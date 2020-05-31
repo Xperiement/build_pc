@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PB</title>
+    <link rel="stylesheet" href="style_dashboard.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <header class="heading">
+        <div class="wrapper">
+            <div class="title">
+
+            </div>
+            <div class="nav">
+    
+            </div>
+        </div>
+    </header>
+    <div class="panelInfo">
+        <div class="wrapper vertCenter">
+            <p id="panelTitle" class="currentPanelTitle bigTitle">Dashboard</p>
+        </div>
+    </div>
+
+    <section id="dashboard" class="dashboard">
+        <div class="wrapper">
+            <p class="pText mediumTitle element">Desktop Name</p>
+            <input class="configNameInput slighlySmallTitle element" type="text" placeholder="Write your Desktop Name">
+            <div class="configStatus"><!--Grid-->
+                <div class="card1">
+                    <p class="type mediumTitle">CPU</p>
+                    <img src="" alt="Add Component" class="addImg">
+                    <img src="" alt="CPU" class="compoImg">
+                    <p id="cpuName" class="compoDetails smallTitle">Not Selected</p>
+                    <div style="margin-top: .5rem;">
+                        <button class="cardBtn def" onclick="setValue('cpuName')">Add</button>
+                        <button class="cardBtn rm">Remove</button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <p class="type mediumTitle">Motherboard</p>
+                    <img src="" alt="Add Component" class="addImg">
+                    <img src="" alt="CPU" class="compoImg">
+                    <p class="compoDetails smallTitle">Not Selected</p>
+                    <div style="margin-top: .5rem;">
+                        <button class="cardBtn" onclick="changePanel('dashboard','add_cpu')">Add</button>
+                        <button class="cardBtn rm">Remove</button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <p class="type mediumTitle">RAM</p>
+                    <img src="" alt="Add Component" class="addImg">
+                    <img src="" alt="CPU" class="compoImg">
+                    <p class="compoDetails smallTitle">Not Selected</p>
+                    <div style="margin-top: .5rem;">
+                        <button class="cardBtn" onclick="changePanel('dashboard','add_cpu')">Add</button>
+                        <button class="cardBtn rm">Remove</button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <p class="type mediumTitle">Graphics Card</p>
+                    <img src="" alt="Add Component" class="addImg">
+                    <img src="" alt="CPU" class="compoImg">
+                    <p class="compoDetails smallTitle">Not Selected</p>
+                    <div style="margin-top: .5rem;">
+                        <button class="cardBtn" onclick="changePanel('dashboard','add_cpu')">Add</button>
+                        <button class="cardBtn rm">Remove</button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <p class="type mediumTitle">Hard Disk</p>
+                    <img src="" alt="Add Component" class="addImg">
+                    <img src="" alt="CPU" class="compoImg">
+                    <p class="compoDetails smallTitle">Not Selected</p>
+                    <div style="margin-top: .5rem;">
+                        <button class="cardBtn" onclick="changePanel('dashboard','add_cpu')">Add</button>
+                        <button class="cardBtn rm">Remove</button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <p class="type mediumTitle">SSD</p>
+                    <img src="" alt="Add Component" class="addImg">
+                    <img src="" alt="CPU" class="compoImg">
+                    <p class="compoDetails smallTitle">Not Selected</p>
+                    <div style="margin-top: .5rem;">
+                        <button class="cardBtn" onclick="changePanel('dashboard','add_cpu')">Add</button>
+                        <button class="cardBtn rm">Remove</button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <p class="type mediumTitle">Power Supply</p>
+                    <img src="" alt="Add Component" class="addImg">
+                    <img src="" alt="CPU" class="compoImg">
+                    <p class="compoDetails smallTitle">Not Selected</p>
+                    <div style="margin-top: .5rem;">
+                        <button class="cardBtn" onclick="changePanel('dashboard','add_cpu')">Add</button>
+                        <button class="cardBtn rm">Remove</button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <p class="type mediumTitle">Case</p>
+                    <img src="" alt="Add Component" class="addImg">
+                    <img src="" alt="CPU" class="compoImg">
+                    <p class="compoDetails smallTitle">Not Selected</p>
+                    <div style="margin-top: .5rem;">
+                        <button class="cardBtn" onclick="changePanel('dashboard','add_cpu')">Add</button>
+                        <button class="cardBtn rm">Remove</button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <p class="type mediumTitle">Mouse</p>
+                    <img src="" alt="Add Component" class="addImg">
+                    <img src="" alt="CPU" class="compoImg">
+                    <p class="compoDetails smallTitle">Not Selected</p>
+                    <div style="margin-top: .5rem;">
+                        <button class="cardBtn" onclick="changePanel('dashboard','add_cpu')">Add</button>
+                        <button class="cardBtn rm">Remove</button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <p class="type mediumTitle">Keyboard</p>
+                    <img src="" alt="Add Component" class="addImg">
+                    <img src="" alt="CPU" class="compoImg">
+                    <p class="compoDetails smallTitle">Not Selected</p>
+                    <div style="margin-top: .5rem;">
+                        <button class="cardBtn" onclick="changePanel('dashboard','add_cpu')">Add</button>
+                        <button class="cardBtn rm">Remove</button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <p class="type mediumTitle">Monitor</p>
+                    <img src="" alt="Add Component" class="addImg">
+                    <img src="" alt="CPU" class="compoImg">
+                    <p class="compoDetails smallTitle">Not Selected</p>
+                    <div style="margin-top: .5rem;">
+                        <button class="cardBtn" onclick="changePanel('dashboard','add_cpu')">Add</button>
+                        <button class="cardBtn rm">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="add_cpu" class="addCpu">
+        <div class="wrapper">
+            
+        </div>
+    </section>
+</body>
+</html>

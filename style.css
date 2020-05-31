@@ -2,28 +2,6 @@
   --primary-color: rgb(245, 253, 255);
 }
 
-@-webkit-keyframes guunAnimation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes guunAnimation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 * {
   outline: none;
   margin: 0;
@@ -86,7 +64,6 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 1rem;
   text-align: center;
   font-size: 1.2rem;
   font-family: 'Raleway', sans-serif;
@@ -95,8 +72,21 @@ header {
 }
 
 .nav a {
-  margin-right: 1rem;
+  width: 7rem;
+  margin-left: 1rem;
   color: white;
+  -webkit-transition: color 280ms, background 280ms;
+  transition: color 280ms, background 280ms;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.nav a:focus,
+.nav a:hover {
+  background: white;
+  color: black;
 }
 
 .blacky {

@@ -1,0 +1,218 @@
+:root {
+  --primary-color: rgb(245, 253, 255);
+}
+
+* {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  position: relative;
+  background: #f6f8ff;
+}
+
+input {
+  padding: .5rem 1rem .3rem 0rem;
+  border: 2px solid grey;
+  background: transparent;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  width: 16rem;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.heading, .panelInfo, .dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 1rem;
+}
+
+.dashboard,
+.addCpu {
+  margin-top: 1rem;
+  -webkit-transition: display 280ms, opacity 280ms;
+  transition: display 280ms, opacity 280ms;
+}
+
+.heading {
+  position: fixed;
+  top: 0;
+  background: #e7e7e7;
+  width: 100vw;
+  height: 4rem;
+}
+
+.panelInfo {
+  z-index: 69;
+  margin-top: 4rem;
+  height: 100px;
+}
+
+.dashboard {
+  z-index: -70;
+}
+
+.addCpu {
+  height: 100vh;
+  opacity: 0%;
+  background: red;
+  display: none;
+}
+
+.vertCenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.bigTitle {
+  font-size: 3.5rem;
+  font-family: Product Sans;
+}
+
+.mediumTitle {
+  font-size: 1.6rem;
+  font-family: Product Sans;
+}
+
+.smallTitle {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.slighlySmallTitle {
+  font-size: .8rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn {
+  color: grey;
+  font-size: .8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  border-radius: 50px;
+  width: 7rem;
+}
+
+.cardBtn {
+  width: 5rem;
+  font-size: 1rem;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+  border: 2px solid #bdbdbd;
+  border-radius: 1rem;
+  background: transparent;
+  color: #5e5e5e;
+  -webkit-box-shadow: 0px 3px 10px #0000002a;
+          box-shadow: 0px 3px 10px #0000002a;
+  font-family: Product Sans;
+  letter-spacing: .1rem;
+  -webkit-transition: color 280ms, background 280ms, border-color 280ms;
+  transition: color 280ms, background 280ms, border-color 280ms;
+}
+
+.cardBtn:focus,
+.cardBtn:hover {
+  color: white;
+  background: #141414;
+  border-color: #141414;
+}
+
+.rm {
+  display: none;
+}
+
+.compoDetails {
+  font-family: product sans;
+  color: grey;
+}
+
+.type {
+  color: #555555;
+}
+
+.element {
+  margin-right: 1rem;
+}
+
+.configName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 1rem;
+}
+
+.configStatus {
+  margin-top: 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (200px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 200px);
+  gap: 3rem;
+}
+
+.card1 {
+  width: 200px;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #dfdfdf;
+  -webkit-transition: border-color 280ms, -webkit-box-shadow 280ms;
+  transition: border-color 280ms, -webkit-box-shadow 280ms;
+  transition: border-color 280ms, box-shadow 280ms;
+  transition: border-color 280ms, box-shadow 280ms, -webkit-box-shadow 280ms;
+}
+
+.card1:focus,
+.card1:hover {
+  border-color: transparent;
+  -webkit-box-shadow: 0px 5px 10px #0000001a;
+          box-shadow: 0px 5px 10px #0000001a;
+}
+/*# sourceMappingURL=style_dashboard.css.map */

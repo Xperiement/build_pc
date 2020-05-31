@@ -2,11 +2,6 @@
     --primary-color: rgb(245, 253, 255);
 }
 
-@keyframes guunAnimation{
-    from{transform: rotate(0deg);}
-    to{transform: rotate(360deg);}
-}
-
 *{
     outline: none;
     margin: 0;
@@ -42,7 +37,6 @@ header{
 .nav{
     display: flex;
     flex-direction: row;
-    gap: 1rem;
     text-align: center;
 
     //Font
@@ -51,8 +45,19 @@ header{
     letter-spacing: .1rem;
     text-transform: uppercase;
     a{
-        margin-right: 1rem;
+        width: 7rem;
+        margin-left: 1rem;
         color: white;
+        transition: color 280ms, background 280ms;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+    a:focus,
+    a:hover{
+        background: white;
+        color: black;
     }
 }
 
