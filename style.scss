@@ -2,6 +2,11 @@
     --primary-color: rgb(245, 253, 255);
 }
 
+@keyframes guunAnimation{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
 *{
     outline: none;
     margin: 0;
@@ -29,19 +34,24 @@ header{
 .heading{
     //Font
     font-size: 1.6rem;
-    font-family: Arial;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
     user-select: none;
 }
 .nav{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    display: flex;
+    flex-direction: row;
     gap: 1rem;
     text-align: center;
 
     //Font
     font-size: 1.2rem;
-    font-family: Arial;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
     a{
+        margin-right: 1rem;
         color: white;
     }
 }
@@ -53,6 +63,12 @@ header{
     height: 100vh;
     background: rgb(20, 20, 20);
     z-index: -69;
+    .desktop{
+        position: absolute;
+        top: 25%;
+        margin-left: 10rem;
+        width: 10rem;
+    }
 }
 
 .container{
@@ -75,6 +91,7 @@ header{
         text-transform: uppercase;
         color: rgb(68, 68, 68);
         span{
+            font-family: Product Sans;
             font-size: 4rem;
             text-transform: capitalize;
             color: black;
@@ -82,14 +99,14 @@ header{
     }
     .subInfo{
         width: 70%;
-        margin-top: 1.5rem;
+        margin-top: 1rem;
         font-size: 1.2rem;
-        word-spacing: .3rem;
-        font-family: arial;
+        word-spacing: .2rem;
+        font-family: 'Questrial', sans-serif;
         color: rgb(83, 83, 83);
     }
     .startBtn{
-        margin-top: 1.5rem;
+        margin-top: 2rem;
         display: grid;
         place-content: center;
         border: 3px solid rgb(68, 68, 68);
@@ -97,7 +114,7 @@ header{
         width: 120px;
         text-align: center;
         font-family: Product Sans;
-        color: rgb(68, 68, 68);
+        color: rgb(0, 0, 0);
         font-size: 1.2rem;
 
         transition: background 280ms ease, color 280ms ease, box-shadow 350ms;

@@ -2,6 +2,28 @@
   --primary-color: rgb(245, 253, 255);
 }
 
+@-webkit-keyframes guunAnimation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes guunAnimation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 * {
   outline: none;
   margin: 0;
@@ -47,7 +69,9 @@ header {
 
 .heading {
   font-size: 1.6rem;
-  font-family: Arial;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -55,17 +79,23 @@ header {
 }
 
 .nav {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 1rem;
   text-align: center;
   font-size: 1.2rem;
-  font-family: Arial;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
 }
 
 .nav a {
+  margin-right: 1rem;
   color: white;
 }
 
@@ -76,6 +106,13 @@ header {
   height: 100vh;
   background: #141414;
   z-index: -69;
+}
+
+.blacky .desktop {
+  position: absolute;
+  top: 25%;
+  margin-left: 10rem;
+  width: 10rem;
 }
 
 .container {
@@ -114,6 +151,7 @@ header {
 }
 
 .container .belak span {
+  font-family: Product Sans;
   font-size: 4rem;
   text-transform: capitalize;
   color: black;
@@ -121,15 +159,15 @@ header {
 
 .container .subInfo {
   width: 70%;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   font-size: 1.2rem;
-  word-spacing: .3rem;
-  font-family: arial;
+  word-spacing: .2rem;
+  font-family: 'Questrial', sans-serif;
   color: #535353;
 }
 
 .container .startBtn {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   display: -ms-grid;
   display: grid;
   place-content: center;
@@ -138,7 +176,7 @@ header {
   width: 120px;
   text-align: center;
   font-family: Product Sans;
-  color: #444444;
+  color: black;
   font-size: 1.2rem;
   -webkit-transition: background 280ms ease, color 280ms ease, -webkit-box-shadow 350ms;
   transition: background 280ms ease, color 280ms ease, -webkit-box-shadow 350ms;

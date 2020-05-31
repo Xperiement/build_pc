@@ -1,0 +1,55 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.99 654.91">
+<defs>
+<style>
+@keyframes guunAnimation{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+.cls-1,.cls-4{
+    fill:none;stroke:white;
+    stroke-miterlimit:10;
+}
+.cls-1{
+    stroke-width:10px;
+}
+.cls-2{
+    fill:white;
+}
+.cls-3{
+    fill:white;
+}
+.cls-4{
+    stroke-width:8px;
+}
+.guun{
+    animation: guunAnimation 1s linear infinite;
+}
+.stCircle{
+    transform-origin: 50% 34.5%;
+}
+.ndCircle{
+    transform-origin: 50% 75%;
+}
+</style>
+</defs>
+<title>desktop</title>
+<rect class="cls-1" x="5" y="5" width="308.99" height="644.91" rx="5"/>
+<circle class="cls-3" cx="52.54" cy="45.45" r="9.27"/>
+<rect class="cls-3" x="222.38" y="40.17" width="24.71" height="10.56" rx="3.17"/>
+<rect class="cls-3" x="253.86" y="40.17" width="24.71" height="10.56" rx="3.17"/>
+<circle class="cls-3" cx="205.62" cy="45.45" r="5.28"/>
+<ellipse class="cls-4" cx="159.49" cy="226.64" rx="87.69" ry="87.68"/>
+<g id="fan" class="guun stCircle">
+    <path class="cls-2" d="M472.19,419.77c-5,.53-5.13-16.63-24.44-43.21-8.93-12.31-14.78-16.73-13.1-22,2.79-8.69,24.54-13.8,36.84-6C494.18,362.93,481,418.82,472.19,419.77Z" transform="translate(-312.9 -188.47)"/>
+    <path class="cls-2" d="M476.53,412.6c2.94,4-11.84,12.77-25.21,42.77-6.19,13.9-7.09,21.17-12.46,22.33-8.93,1.93-24.22-14.35-23.64-28.89C416.31,422,471.28,405.43,476.53,412.6Z" transform="translate(-312.9 -188.47)"/>
+    <path class="cls-2" d="M469,412.25c2-4.56,17,3.87,49.64.44,15.13-1.58,21.88-4.44,25.57-.37,6.13,6.77-.32,28.15-13.2,34.91C507.26,459.71,465.43,420.38,469,412.25Z" transform="translate(-312.9 -188.47)"/>
+    <circle class="cls-3" cx="159.49" cy="226.64" r="14.83"/>
+</g>
+<ellipse class="cls-4" cx="159.49" cy="492.91" rx="87.69" ry="87.68"/>
+<g id="fan" class="guun ndCircle">
+    <path class="cls-2" d="M472.19,686c-5,.53-5.13-16.63-24.44-43.21-8.93-12.31-14.78-16.73-13.1-22,2.79-8.69,24.54-13.8,36.84-6C494.18,629.2,481,685.09,472.19,686Z" transform="translate(-312.9 -188.47)"/>
+    <path class="cls-2" d="M476.53,678.87c2.94,4-11.84,12.77-25.21,42.77-6.19,13.89-7.09,21.17-12.46,22.33-8.93,1.93-24.22-14.35-23.64-28.89C416.31,688.26,471.28,671.7,476.53,678.87Z" transform="translate(-312.9 -188.47)"/>
+    <path class="cls-2" d="M469,678.52c2-4.56,17,3.87,49.64.44,15.13-1.58,21.88-4.44,25.57-.37,6.13,6.77-.32,28.15-13.2,34.91C507.26,726,465.43,686.65,469,678.52Z" transform="translate(-312.9 -188.47)"/>
+    <circle class="cls-3" cx="159.49" cy="492.91" r="14.83"/>
+</g>
+</svg>
