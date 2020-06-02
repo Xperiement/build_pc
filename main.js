@@ -77,33 +77,68 @@ function setValue(x){
 function load(id,to,from,brand,model,price){
     if(id=="cpuList"){
         myCPU=fetcher(CPUDATA,brand,model,price);
-        document.getElementById("cpuName").innerHTML=myCPU.brand+" "+myCPU.model;
+        if(myCPU.brand=="intel"||myCPU.brand=="Intel"||myCPU.brand=="INTEL"){
+            document.getElementById('myCpuImg').style['backgroundImage']="url('res/images/intel_model_one_i9.svg')";
+        }else{
+            document.getElementById('myCpuImg').style['backgroundImage']="url('res/images/amd_one.svg')";
+        }
+        document.getElementById('myCpuImg').style['backgroundSize']="auto 120px";
+
+
+        document.getElementById("cpuBrand").innerHTML=myCPU.brand;
+        document.getElementById("cpuName").innerHTML=myCPU.model;
     }else if(id=="motherboardList"){
+        document.getElementById('myMotherboardImg').style['backgroundImage']="url('res/images/motherboard.svg')";
+        document.getElementById('myMotherboardImg').style['backgroundSize']="auto 120px";
+
         myMOTHERBOARD=fetcher(MOTHERBOARDDATA,brand,model,price);
-        document.getElementById("motherboardName").innerHTML=myMOTHERBOARD.brand+" "+myMOTHERBOARD.model;
+        document.getElementById("motherboardBrand").innerHTML=myMOTHERBOARD.brand;
+        document.getElementById("motherboardName").innerHTML=myMOTHERBOARD.model;
     }else if(id=="ramList"){
+        document.getElementById('myRamImg').style['backgroundImage']="url('res/images/ram.svg')";
+        document.getElementById('myRamImg').style['backgroundSize']="auto 210px";
+
         myRAM=fetcher(RAMDATA,brand,model,price);
-        document.getElementById("ramName").innerHTML=myRAM.brand+" "+myRAM.model;
+        document.getElementById("ramBrand").innerHTML=myRAM.brand;
+        document.getElementById("ramName").innerHTML=myRAM.model;
 
     }else if(id=="gpuList"){
+        document.getElementById('myGpuImg').style['backgroundImage']="url('res/images/gpu_amd.svg')";
+        document.getElementById('myGpuImg').style['backgroundSize']="auto 160px";
+
         myGPU=fetcher(GPUDATA,brand,model,price);
-        document.getElementById("gpuName").innerHTML=myGPU.brand+" "+myGPU.model;
+        document.getElementById("gpuBrand").innerHTML=myGPU.brand;
+        document.getElementById("gpuName").innerHTML=myGPU.model;
 
     }else if(id=="hddList"){
+        document.getElementById('myHddImg').style['backgroundImage']="url('res/images/hdd.svg')";
+        document.getElementById('myHddImg').style['backgroundSize']="auto 120px";
+
         myHDD=fetcher(HDDDATA,brand,model,price);
-        document.getElementById("hddName").innerHTML=myHDD.brand+" "+myHDD.model;
+        document.getElementById("hddBrand").innerHTML=myHDD.brand;
+        document.getElementById("hddName").innerHTML=myHDD.model;
 
     }else if(id=="ssdList"){
+        document.getElementById('mySsdImg').style['backgroundImage']="url('res/images/sata_m_2.svg')";
+        document.getElementById('mySsdImg').style['backgroundSize']="auto 200px";
+
         mySSD=fetcher(SSDDATA,brand,model,price);
-        document.getElementById("ssdName").innerHTML=mySSD.brand+" "+mySSD.model;
+        document.getElementById("ssdBrand").innerHTML=mySSD.brand;
+        document.getElementById("ssdName").innerHTML=mySSD.model;
 
     }else if(id=="psuList"){
+        document.getElementById('myPsuImg').style['backgroundImage']="url('res/images/psu.svg')";
+        document.getElementById('myPsuImg').style['backgroundSize']="auto 160px";
+
         myPSU=fetcher(PSUDATA,brand,model,price);
-        document.getElementById("psuName").innerHTML=myPSU.brand+" "+myPSU.model;
+        document.getElementById("psuBrand").innerHTML=myPSU.brand;
+        document.getElementById("psuName").innerHTML=myPSU.model;
 
     }else if(id=="caseList"){
+        
         myCASE=fetcher(CASEDATA,brand,model,price);
-        document.getElementById("caseName").innerHTML=myCASE.brand+" "+myCASE.model;
+        document.getElementById("caseBrand").innerHTML=myCASE.brand;
+        document.getElementById("caseName").innerHTML=myCASE.model;
     }
 
     changePanel(to,from);
@@ -219,7 +254,7 @@ var CPUDATA=[
     },
     {
         brand:"Intel",
-        model:"Core i7-9700KS",
+        model:"Core i9-9900KS",
         price:70000
     },
     {
@@ -236,162 +271,162 @@ var CPUDATA=[
 
 var MOTHERBOARDDATA=[
     {
-        brand:"Intel",
-        model:"Core i3-6098p",
-        price:7900
+        brand:"Asus",
+        model:"Z570",
+        price:16000
     },
     {
-        brand:"Intel",
-        model:"Core i7-9700KS",
-        price:70000
+        brand:"Asrock",
+        model:"B450 Lightning",
+        price:9500
     },
     {
-        brand:"Intel",
-        model:"Core i5-9400F",
-        price:12000
+        brand:"Gigabyte",
+        model:"H110m-s2",
+        price:3800
     },
     {
-        brand:"AMD",
-        model:"Ryzen 5 3600X",
-        price:21000
+        brand:"MSI",
+        model:"B450-Tomahawk",
+        price:9000
     }
 ];
 
 var RAMDATA=[
     {
-        brand:"Intel",
-        model:"Core i3-6098p",
-        price:7900
+        brand:"Corsair",
+        model:"Value Select 8GB",
+        price:3100
     },
     {
-        brand:"Intel",
-        model:"Core i7-9700KS",
-        price:70000
+        brand:"Corsair",
+        model:"Value Select 16GB",
+        price:7100
     },
     {
-        brand:"Intel",
-        model:"Core i5-9400F",
-        price:12000
+        brand:"Kingstone",
+        model:"HyperX Fury 8GB",
+        price:4180
     },
     {
-        brand:"AMD",
-        model:"Ryzen 5 3600X",
-        price:21000
+        brand:"Adata",
+        model:"XPG 16GB",
+        price:5100
     }
 ];
 
 var GPUDATA=[
     {
-        brand:"Intel",
-        model:"Core i3-6098p",
-        price:7900
+        brand:"Nvidia",
+        model:"GTX 1650",
+        price:12500
     },
     {
-        brand:"Intel",
-        model:"Core i7-9700KS",
-        price:70000
+        brand:"Nvidia",
+        model:"GTX 2070 Super",
+        price:45000
     },
     {
-        brand:"Intel",
-        model:"Core i5-9400F",
-        price:12000
+        brand:"Nvidia",
+        model:"GTX 2080Ti",
+        price:123000
     },
     {
         brand:"AMD",
-        model:"Ryzen 5 3600X",
-        price:21000
+        model:"RX 5700XT",
+        price:41900
     }
 ];
 
 var HDDDATA=[
     {
-        brand:"Intel",
-        model:"Core i3-6098p",
-        price:7900
+        brand:"Seagate",
+        model:"Baracuda 1TB",
+        price:4100
     },
     {
-        brand:"Intel",
-        model:"Core i7-9700KS",
-        price:70000
+        brand:"Seagate",
+        model:"Baracuda 4TB",
+        price:9000
     },
     {
-        brand:"Intel",
-        model:"Core i5-9400F",
-        price:12000
+        brand:"WD",
+        model:"Blue 1TB",
+        price:4000
     },
     {
-        brand:"AMD",
-        model:"Ryzen 5 3600X",
-        price:21000
+        brand:"WD",
+        model:"Black 1TB",
+        price:5500
     }
 ];
 
 var SSDDATA=[
     {
-        brand:"Intel",
-        model:"Core i3-6098p",
-        price:7900
+        brand:"Samsung",
+        model:"960 Evo",
+        price:8453
     },
     {
-        brand:"Intel",
-        model:"Core i7-9700KS",
-        price:70000
+        brand:"Corsair",
+        model:"MP500",
+        price:9665
     },
     {
-        brand:"Intel",
-        model:"Core i5-9400F",
-        price:12000
+        brand:"Adata",
+        model:"XPG S6000",
+        price:5500
     },
     {
-        brand:"AMD",
-        model:"Ryzen 5 3600X",
-        price:21000
+        brand:"WD",
+        model:"Black 203",
+        price:8954
     }
 ];
 
 var PSUDATA=[
     {
-        brand:"Intel",
-        model:"Core i3-6098p",
-        price:7900
+        brand:"Corsair",
+        model:"VS550",
+        price:4678
     },
     {
-        brand:"Intel",
-        model:"Core i7-9700KS",
-        price:70000
+        brand:"Corsair",
+        model:"VS450",
+        price:2600
     },
     {
-        brand:"Intel",
-        model:"Core i5-9400F",
-        price:12000
+        brand:"Cooler Master",
+        model:"MWE 750",
+        price:6234
     },
     {
-        brand:"AMD",
-        model:"Ryzen 5 3600X",
-        price:21000
+        brand:"Sliver Stone",
+        model:"S450",
+        price:3186
     }
 ];
 
 var CASEDATA=[
     {
-        brand:"Intel",
-        model:"Core i3-6098p",
-        price:7900
+        brand:"Corsair",
+        model:"Carbide S1",
+        price:5473
     },
     {
-        brand:"Intel",
-        model:"Core i7-9700KS",
-        price:70000
+        brand:"Corsair",
+        model:"Spec 03",
+        price:2457
     },
     {
-        brand:"Intel",
-        model:"Core i5-9400F",
-        price:12000
+        brand:"Cooler Master",
+        model:"M500",
+        price:5767
     },
     {
-        brand:"AMD",
-        model:"Ryzen 5 3600X",
-        price:21000
+        brand:"Aorus",
+        model:"Gaming X",
+        price:7576
     }
 ];
 
