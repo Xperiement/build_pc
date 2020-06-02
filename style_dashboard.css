@@ -15,6 +15,7 @@ body {
 }
 
 input {
+  margin-top: .5rem;
   padding: .5rem 1rem .3rem 0rem;
   border: 2px solid grey;
   background: transparent;
@@ -29,7 +30,7 @@ input {
   max-width: 1000px;
 }
 
-.heading, .panelInfo, .dashboard {
+.heading, .panelInfo, .dashboard, .addComponentPanel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,7 +45,7 @@ input {
 }
 
 .dashboard,
-.addCpu {
+.addComponentPanel {
   margin-top: 1rem;
   -webkit-transition: display 280ms, opacity 280ms;
   transition: display 280ms, opacity 280ms;
@@ -68,10 +69,9 @@ input {
   z-index: -70;
 }
 
-.addCpu {
+.addComponentPanel {
   height: 100vh;
   opacity: 0%;
-  background: red;
   display: none;
 }
 
@@ -132,8 +132,6 @@ input {
   border-radius: 1rem;
   background: transparent;
   color: #5e5e5e;
-  -webkit-box-shadow: 0px 3px 10px #0000002a;
-          box-shadow: 0px 3px 10px #0000002a;
   font-family: Product Sans;
   letter-spacing: .1rem;
   -webkit-transition: color 280ms, background 280ms, border-color 280ms;
@@ -158,6 +156,10 @@ input {
 
 .type {
   color: #555555;
+}
+
+.addImg {
+  width: 80px;
 }
 
 .element {
