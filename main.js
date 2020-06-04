@@ -184,7 +184,10 @@ async function createCard(arg,index,id){
     var brand=arg.brand;
     var name=arg.model;
     var price=arg.price;
+    console.log("Create Card -------");
+    console.log(document.getElementById(id).innerHTML);
     document.getElementById(id).innerHTML="";
+    document.getElementById(id).appendChild(createInfoPanel(id));
     await sleep(1);
 
     var fansan=getCollecter(arg,index,id);
@@ -220,8 +223,9 @@ async function createCard(arg,index,id){
 
     var p2=document.createElement("p");
     p2.classList.add("compoDetails","smallTitleEx");
+    p2.setAttribute("onclick",balerFunction(id,index,"Info","InfoContainer"));
     p2.innerHTML=name;
-
+    //console.log(balerFunction(id,index,"Info","InfoContainer"));
     var p3=document.createElement("p");
     p3.classList.add("compoDetails","slighlySmallTitle");
     p3.innerHTML="3.4GHZ, 2 cores 4 threads";
@@ -246,6 +250,11 @@ async function createCard(arg,index,id){
     //card.appendChild(subdiv);
     document.getElementById(id).appendChild(card);
 
+}
+
+function balerFunction(id,index,x,y){
+    var funName="subInfoHandler(";
+    return funName+"'"+id+"',"+index+",'"+id+x+"','"+id+y+"')";
 }
 
 function getImage(arg,id){
