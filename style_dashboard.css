@@ -99,8 +99,18 @@ input {
   font-family: Product Sans;
 }
 
+.mediumTitleEx {
+  font-size: 1.4rem;
+  font-family: Product Sans;
+}
+
 .smallTitle {
   font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.smallTitleEx {
+  font-size: 1.2rem;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -152,6 +162,20 @@ input {
 .compoDetails {
   font-family: product sans;
   color: grey;
+  -webkit-transition: -webkit-transform 280ms;
+  transition: -webkit-transform 280ms;
+  transition: transform 280ms;
+  transition: transform 280ms, -webkit-transform 280ms;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.compoDetails:focus,
+.compoDetails:hover {
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
 }
 
 .type {
@@ -184,6 +208,61 @@ input {
   -ms-grid-columns: (200px)[auto-fit];
       grid-template-columns: repeat(auto-fit, 200px);
   gap: 3rem;
+  position: relative;
+}
+
+.infoPanel {
+  opacity: 0%;
+  display: none;
+  z-index: 69;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.829);
+  background-blend-mode: overlay;
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: opacity 280ms;
+  transition: opacity 280ms;
+}
+
+.infoPanel .mainHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.infoPanel .mainDesc {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.infoPanel .closeBtn {
+  position: absolute;
+  width: 20px;
+  top: 2%;
+  right: 5%;
 }
 
 .card1 {
@@ -216,7 +295,7 @@ input {
   padding-top: .5rem;
 }
 
-.card1 .imageContainer {
+.imageContainer {
   background-image: url("res/images/plus-circle-solid.svg");
   width: 100%;
   height: 150px;
@@ -225,6 +304,26 @@ input {
   background-size: auto 100px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.imageContainerEx {
+  width: 100%;
+  height: 130px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-size: auto 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: -webkit-transform 280ms;
+  transition: -webkit-transform 280ms;
+  transition: transform 280ms;
+  transition: transform 280ms, -webkit-transform 280ms;
+}
+
+.imageContainerEx:focus,
+.imageContainerEx:hover {
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
 }
 
 .card1:focus,

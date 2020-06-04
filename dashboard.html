@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - PB</title>
     <link rel="stylesheet" href="style_dashboard.css">
+    <script src="master.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
@@ -29,8 +30,31 @@
             <p class="pText mediumTitle element">Desktop Name</p>
             <input class="configNameInput slighlySmallTitle element" type="text" placeholder="Write your Desktop Name">
             <div class="configStatus"><!--Grid-->
+
+
+
+
+                <div id="infoPanel" class="infoPanel">
+                    <div id="guun" class="mainHead">
+                        <!--div class="mainDesc">
+                            <p id="cpuBrand" class="type bigTitle">AMD</p>
+                            <p id="cpuBrand" class="type mediumTitle">Ryzen Threadripper 3990X</p>
+
+                            <p id="cpuBrand" class="type smallTitleEx"><br>3.8GHZ base , 4.2GHZ Boost</p>
+                            <p id="cpuBrand" class="type smallTitleEx">12 cores, 24threads</p>
+                        </div>
+                        <img class="closeBtn" src="res/images/close.svg" alt="" onclick="closeOverlay('infoPanel')"-->
+                    </div>
+                </div>
+
+
+
+
+
+
                 <div class="card1">
                     <div id="myCpuImg" class="imageContainer" onclick="changePanel('dashboard','add_cpu')"></div>
+                    <!--div id="myCpuImg" class="imageContainer" onclick="openOverlay('infoPanel')"></div-->
                     <p id="cpuBrand" class="type mediumTitle">CPU</p>
                     <p id="cpuName" class="compoDetails smallTitle">Not Selected</p>
                 </div>
