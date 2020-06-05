@@ -8,12 +8,12 @@ function sleep(ms){
 
 async function openOverlay(x){
     document.getElementById(x).style['display']='flex';
-    await sleep(280);
+    await sleep(100);
     document.getElementById(x).style['opacity']='100%';
 }
 async function closeOverlay(x){
     document.getElementById(x).style['opacity']='0%';
-    await sleep(280);
+    await sleep(1080);
     document.getElementById(x).style['display']='none';
 }
 

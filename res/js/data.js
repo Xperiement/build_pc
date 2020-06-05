@@ -13,6 +13,20 @@ var CPUDATA=[
     {
         brand:"Intel",
         model:"Core i3-6098p",
+        brand:"Intel",
+        baseClock:"3.60 GHZ",
+        turboClock:"None",
+        tdp:54,
+        core:2,
+        thread:4,
+        l1cache:"512KB",
+        l2cache:"1MB",
+        l3cache:"3MB",
+        socket:"LGA1151",
+        cpu_overclocking: false,
+        pcilanes:"16",
+        has_igpu: true,
+        igpu:"HD510",
         price:7900
     },
     {
@@ -36,6 +50,25 @@ var MOTHERBOARDDATA=[
     {
         brand:"Asus",
         model:"Z570",
+        chipset:"H110",
+        socket: "LGA1151",
+        size:"micro-ATX",
+        supportedCpu: "",
+        memorySlot: 2,
+        memoryType:"DDR4",
+        has_dualChannel: true,
+        has_quadChannel: false,
+        max_memory: 32,
+        max_memory_speed: 2133,
+        no_of_pcie_full: 1,
+        no_of_pcie_1x: 1,
+        available_pci_lanes:16,
+        no_of_sata_port: 4,
+        has_dual_bios: false,
+        has_nvme_m_2_slot: false,
+        has_sata_m_2_slot: false,
+        no_of_m_2_slot: 0,
+        cpu_overclocking: false, 
         price:16000
     },
     {
@@ -59,6 +92,11 @@ var RAMDATA=[
     {
         brand:"Corsair",
         model:"Value Select 8GB",
+        capacity: 8,
+        quantity: 1,
+        type:"DDR4",
+        speed:2666,
+        eccMemory: false,
         price:3100
     },
     {
@@ -82,6 +120,16 @@ var GPUDATA=[
     {
         brand:"Nvidia",
         model:"GTX 1650",
+        baseClock:"None",
+        turboClock:"None",
+        tdp:120,
+        vram:2,
+        vram_type:"GDDR5",
+        interface:"PCI-e 3.0",
+        has_Vga:false,
+        has_Dvi:false,
+        has_Hdmi:true,
+        has_displayPort:true,
         price:12500
     },
     {
@@ -105,6 +153,9 @@ var HDDDATA=[
     {
         brand:"Seagate",
         model:"Baracuda 1TB",
+        capacity: 1,
+        interface:"SATA3",
+        rpm:7200,
         price:4100
     },
     {
@@ -128,6 +179,7 @@ var SSDDATA=[
     {
         brand:"Samsung",
         model:"960 Evo",
+        capacity:128,
         interface:"M.2",
         type:"NVME",
         price:8453
@@ -159,6 +211,9 @@ var PSUDATA=[
     {
         brand:"Corsair",
         model:"VS550",
+        capacity:450,
+        has_80_cartification: true,
+        type_80_plus:"Default",
         price:4678
     },
     {
@@ -182,6 +237,22 @@ var CASEDATA=[
     {
         brand:"Corsair",
         model:"Carbide S1",
+        type:"Mid Tower",
+        maxMotherboardSize:"ATX",
+        has_rear_fan_space: true,
+        has_top_fan_space: false,
+        has_bottom_fan_space: false,
+        has_front_fan_space: false,
+        no_of__available_rear_fan_space: 1,
+        max_rear_fan_type: 120,
+        no_of__available_top_fan_space: 0,
+        max_top_fan_type: 120,
+        no_of__available_front_fan_space: 0,
+        max_front_fan_type: 120,
+        no_of__available_bottom_fan_space: 0,
+        max_bottom_fan_type: 120,
+        no_of_available_hdd_space: 2,
+        no_of_available_ssd_space: 2,
         price:5473
     },
     {
