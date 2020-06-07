@@ -13,7 +13,6 @@ var CPUDATA=[
     {
         brand:"Intel",
         model:"Core i3-6098p",
-        brand:"Intel",
         baseClock:"3.60 GHZ",
         turboClock:"None",
         tdp:54,
