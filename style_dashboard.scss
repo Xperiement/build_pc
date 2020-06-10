@@ -178,7 +178,36 @@ input{
 .addImg{
     width: 80px;
 }
-
+.clearSection{
+    background: rgba(82, 82, 255, 0.527);
+    position: absolute;
+    display: none;
+    place-content: center;
+    height: 10px;
+    width: 100%;
+    bottom: 0;
+    //border-radius: 10rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    transition: width 280ms, border-radius 580ms, height 280ms;
+    p{
+        transition: opacity 280ms, transform 500ms;
+        user-select: none;
+    }
+    p:hover{
+        transform: scale(120%);
+    }
+}
+.clearSection:hover{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    p{
+        display: block;
+        opacity: 100%;
+    }
+}
 
 
 

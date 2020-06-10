@@ -1,5 +1,7 @@
 include("res/js/data.js");
 include("res/js/componentInfo.js");
+include("res/js/guiComponent.js");
+include("res/js/clearData.js");
 include("res/js/filters.js");
 include("res/js/sortfilter.js");
 
@@ -131,6 +133,7 @@ function load(id,to,from,brand,model,price,index){
         document.getElementById("cpuBrand").innerHTML=myCPU.brand;
         document.getElementById("cpuName").innerHTML=myCPU.model;
         document.getElementById("cpuName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
+        document.getElementById("cpu_clearBtnPanel").style['display']="grid";
     }else if(id=="motherboardList"){
         myMOTHERBOARD=fetcher(MOTHERBOARDDATA,brand,model,price);
         document.getElementById("motherboardBrand").innerHTML=myMOTHERBOARD.brand;
