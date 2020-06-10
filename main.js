@@ -142,6 +142,7 @@ function load(id,to,from,brand,model,price,index){
 
         document.getElementById('myMotherboardImg').style['backgroundImage']="url('"+getImage(myMOTHERBOARD,id)+"')";
         document.getElementById('myMotherboardImg').style['backgroundSize']="auto 120px";
+        document.getElementById("motherboard_clearBtnPanel").style['display']="grid";
     }else if(id=="ramList"){
         myRAM=fetcher(RAMDATA,brand,model,price);
         document.getElementById("ramBrand").innerHTML=myRAM.brand;
@@ -150,6 +151,7 @@ function load(id,to,from,brand,model,price,index){
 
         document.getElementById('myRamImg').style['backgroundImage']="url('"+getImage(myRAM,id)+"')";
         document.getElementById('myRamImg').style['backgroundSize']="auto 210px";
+        document.getElementById("ram_clearBtnPanel").style['display']="grid";
 
 
     }else if(id=="gpuList"){
@@ -160,6 +162,7 @@ function load(id,to,from,brand,model,price,index){
 
         document.getElementById('myGpuImg').style['backgroundImage']="url('"+getImage(myGPU,id)+"')";
         document.getElementById('myGpuImg').style['backgroundSize']="auto 160px";
+        document.getElementById("gpu_clearBtnPanel").style['display']="grid";
 
     }else if(id=="hddList"){
         myHDD=fetcher(HDDDATA,brand,model,price);
@@ -169,6 +172,7 @@ function load(id,to,from,brand,model,price,index){
 
         document.getElementById('myHddImg').style['backgroundImage']="url('"+getImage(myHDD,id)+"')";
         document.getElementById('myHddImg').style['backgroundSize']="auto 120px";
+        document.getElementById("hdd_clearBtnPanel").style['display']="grid";
     }else if(id=="ssdList"){
         mySSD=fetcher(SSDDATA,brand,model,price);
         document.getElementById("ssdBrand").innerHTML=mySSD.brand;
@@ -177,6 +181,7 @@ function load(id,to,from,brand,model,price,index){
 
         document.getElementById('mySsdImg').style['backgroundImage']="url('"+getImage(mySSD,id)+"')";
         document.getElementById('mySsdImg').style['backgroundSize']="auto 200px";
+        document.getElementById("ssd_clearBtnPanel").style['display']="grid";
     }else if(id=="psuList"){
         myPSU=fetcher(PSUDATA,brand,model,price);
         document.getElementById("psuBrand").innerHTML=myPSU.brand;
@@ -185,12 +190,14 @@ function load(id,to,from,brand,model,price,index){
 
         document.getElementById('myPsuImg').style['backgroundImage']="url('"+getImage(myPSU,id)+"')";
         document.getElementById('myPsuImg').style['backgroundSize']="auto 160px";
+        document.getElementById("psu_clearBtnPanel").style['display']="grid";
     }else if(id=="caseList"){
         
         myCASE=fetcher(CASEDATA,brand,model,price);
         document.getElementById("caseBrand").innerHTML=myCASE.brand;
         document.getElementById("caseName").innerHTML=myCASE.model;
         document.getElementById("caseName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
+        document.getElementById("case_clearBtnPanel").style['display']="grid";
     }
 
     changePanel(to,from);

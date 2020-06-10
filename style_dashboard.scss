@@ -189,7 +189,7 @@ input{
     //border-radius: 10rem;
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
-    transition: width 280ms, border-radius 580ms, height 280ms;
+    transition: width 280ms, border-radius 580ms, height 280ms, opacity 280ms;
     p{
         transition: opacity 280ms, transform 500ms;
         user-select: none;

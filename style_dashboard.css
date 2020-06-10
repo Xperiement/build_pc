@@ -209,8 +209,8 @@ input {
   bottom: 0;
   border-bottom-left-radius: .5rem;
   border-bottom-right-radius: .5rem;
-  -webkit-transition: width 280ms, border-radius 580ms, height 280ms;
-  transition: width 280ms, border-radius 580ms, height 280ms;
+  -webkit-transition: width 280ms, border-radius 580ms, height 280ms, opacity 280ms;
+  transition: width 280ms, border-radius 580ms, height 280ms, opacity 280ms;
 }
 
 .clearSection p {
