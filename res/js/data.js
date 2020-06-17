@@ -30,17 +30,23 @@ var CPUDATA=[
     },
     {
         brand:"Intel",
+        core:8,
         model:"Core i9-9900KS",
+        has_igpu: false,
         price:70000
     },
     {
         brand:"Intel",
+        core:4,
         model:"Core i5-9400F",
+        has_igpu: false,
         price:12000
     },
     {
         brand:"AMD",
+        core:4,
         model:"Ryzen 5 3600X",
+        has_igpu: false,
         price:21000
     }
 ];

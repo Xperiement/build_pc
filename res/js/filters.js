@@ -47,6 +47,7 @@ function CPUFILTER(DATA){
         if(hasIgpu==DATA.has_igpu){
             ret=true;
         }else{
+            
             return false;
         }
     }

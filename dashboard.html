@@ -127,11 +127,24 @@
     <!--Components Picker-->
     <section id="add_cpu" class="addComponentPanel">
         <div class="wrapper">
-            <!--div id="cpuListInfo" class="infoPanel">
-                <div id="cpuListInfoContainer" class="mainHead">
-                    
+            <!--Sorting-->
+            <div class="fsPanel">
+                <div class="radioBtnGroup">
+                    <input type="radio" name="cpuCores" id="dualCore" value="2" onclick="applyCpuCoreFilter(['dualCore','quadCore','octaCore','all'])"><label for="dualCore">2 Cores</label>
+                    <input type="radio" name="cpuCores" id="quadCore" value="4" onclick="applyCpuCoreFilter(['dualCore','quadCore','octaCore','all'])"><label for="quadCore">4 Cores</label>
+                    <input type="radio" name="cpuCores" id="octaCore" value="8" onclick="applyCpuCoreFilter(['dualCore','quadCore','octaCore','all'])"><label for="octaCore">8 Cores</label>
+                    <input type="radio" name="cpuCores" id="all" value="0" onclick="applyCpuCoreFilter(['dualCore','quadCore','octaCore','all'])"><label for="octaCore">All</label>
                 </div>
-            </div-->
+                <div class="radioBtnGroup">
+                    <input type="radio" name="iGPU" id="igpuOp1" value="false" onclick="applyCpuIgpuFilter(['igpuOp1','igpuOp2','igpuOp3'])"><label for="igpuOp1">No iGPU</label>
+                    <input type="radio" name="iGPU" id="igpuOp2" value="true" onclick="applyCpuIgpuFilter(['igpuOp1','igpuOp2','igpuOp3'])"><label for="igpuOp2">iGPU</label>
+                    <input type="radio" name="iGPU" id="igpuOp3" value="null" onclick="applyCpuIgpuFilter(['igpuOp1','igpuOp2','igpuOp3'])"><label for="igpuOp3">Both</label>
+                </div>
+                
+
+                <button>Low To High</button>
+                <button>High To Low</button>
+            </div>
             <div id="cpuList" class="configStatus"><!--Grid-->
                 <!--Some JS Placeholder-->
             </div>
