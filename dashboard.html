@@ -140,10 +140,11 @@
                     <input type="radio" name="iGPU" id="igpuOp2" value="true" onclick="applyCpuIgpuFilter(['igpuOp1','igpuOp2','igpuOp3'])"><label for="igpuOp2">iGPU</label>
                     <input type="radio" name="iGPU" id="igpuOp3" value="null" onclick="applyCpuIgpuFilter(['igpuOp1','igpuOp2','igpuOp3'])"><label for="igpuOp3">Both</label>
                 </div>
-                
 
-                <button>Low To High</button>
-                <button>High To Low</button>
+                <div class="radioBtnGroup">
+                    <input type="radio" name="sort" id="high" value="false" onclick="reRenderSort(true,'add_cpu')"><label for="high">High to Low</label>
+                    <input type="radio" name="sort" id="low" value="true" onclick="reRenderSort(false,'add_cpu')"><label for="low">Low to High</label>
+                </div>
             </div>
             <div id="cpuList" class="configStatus"><!--Grid-->
                 <!--Some JS Placeholder-->
