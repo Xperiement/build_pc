@@ -24,7 +24,7 @@ function OptionPanelOn(id1,id2,id3,id4){
     document.getElementById(id1).style["height"]="100%";
     document.getElementById(id2).style["opacity"]="0%";
     document.getElementById(id2).style["display"]="none";
-    document.getElementById(id3).style.transform="scale(100%)";
+    document.getElementById(id3).style["display"]="flex";
     document.getElementById(id4).style["display"]="block";
 }
 
@@ -33,7 +33,7 @@ function closeOptionPanel(id1,id2,id3,id4){
     document.getElementById(id1).style["height"]="2rem";
     document.getElementById(id2).style["opacity"]="100%";
     document.getElementById(id2).style["display"]="block";
-    document.getElementById(id3).style.transform="scale(0%)";
+    document.getElementById(id3).style["display"]="none";
     document.getElementById(id4).style["display"]="none";
 }
 
