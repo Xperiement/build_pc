@@ -129,7 +129,8 @@
         <div class="wrapper">
             <!--Sorting-->
             <div id="cpuOptions" class="fsPanel">
-                <button id="CpuFilterButton" onclick="OptionPanelOn('cpuOptions','CpuFilterButton','cpuMainOptionPanel')">OPTIONS</button>
+                <button id="CpuFilterButton" class="OptionBtn" onclick="OptionPanelOn('cpuOptions','CpuFilterButton','cpuMainOptionPanel','closeCpuOption')">OPTIONS</button>
+                <button style="z-index: 99;" id="closeCpuOption" class="OptionBtn rm" onclick="closeOptionPanel('cpuOptions','CpuFilterButton','cpuMainOptionPanel','closeCpuOption')">Close</button>
                 <div id="cpuMainOptionPanel" class="optionPanel">
                     <p class="type mediumTitle">Sort</p>
                     <div class="radioBtnGroup">

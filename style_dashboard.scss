@@ -277,20 +277,31 @@ input{
     button{
         border: none;
         width: 7rem;
-        font-family: 'Questrial', sans-serif;
-        font-size: 1rem;
+        //font-family: 'Questrial', sans-serif;
+        //font-size: 1rem;
     }
     .optionsBtn{
         width: 2rem;
         height: 2rem;
         margin-right: 2rem;
     }
-    #CpuFilterButton{
+    .OptionBtn{
+        width: min-content;
         transition: opacity 280ms;
+        transition: color 280ms;
         position: absolute;
         right: 0;
-        top: 25%;
+        top: 0;
+        font-size: 1rem;
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        background: transparent;
+        color: #363636;
     }
+    .OptionBtn:hover{
+        color: #8e8cff;
+    }
+    
     .optionPanel{
         width: calc(100% - 2rem);
         height: calc(100% - 2rem);
@@ -302,6 +313,7 @@ input{
         transition: transform 280ms;
         transform-origin: left;
     }
+
     .typeOption{
         margin-top: 2rem;
     }

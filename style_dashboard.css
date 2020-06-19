@@ -350,8 +350,6 @@ input {
 .fsPanel button {
   border: none;
   width: 7rem;
-  font-family: 'Questrial', sans-serif;
-  font-size: 1rem;
 }
 
 .fsPanel .optionsBtn {
@@ -360,12 +358,26 @@ input {
   margin-right: 2rem;
 }
 
-.fsPanel #CpuFilterButton {
+.fsPanel .OptionBtn {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
   -webkit-transition: opacity 280ms;
   transition: opacity 280ms;
+  -webkit-transition: color 280ms;
+  transition: color 280ms;
   position: absolute;
   right: 0;
-  top: 25%;
+  top: 0;
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  background: transparent;
+  color: #363636;
+}
+
+.fsPanel .OptionBtn:hover {
+  color: #8e8cff;
 }
 
 .fsPanel .optionPanel {
