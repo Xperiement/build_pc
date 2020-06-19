@@ -32,6 +32,7 @@ var CPUDATA=[
         brand:"Intel",
         core:8,
         model:"Core i9-9900KS",
+        socket:"LGA1151",
         has_igpu: false,
         price:70000
     },
@@ -39,6 +40,7 @@ var CPUDATA=[
         brand:"Intel",
         core:4,
         model:"Core i5-9400F",
+        socket:"LGA1151",
         has_igpu: false,
         price:12000
     },
@@ -46,6 +48,7 @@ var CPUDATA=[
         brand:"AMD",
         core:4,
         model:"Ryzen 5 3600X",
+        socket:"AM4+",
         has_igpu: false,
         price:21000
     }

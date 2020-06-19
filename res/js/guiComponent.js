@@ -20,37 +20,26 @@ async function closeClearPanel(){
     document.getElementById("GuunerBtn").style["display"]="block";
 }
 
-
-
-
-
-
-
-
-function applyCpuCoreFilter(ids){
-    var value;
-    for(var i=0;i<ids.length;i++){
-        if(document.getElementById(ids[i]).checked){
-            value=document.getElementById(ids[i]).value;
-        }
-    }
-    cpuCore=value;
-    reRenderComponents("add_cpu");
+function OptionPanelOn(id1,id2,id3){
+    document.getElementById(id1).style["height"]="100%";
+    document.getElementById(id2).style["opacity"]="0%";
+    document.getElementById(id3).style.transform="scale(100%)";
 }
 
-function applyCpuIgpuFilter(ids){
-    var value;
-    for(var i=0;i<ids.length;i++){
-        if(document.getElementById(ids[i]).checked){
-            value=document.getElementById(ids[i]).value;
-        }
-    }
-    if(value=='true'){
-        hasIgpu=true;
-    }else if(value=='false'){
-        hasIgpu=false;
-    }else{
-        hasIgpu=null;
+
+
+
+
+
+function applyCpuFilter(prop,value){
+    if(prop=="core"){
+        cpuCore=value;
+    }else if(prop=="igpu"){
+        hasIgpu=value;
+    }else if(prop=='brand'){
+        cpuBrand=value;
+    }else if(prop=='socket'){
+        cpuSocket=value;
     }
     reRenderComponents("add_cpu");
 }

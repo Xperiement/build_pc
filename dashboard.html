@@ -128,22 +128,58 @@
     <section id="add_cpu" class="addComponentPanel">
         <div class="wrapper">
             <!--Sorting-->
-            <div class="fsPanel">
-                <div class="radioBtnGroup">
-                    <input type="radio" name="cpuCores" id="dualCore" value="2" onclick="applyCpuCoreFilter(['dualCore','quadCore','octaCore','all'])"><label for="dualCore">2 Cores</label>
-                    <input type="radio" name="cpuCores" id="quadCore" value="4" onclick="applyCpuCoreFilter(['dualCore','quadCore','octaCore','all'])"><label for="quadCore">4 Cores</label>
-                    <input type="radio" name="cpuCores" id="octaCore" value="8" onclick="applyCpuCoreFilter(['dualCore','quadCore','octaCore','all'])"><label for="octaCore">8 Cores</label>
-                    <input type="radio" name="cpuCores" id="all" value="0" onclick="applyCpuCoreFilter(['dualCore','quadCore','octaCore','all'])"><label for="octaCore">All</label>
-                </div>
-                <div class="radioBtnGroup">
-                    <input type="radio" name="iGPU" id="igpuOp1" value="false" onclick="applyCpuIgpuFilter(['igpuOp1','igpuOp2','igpuOp3'])"><label for="igpuOp1">No iGPU</label>
-                    <input type="radio" name="iGPU" id="igpuOp2" value="true" onclick="applyCpuIgpuFilter(['igpuOp1','igpuOp2','igpuOp3'])"><label for="igpuOp2">iGPU</label>
-                    <input type="radio" name="iGPU" id="igpuOp3" value="null" onclick="applyCpuIgpuFilter(['igpuOp1','igpuOp2','igpuOp3'])"><label for="igpuOp3">Both</label>
-                </div>
+            <div id="cpuOptions" class="fsPanel">
+                <button id="CpuFilterButton" onclick="OptionPanelOn('cpuOptions','CpuFilterButton','cpuMainOptionPanel')">OPTIONS</button>
+                <div id="cpuMainOptionPanel" class="optionPanel">
+                    <p class="type mediumTitle">Sort</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="sort" id="none" value="" onclick="reRenderSort(null,'add_cpu')" checked="checked">
+                        <label class="type" for="none">None</label>
+                        <input type="radio" name="sort" id="high" value="false" onclick="reRenderSort(true,'add_cpu')">
+                        <label class="type" for="high">High to Low</label>
+                        <input type="radio" name="sort" id="low" value="true" onclick="reRenderSort(false,'add_cpu')">
+                        <label class="type" for="low">Low to High</label>
+                    </div>
+                    <p class="type mediumTitle typeOption">Brand</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="cpuBrand" id="cpubrand1" value="AMD" onclick="applyCpuFilter('brand','AMD')">
+                        <label class="type" for="cpubrand1">Amd</label>
+                        <input type="radio" name="cpuBrand" id="cpubrand2" value="Intel" onclick="applyCpuFilter('brand','Intel')">
+                        <label class="type" for="cpubrand2">Intel</label>
+                        <input type="radio" name="cpuBrand" id="cpubrand3" value="" onclick="applyCpuFilter('brand','')" checked="checked">
+                        <label class="type" for="cpubrand3">Both</label>
+                    </div>
 
-                <div class="radioBtnGroup">
-                    <input type="radio" name="sort" id="high" value="false" onclick="reRenderSort(true,'add_cpu')"><label for="high">High to Low</label>
-                    <input type="radio" name="sort" id="low" value="true" onclick="reRenderSort(false,'add_cpu')"><label for="low">Low to High</label>
+                    <p class="type mediumTitle typeOption">Socket</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="cpuSocket" id="cpuSocket1" value="LGA1151" onclick="applyCpuFilter('socket','LGA1151')">
+                        <label class="type" for="cpuSocket1">LGA1151</label>
+                        <input type="radio" name="cpuSocket" id="cpuSocket2" value="LGA1152" onclick="applyCpuFilter('socket','LGA1152')">
+                        <label class="type" for="cpuSocket2">LGA1152</label>
+                        <input type="radio" name="cpuSocket" id="cpuSocket3" value="AM4+" onclick="applyCpuFilter('socket','AM4+')">
+                        <label class="type" for="cpuSocket3">AM4+</label>
+                        <input type="radio" name="cpuSocket" id="cpuSocket4" value="" onclick="applyCpuFilter('socket','')" checked="checked">
+                        <label class="type" for="cpuSocket4">All</label>
+                    </div>
+
+
+                    <p class="type mediumTitle typeOption">Processor Cores</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="cpuCores" id="dualCore" value="2" onclick="applyCpuCoreFilter(2)">
+                        <label class="type" for="dualCore">2 Cores</label>
+                        <input type="radio" name="cpuCores" id="quadCore" value="4" onclick="applyCpuCoreFilter(4)">
+                        <label class="type" for="quadCore">4 Cores</label>
+                        <input type="radio" name="cpuCores" id="octaCore" value="8" onclick="applyCpuCoreFilter(8)">
+                        <label class="type" for="octaCore">8 Cores</label>
+                        <input type="radio" name="cpuCores" id="all" value="0" onclick="applyCpuCoreFilter(0)" checked="checked"><label class="type" for="all">All</label>
+                    </div>
+                    <p class="type mediumTitle typeOption">Internal Graphics</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="iGPU" id="igpuOp1" value="false" onclick="applyCpuIgpuFilter(['igpuOp1','igpuOp2','igpuOp3'])"><label class="type" for="igpuOp1">No iGPU</label>
+                        <input type="radio" name="iGPU" id="igpuOp2" value="true" onclick="applyCpuIgpuFilter(['igpuOp1','igpuOp2','igpuOp3'])"><label class="type" for="igpuOp2">iGPU</label>
+                        <input type="radio" name="iGPU" id="igpuOp3" value="null" onclick="applyCpuIgpuFilter(['igpuOp1','igpuOp2','igpuOp3'])" checked="checked"><label class="type" for="igpuOp3">Both</label>
+                    </div>
+                    
                 </div>
             </div>
             <div id="cpuList" class="configStatus"><!--Grid-->

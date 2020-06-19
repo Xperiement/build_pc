@@ -1,10 +1,21 @@
+var cloneCPUDATA=CPUDATA;
+var cloneMOTHERBOARDDATA=MOTHERBOARDDATA;
+var cloneRAMDATA=RAMDATA;
+var cloneGPUDATA=GPUDATA;
+var cloneHDDDATA=HDDDATA;
+var cloneSSDDATA=SSDDATA;
+var clonePSUDATA=PSUDATA;
+var cloneCASEDATA=CASEDATA;
+
 function reRenderSort(x,id){
     if(x){
         highToLow=true;
         lowToHigh=false;
-    }else{
+    }else if(!x){
         highToLow=false;
         lowToHigh=true;
+    }else{
+        restoreOldData();
     }
     reRenderComponents(id);
 }
@@ -79,4 +90,14 @@ function filter(id,DATA){
     }
     
     return true;
+}
+function restoreOldData(){
+    CPUDATA=cloneCPUDATA;
+    MOTHERBOARDDATA=cloneMOTHERBOARDDATA;
+    RAMDATA=cloneRAMDATA;
+    GPUDATA=cloneGPUDATA;
+    HDDDATA=cloneHDDDATA;
+    SSDDATA=cloneSSDDATA;
+    PSUDATA=clonePSUDATA;
+    CASEDATA=cloneCASEDATA;
 }

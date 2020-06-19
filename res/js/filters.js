@@ -2,7 +2,7 @@
 var cpuBrand="";
 var cpuCore=0;
 var cache="";
-var cpuSocket=0;
+var cpuSocket="";
 var cpuOverclockable=null;
 var hasIgpu=null;
 function CPUFILTER(DATA){
