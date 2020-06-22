@@ -39,24 +39,6 @@ function closeOptionPanel(id1,id2,id3,id4){
 
 
 
-
-
-
-function applyCpuFilter(prop,value){
-    if(prop=="core"){
-        cpuCore=value;
-    }else if(prop=="igpu"){
-        hasIgpu=value;
-    }else if(prop=='brand'){
-        cpuBrand=value;
-    }else if(prop=='socket'){
-        cpuSocket=value;
-    }
-    reRenderComponents("add_cpu");
-}
-
-
-
 function reRenderComponents(y){
     if(y=="add_cpu"){
         document.getElementById('panelTitle').innerHTML='Select Cpu';
@@ -69,6 +51,7 @@ function reRenderComponents(y){
         }
     }else if(y=="add_motherboard"){
         document.getElementById('panelTitle').innerHTML='Select Motherboard';
+        document.getElementById('motherboardList').innerHTML="";
         sort("add_motherboard");
         for(var i=0;i<MOTHERBOARDDATA.length;i++){
             if(filter("motherboardList",MOTHERBOARDDATA[i])){
@@ -77,6 +60,7 @@ function reRenderComponents(y){
         }
     }else if(y=="add_ram"){
         document.getElementById('panelTitle').innerHTML='Select Ram';
+        document.getElementById('ramList').innerHTML="";
         sort("add_ram");
         for(var i=0;i<RAMDATA.length;i++){
             if(filter("ramList",RAMDATA[i])){
@@ -85,6 +69,7 @@ function reRenderComponents(y){
         }
     }else if(y=="add_gpu"){
         document.getElementById('panelTitle').innerHTML='Select Graphics Card';
+        document.getElementById('gpuList').innerHTML="";
         sort("add_gpu");
         for(var i=0;i<GPUDATA.length;i++){
             if(filter("gpuList",GPUDATA[i])){
@@ -93,6 +78,7 @@ function reRenderComponents(y){
         }
     }else if(y=="add_hdd"){
         document.getElementById('panelTitle').innerHTML='Select Hard Disk';
+        document.getElementById('hddList').innerHTML="";
         sort("add_hdd");
         for(var i=0;i<HDDDATA.length;i++){
             if(filter("hddList",HDDDATA[i])){
@@ -101,6 +87,7 @@ function reRenderComponents(y){
         }
     }else if(y=="add_ssd"){
         document.getElementById('panelTitle').innerHTML='Select SSD';
+        document.getElementById('ssdList').innerHTML="";
         sort("add_ssd");
         for(var i=0;i<SSDDATA.length;i++){
             if(filter("ssdList",SSDDATA[i])){
@@ -109,6 +96,7 @@ function reRenderComponents(y){
         }
     }else if(y=="add_psu"){
         document.getElementById('panelTitle').innerHTML='Select Power Supply';
+        document.getElementById('psuList').innerHTML="";
         sort("add_psu");
         for(var i=0;i<PSUDATA.length;i++){
             if(filter("psuList",PSUDATA[i])){
@@ -117,6 +105,7 @@ function reRenderComponents(y){
         }
     }else if(y=="add_case"){
         document.getElementById('panelTitle').innerHTML='Select Case';
+        document.getElementById('caseList').innerHTML="";
         sort("add_case");
         for(var i=0;i<CASEDATA.length;i++){
             if(filter("caseList",CASEDATA[i])){

@@ -4,9 +4,9 @@ include("res/js/guiComponent.js");
 include("res/js/otherOptions.js");
 include("res/js/clearData.js");
 include("res/js/filters.js");
-include("res/js/sortfilter.js");
+include("res/js/sort.js");
 
-var lowToHigh=true;
+var lowToHigh=false;
 var highToLow=false;
 
 function sleep(ms){

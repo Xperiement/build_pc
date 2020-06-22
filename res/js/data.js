@@ -57,10 +57,11 @@ var CPUDATA=[
 var MOTHERBOARDDATA=[
     {
         brand:"Asus",
+        platform: "Intel",
         model:"Z570",
-        chipset:"H110",
+        chipset:"Z570",
         socket: "LGA1151",
-        size:"micro-ATX",
+        size:"ATX",
         supportedCpu: "",
         memorySlot: 2,
         memoryType:"DDR4",
@@ -73,25 +74,43 @@ var MOTHERBOARDDATA=[
         available_pci_lanes:16,
         no_of_sata_port: 4,
         has_dual_bios: false,
-        has_nvme_m_2_slot: false,
-        has_sata_m_2_slot: false,
+        has_nvme_m_2_slot: true,
+        has_sata_m_2_slot: true,
         no_of_m_2_slot: 0,
         cpu_overclocking: false, 
         price:16000
     },
     {
         brand:"Asrock",
+        platform: "AMD",
         model:"B450 Lightning",
+        size:"Mini-ITX",
+        chipset:"B450",
+        socket: "AM4+",
+        has_nvme_m_2_slot: false,
+        has_sata_m_2_slot: true,
         price:9500
     },
     {
         brand:"Gigabyte",
+        platform: "Intel",
         model:"H110m-s2",
+        size:"Micro-ATX",
+        chipset:"H110",
+        socket: "LGA1151",
+        has_nvme_m_2_slot: false,
+        has_sata_m_2_slot: false,
         price:3800
     },
     {
         brand:"MSI",
+        platform: "AMD",
         model:"B450-Tomahawk",
+        size:"ATX",
+        chipset:"B450",
+        socket: "AM4+",
+        has_nvme_m_2_slot: true,
+        has_sata_m_2_slot: true,
         price:9000
     }
 ];
@@ -412,3 +431,14 @@ var powerSupplyData={
     type_80_plus:"Default",
     price:6500
 };
+
+
+//Cloned value
+var cloneCPUDATA=CPUDATA.slice(0,CPUDATA.length);
+var cloneMOTHERBOARDDATA=MOTHERBOARDDATA.slice(0,MOTHERBOARDDATA.length);
+var cloneRAMDATA=RAMDATA.slice(0,RAMDATA.length);
+var cloneGPUDATA=GPUDATA.slice(0,GPUDATA.length);
+var cloneHDDDATA=HDDDATA.slice(0,HDDDATA.length);
+var cloneSSDDATA=SSDDATA.slice(0,SSDDATA.length);
+var clonePSUDATA=PSUDATA.slice(0,PSUDATA.length);
+var cloneCASEDATA=CASEDATA.slice(0,CASEDATA.length);

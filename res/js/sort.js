@@ -1,26 +1,4 @@
-var cloneCPUDATA=CPUDATA;
-var cloneMOTHERBOARDDATA=MOTHERBOARDDATA;
-var cloneRAMDATA=RAMDATA;
-var cloneGPUDATA=GPUDATA;
-var cloneHDDDATA=HDDDATA;
-var cloneSSDDATA=SSDDATA;
-var clonePSUDATA=PSUDATA;
-var cloneCASEDATA=CASEDATA;
-
-function reRenderSort(x,id){
-    if(x){
-        highToLow=true;
-        lowToHigh=false;
-    }else if(!x){
-        highToLow=false;
-        lowToHigh=true;
-    }else{
-        restoreOldData();
-    }
-    reRenderComponents(id);
-}
-
-
+//Sorting
 function sort(id){
     var TEMPDATA;
     var tmp;
@@ -77,27 +55,32 @@ function sort(id){
     }
 }
 
-//Filter_Variables
-var filterEnabled=true;
-
-function filter(id,DATA){
-    var ret=true;
-    if(filterEnabled){
-        if(id=="cpuList"){
-            return CPUFILTER(DATA);
-        }
-            
+function reRenderSort(x,id){
+    if(x){
+        highToLow=true;
+        lowToHigh=false;
+    }else if(x==false){
+        highToLow=false;
+        lowToHigh=true;
+    }else if(x==null){
+        highToLow=false;
+        lowToHigh=false;
+        restoreOldData();
     }
-    
-    return true;
+    reRenderComponents(id);
 }
+
 function restoreOldData(){
-    CPUDATA=cloneCPUDATA;
-    MOTHERBOARDDATA=cloneMOTHERBOARDDATA;
-    RAMDATA=cloneRAMDATA;
-    GPUDATA=cloneGPUDATA;
-    HDDDATA=cloneHDDDATA;
-    SSDDATA=cloneSSDDATA;
-    PSUDATA=clonePSUDATA;
-    CASEDATA=cloneCASEDATA;
+    //console.log("CHANGED DATA--------------");
+    //console.log(MOTHERBOARDDATA);
+    //console.log("CLONED DATA--------------");
+    //console.log(cloneMOTHERBOARDDATA);
+    CPUDATA=cloneCPUDATA.slice(0,cloneCPUDATA.length);
+    MOTHERBOARDDATA=cloneMOTHERBOARDDATA.slice(0,cloneMOTHERBOARDDATA.length);
+    RAMDATA=cloneRAMDATA.slice(0,cloneRAMDATA.length);
+    GPUDATA=cloneGPUDATA.slice(0,cloneGPUDATA.length);
+    HDDDATA=cloneHDDDATA.slice(0,cloneHDDDATA.length);
+    SSDDATA=cloneSSDDATA.slice(0,cloneSSDDATA.length);
+    PSUDATA=clonePSUDATA.slice(0,clonePSUDATA.length);
+    CASEDATA=cloneCASEDATA.slice(0,cloneCASEDATA.length);
 }

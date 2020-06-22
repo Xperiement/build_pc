@@ -166,13 +166,13 @@
 
                     <p class="type mediumTitle typeOption">Processor Cores</p>
                     <div class="radioBtnGroup">
-                        <input type="radio" name="cpuCores" id="dualCore" value="2" onclick="applyCpuCoreFilter(2)">
+                        <input type="radio" name="cpuCores" id="dualCore" value="2" onclick="applyCpuFilter('core',2)">
                         <label class="type" for="dualCore">2 Cores</label>
-                        <input type="radio" name="cpuCores" id="quadCore" value="4" onclick="applyCpuCoreFilter(4)">
+                        <input type="radio" name="cpuCores" id="quadCore" value="4" onclick="applyCpuFilter('core',4)">
                         <label class="type" for="quadCore">4 Cores</label>
-                        <input type="radio" name="cpuCores" id="octaCore" value="8" onclick="applyCpuCoreFilter(8)">
+                        <input type="radio" name="cpuCores" id="octaCore" value="8" onclick="applyCpuFilter('core',8)">
                         <label class="type" for="octaCore">8 Cores</label>
-                        <input type="radio" name="cpuCores" id="all" value="0" onclick="applyCpuCoreFilter(0)" checked="checked"><label class="type" for="all">All</label>
+                        <input type="radio" name="cpuCores" id="all" value="0" onclick="applyCpuFilter('core',0)" checked="checked"><label class="type" for="all">All</label>
                     </div>
                     <p class="type mediumTitle typeOption">Internal Graphics</p>
                     <div class="radioBtnGroup">
@@ -190,6 +190,90 @@
     </section>
     <section id="add_motherboard" class="addComponentPanel">
         <div class="wrapper">
+
+            <div id="motherboardOptions" class="fsPanel">
+                <button id="MotherboardFilterButton" class="OptionBtn" onclick="OptionPanelOn('motherboardOptions','MotherboardFilterButton','motherboardMainOptionPanel','closeMotherboardOption')">OPTIONS</button>
+                <button style="z-index: 99;" id="closeMotherboardOption" class="OptionBtn rm" onclick="closeOptionPanel('motherboardOptions','MotherboardFilterButton','motherboardMainOptionPanel','closeMotherboardOption')">Close</button>
+                <div id="motherboardMainOptionPanel" class="optionPanel">
+                    <p class="type mediumTitle">Sort</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="sortMotherboard" id="noneM" value="" onclick="reRenderSort(null,'add_motherboard')" checked="checked">
+                        <label class="type" for="noneM">None</label>
+                        <input type="radio" name="sortMotherboard" id="highM" value="" onclick="reRenderSort(true,'add_motherboard')">
+                        <label class="type" for="highM">High to Low</label>
+                        <input type="radio" name="sortMotherboard" id="lowM" value="" onclick="reRenderSort(false,'add_motherboard')">
+                        <label class="type" for="lowM">Low to High</label>
+                    </div>
+                    <p class="type mediumTitle typeOption">Platform</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="mPlatform" id="motherboardPlatform1" value="AMD" onclick="applyMotherboardFilter('platform','AMD')">
+                        <label class="type" for="motherboardPlatform1">Amd</label>
+                        <input type="radio" name="mPlatform" id="motherboardPlatform2" value="Intel" onclick="applyMotherboardFilter('platform','Intel')">
+                        <label class="type" for="motherboardPlatform2">Intel</label>
+                        <input type="radio" name="mPlatform" id="motherboardPlatform3" value="" onclick="applyMotherboardFilter('platform','')" checked="checked">
+                        <label class="type" for="motherboardPlatform3">Both</label>
+                    </div>
+            
+                    <p class="type mediumTitle typeOption">Form Factor</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="mFromFactor" id="mFromFactor1" value="" onclick="applyMotherboardFilter('formFactor','ATX')">
+                        <label class="type" for="mFromFactor1">ATX</label>
+                        <input type="radio" name="mFromFactor" id="mFromFactor2" value="" onclick="applyMotherboardFilter('formFactor','Micro-ATX')">
+                        <label class="type" for="mFromFactor2">Micro-ATX</label>
+                        <input type="radio" name="mFromFactor" id="mFromFactor3" value="" onclick="applyMotherboardFilter('formFactor','Mini-ITX')">
+                        <label class="type" for="mFromFactor3">Mini-ITX</label>
+                        <input type="radio" name="mFromFactor" id="mFromFactor4" value="" onclick="applyMotherboardFilter('formFactor','')" checked="checked">
+                        <label class="type" for="mFromFactor4">All</label>
+                    </div>
+            
+                    <p class="type mediumTitle typeOption">Chipset</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="mChipset" id="mChipset1" value="" onclick="applyMotherboardFilter('chipset','B550')">
+                        <label class="type" for="mChipset1">B550</label>
+                        <input type="radio" name="mChipset" id="mChipset2" value="" onclick="applyMotherboardFilter('chipset','H110')">
+                        <label class="type" for="mChipset2">H110</label>
+                        <input type="radio" name="mChipset" id="mChipset3" value="" onclick="applyMotherboardFilter('chipset','')" checked="checked">
+                        <label class="type" for="mChipset3">All</label>
+                    </div>
+            
+                    <p class="type mediumTitle typeOption">Socket</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="mSocket" id="mSocket1" value="" onclick="applyMotherboardFilter('socket','LGA1151')">
+                        <label class="type" for="mSocket1">LGA1151</label>
+                        <input type="radio" name="mSocket" id="mSocket2" value="" onclick="applyMotherboardFilter('socket','LGA1152')">
+                        <label class="type" for="mSocket2">LGA1152</label>
+                        <input type="radio" name="mSocket" id="mSocket3" value="" onclick="applyMotherboardFilter('socket','AM4+')">
+                        <label class="type" for="mSocket3">AM4+</label>
+                        <input type="radio" name="mSocket" id="mSocket4" value="" onclick="applyMotherboardFilter('socket','')" checked="checked">
+                        <label class="type" for="mSocket4">All</label>
+                    </div>
+            
+                    <p class="type mediumTitle typeOption">NVME M.2</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="mNvme" id="mNvme1" value="" onclick="applyMotherboardFilter('nvme',true)">
+                        <label class="type" for="mNvme1">Yes</label>
+                        <input type="radio" name="mNvme" id="mNvme2" value="" onclick="applyMotherboardFilter('nvme',false)">
+                        <label class="type" for="mNvme2">No</label>
+                        <input type="radio" name="mNvme" id="mNvme3" value="" onclick="applyMotherboardFilter('nvme',null)" checked="checked">
+                        <label class="type" for="mNvme3">Both</label>
+                    </div>
+            
+                    <p class="type mediumTitle typeOption">SATA M.2</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="mSata" id="mSata1" value="" onclick="applyMotherboardFilter('sata_m_2',true)">
+                        <label class="type" for="mSata1">Yes</label>
+                        <input type="radio" name="mSata" id="mSata2" value="" onclick="applyMotherboardFilter('sata_m_2',false)">
+                        <label class="type" for="mSata2">No</label>
+                        <input type="radio" name="mSata" id="mSata3" value="" onclick="applyMotherboardFilter('sata_m_2',null)" checked="checked">
+                        <label class="type" for="mSata3">Both</label>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+
+
             <div id="motherboardList" class="configStatus"><!--Grid-->
                 <!--Some JS Placeholder-->
             </div>
@@ -197,6 +281,31 @@
     </section>
     <section id="add_ram" class="addComponentPanel">
         <div class="wrapper">
+            <div id="ramOptions" class="fsPanel">
+                <button id="RamFilterButton" class="OptionBtn" onclick="OptionPanelOn('ramOptions','RamFilterButton','ramMainOptionPanel','closeRamOption')">OPTIONS</button>
+                <button style="z-index: 99;" id="closeRamOption" class="OptionBtn rm" onclick="closeOptionPanel('ramOptions','RamFilterButton','ramMainOptionPanel','closeRamOption')">Close</button>
+                <div id="ramMainOptionPanel" class="optionPanel">
+                    <p class="type mediumTitle">Sort</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="sortRam" id="noneR" value="" onclick="reRenderSort(null,'add_ram')" checked="checked">
+                        <label class="type" for="noneR">None</label>
+                        <input type="radio" name="sortRam" id="highR" value="" onclick="reRenderSort(true,'add_ram')">
+                        <label class="type" for="highR">High to Low</label>
+                        <input type="radio" name="sortRam" id="lowR" value="" onclick="reRenderSort(false,'add_ram')">
+                        <label class="type" for="lowR">Low to High</label>
+                    </div>
+                    <p class="type mediumTitle typeOption">Platform</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="mPlatform" id="motherboardPlatform1" value="AMD" onclick="applyRamFilter('platform','AMD')">
+                        <label class="type" for="motherboardPlatform1">Amd</label>
+                        <input type="radio" name="mPlatform" id="motherboardPlatform2" value="Intel" onclick="applyRamFilter('platform','Intel')">
+                        <label class="type" for="motherboardPlatform2">Intel</label>
+                        <input type="radio" name="mPlatform" id="motherboardPlatform3" value="" onclick="applyRamFilter('platform','')" checked="checked">
+                        <label class="type" for="motherboardPlatform3">Both</label>
+                    </div>
+                    
+                </div>
+            </div>
             <div id="ramList" class="configStatus"><!--Grid-->
                 <!--Some JS Placeholder-->
             </div>
@@ -204,6 +313,23 @@
     </section>
     <section id="add_gpu" class="addComponentPanel">
         <div class="wrapper">
+            <div id="gpuOptions" class="fsPanel">
+                <button id="GpuFilterButton" class="OptionBtn" onclick="OptionPanelOn('gpuOptions','GpuFilterButton','gpuMainOptionPanel','closeGpuOption')">OPTIONS</button>
+                <button style="z-index: 99;" id="closeGpuOption" class="OptionBtn rm" onclick="closeOptionPanel('gpuOptions','GpuFilterButton','gpuMainOptionPanel','closeGpuOption')">Close</button>
+                <div id="gpuMainOptionPanel" class="optionPanel">
+                    <p class="type mediumTitle">Sort</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="sortGpu" id="noneG" value="" onclick="reRenderSort(null,'add_gpu')" checked="checked">
+                        <label class="type" for="noneG">None</label>
+                        <input type="radio" name="sortGpu" id="highG" value="" onclick="reRenderSort(true,'add_gpu')">
+                        <label class="type" for="highG">High to Low</label>
+                        <input type="radio" name="sortGpu" id="lowG" value="" onclick="reRenderSort(false,'add_gpu')">
+                        <label class="type" for="lowG">Low to High</label>
+                    </div>
+                    
+                    
+                </div>
+            </div>
             <div id="gpuList" class="configStatus"><!--Grid-->
                 <!--Some JS Placeholder-->
             </div>
@@ -211,6 +337,23 @@
     </section>
     <section id="add_hdd" class="addComponentPanel">
         <div class="wrapper">
+            <div id="hddOptions" class="fsPanel">
+                <button id="HddFilterButton" class="OptionBtn" onclick="OptionPanelOn('hddOptions','HddFilterButton','hddMainOptionPanel','closeHddOption')">OPTIONS</button>
+                <button style="z-index: 99;" id="closeHddOption" class="OptionBtn rm" onclick="closeOptionPanel('hddOptions','HddFilterButton','hddMainOptionPanel','closeHddOption')">Close</button>
+                <div id="hddMainOptionPanel" class="optionPanel">
+                    <p class="type mediumTitle">Sort</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="sortHdd" id="noneH" value="" onclick="reRenderSort(null,'add_hdd')" checked="checked">
+                        <label class="type" for="noneH">None</label>
+                        <input type="radio" name="sortHdd" id="highH" value="" onclick="reRenderSort(true,'add_hdd')">
+                        <label class="type" for="highH">High to Low</label>
+                        <input type="radio" name="sortHdd" id="lowH" value="" onclick="reRenderSort(false,'add_hdd')">
+                        <label class="type" for="lowH">Low to High</label>
+                    </div>
+                    
+                    
+                </div>
+            </div>
             <div id="hddList" class="configStatus"><!--Grid-->
                 <!--Some JS Placeholder-->
             </div>
@@ -218,6 +361,23 @@
     </section>
     <section id="add_ssd" class="addComponentPanel">
         <div class="wrapper">
+            <div id="ssdOptions" class="fsPanel">
+                <button id="SsdFilterButton" class="OptionBtn" onclick="OptionPanelOn('ssdOptions','SsdFilterButton','ssdMainOptionPanel','closeSsdOption')">OPTIONS</button>
+                <button style="z-index: 99;" id="closeSsdOption" class="OptionBtn rm" onclick="closeOptionPanel('ssdOptions','SsdFilterButton','ssdMainOptionPanel','closeSsdOption')">Close</button>
+                <div id="ssdMainOptionPanel" class="optionPanel">
+                    <p class="type mediumTitle">Sort</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="sortSsd" id="noneS" value="" onclick="reRenderSort(null,'add_ssd')" checked="checked">
+                        <label class="type" for="noneS">None</label>
+                        <input type="radio" name="sortSsd" id="highS" value="" onclick="reRenderSort(true,'add_ssd')">
+                        <label class="type" for="highS">High to Low</label>
+                        <input type="radio" name="sortSsd" id="lowS" value="" onclick="reRenderSort(false,'add_ssd')">
+                        <label class="type" for="lowS">Low to High</label>
+                    </div>
+                    
+                    
+                </div>
+            </div>
             <div id="ssdList" class="configStatus"><!--Grid-->
                 <!--Some JS Placeholder-->
             </div>
@@ -225,6 +385,23 @@
     </section>
     <section id="add_psu" class="addComponentPanel">
         <div class="wrapper">
+            <div id="psuOptions" class="fsPanel">
+                <button id="PsuFilterButton" class="OptionBtn" onclick="OptionPanelOn('psuOptions','PsuFilterButton','psuMainOptionPanel','closePsuOption')">OPTIONS</button>
+                <button style="z-index: 99;" id="closePsuOption" class="OptionBtn rm" onclick="closeOptionPanel('psuOptions','PsuFilterButton','psuMainOptionPanel','closePsuOption')">Close</button>
+                <div id="psuMainOptionPanel" class="optionPanel">
+                    <p class="type mediumTitle">Sort</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="sortPsu" id="noneP" value="" onclick="reRenderSort(null,'add_psu')" checked="checked">
+                        <label class="type" for="noneP">None</label>
+                        <input type="radio" name="sortPsu" id="highP" value="" onclick="reRenderSort(true,'add_psu')">
+                        <label class="type" for="highP">High to Low</label>
+                        <input type="radio" name="sortPsu" id="lowP" value="" onclick="reRenderSort(false,'add_psu')">
+                        <label class="type" for="lowP">Low to High</label>
+                    </div>
+                    
+                    
+                </div>
+            </div>
             <div id="psuList" class="configStatus"><!--Grid-->
                 <!--Some JS Placeholder-->
             </div>
@@ -232,6 +409,23 @@
     </section>
     <section id="add_case" class="addComponentPanel">
         <div class="wrapper">
+            <div id="caseOptions" class="fsPanel">
+                <button id="CaseFilterButton" class="OptionBtn" onclick="OptionPanelOn('caseOptions','CaseFilterButton','caseMainOptionPanel','closeCaseOption')">OPTIONS</button>
+                <button style="z-index: 99;" id="closeCaseOption" class="OptionBtn rm" onclick="closeOptionPanel('caseOptions','CaseFilterButton','caseMainOptionPanel','closeCaseOption')">Close</button>
+                <div id="caseMainOptionPanel" class="optionPanel">
+                    <p class="type mediumTitle">Sort</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="sortCase" id="noneC" value="" onclick="reRenderSort(null,'add_case')" checked="checked">
+                        <label class="type" for="noneC">None</label>
+                        <input type="radio" name="sortCase" id="highC" value="" onclick="reRenderSort(true,'add_case')">
+                        <label class="type" for="highC">High to Low</label>
+                        <input type="radio" name="sortCase" id="lowC" value="" onclick="reRenderSort(false,'add_case')">
+                        <label class="type" for="lowC">Low to High</label>
+                    </div>
+                    
+                    
+                </div>
+            </div>
             <div id="caseList" class="configStatus"><!--Grid-->
                 <!--Some JS Placeholder-->
             </div>

@@ -1,3 +1,123 @@
+//Filter_Variables
+var filterEnabled=true;
+
+function filter(id,DATA){
+    var ret=true;
+    if(filterEnabled){
+        if(id=="cpuList"){
+            return CPUFILTER(DATA);
+        }else if(id=="motherboardList"){
+            return MOTHERBOARDFILTER(DATA);
+        }else if(id=="ramList"){
+            return CPUFILTER(DATA);
+        }else if(id=="ssdList"){
+            return CPUFILTER(DATA);
+        }else if(id=="hddList"){
+            return CPUFILTER(DATA);
+        }else if(id=="gpuList"){
+            return CPUFILTER(DATA);
+        }else if(id=="psuList"){
+            return CPUFILTER(DATA);
+        }else{
+            return CPUFILTER(DATA);
+        }
+            
+    }
+    
+    return true;
+}
+
+//Gui Interface for appling filter
+function applyCpuFilter(prop,value){
+    if(prop=="core"){
+        cpuCore=value;
+    }else if(prop=="igpu"){
+        hasIgpu=value;
+    }else if(prop=='brand'){
+        cpuBrand=value;
+    }else if(prop=='socket'){
+        cpuSocket=value;
+    }
+    reRenderComponents("add_cpu");
+}
+function applyMotherboardFilter(prop,value){
+    if(prop=="platform"){
+        motherboardPlatform=value;
+    }else if(prop=="chipset"){
+        motherboardChipset=value;
+    }else if(prop=='formFactor'){
+        motherboardSize=value;
+    }else if(prop=='socket'){
+        console.log("passing");
+        motherboardSocket=value;
+    }else if(prop=='nvme'){
+        hasNvme_m2_SSD_Slot=value;
+    }else if(prop=='sata_m_2'){
+        hasSata_m2_SSD_Slot=value;
+    }
+    reRenderComponents("add_motherboard");
+}
+function applyGpuFilter(prop,value){
+    if(prop=="vram"){
+        gpuVram=value;
+    }else if(prop=="vramType"){
+        gpuVramType=value;
+    }else if(prop=='brand'){
+        gpuBrand=value;
+    }
+    reRenderComponents("add_gpu");
+}
+function applyRamFilter(prop,value){
+    if(prop=="brand"){
+        ramBrand=value;
+    }else if(prop=="capacity"){
+        ramCapacity=value;
+    }else if(prop=="type"){
+        ramType=value;
+    }else if(prop=="quantity"){
+        ramQuantity=value;
+    }
+    reRenderComponents("add_ram");
+}
+function applyHddFilter(prop,value){
+    if(prop=="brand"){
+        hddBrand=value;
+    }else if(prop=="capacity"){
+        hddCapacity=value;
+    }
+    reRenderComponents("add_hdd");
+}
+function applySsdFilter(prop,value){
+    if(prop=="brand"){
+        ssdBrand=value;
+    }else if(prop=="capacity"){
+        ssdCapacity=value;
+    }
+    reRenderComponents("add_ssd");
+}
+function applyPsuFilter(prop,value){
+    if(prop=="brand"){
+        psuBrand=value;
+    }else if(prop=="capacity"){
+        psuCapacity=value;
+    }else if(prop=="cartification"){
+        has_80_cartification=value;
+    }else if(prop=="type_80"){
+        type_80_plus=value;
+    }
+    reRenderComponents("add_psu");
+}
+function applyCaseFilter(prop,value){
+    if(prop=="brand"){
+        caseBrand=value;
+    }else if(prop=="type"){
+        caseType=value;
+    }else if(prop=="formFactor"){
+        caseMaxMotherboardSize=value;
+    }
+    reRenderComponents("add_case");
+}
+
 //CPU
 var cpuBrand="";
 var cpuCore=0;
@@ -56,6 +176,7 @@ function CPUFILTER(DATA){
 
 //MotherBoard
 var motherboardBrand="";
+var motherboardPlatform="";
 var motherboardChipset="";
 var motherboardSocket="";
 var motherboardSize="";
@@ -66,6 +187,14 @@ function MOTHERBOARDFILTER(DATA){
     var ret=true;
     if(motherboardBrand!=""){
         if(motherboardBrand==DATA.brand){
+            ret=true;
+        }else{
+            return false;
+        }
+    }
+
+    if(motherboardPlatform!=""){
+        if(motherboardPlatform==DATA.platform){
             ret=true;
         }else{
             return false;
