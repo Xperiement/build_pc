@@ -60,6 +60,8 @@ function applyMotherboardFilter(prop,value){
 function applyGpuFilter(prop,value){
     if(prop=="vram"){
         gpuVram=value;
+    }else if(prop=="platform"){
+        gpuPlatform=value;
     }else if(prop=="vramType"){
         gpuVramType=value;
     }else if(prop=='brand'){
@@ -248,12 +250,20 @@ function MOTHERBOARDFILTER(DATA){
 
 //GPU
 var gpuBrand="";
+var gpuPlatform="";
 var gpuVram=0;
 var gpuVramType="";
 function GPUFILTER(DATA){
     var ret=true;
     if(gpuBrand!=""){
         if(gpuBrand==DATA.brand){
+            ret=true;
+        }else{
+            return false;
+        }
+    }
+    if(gpuPlatform!=""){
+        if(gpuPlatform==DATA.platform){
             ret=true;
         }else{
             return false;

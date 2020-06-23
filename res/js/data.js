@@ -154,12 +154,13 @@ var RAMDATA=[
 
 var GPUDATA=[
     {
-        brand:"Nvidia",
+        brand:"Aorus",
+        platform:"Nvidia",
         model:"GTX 1650",
         baseClock:"None",
         turboClock:"None",
         tdp:120,
-        vram:2,
+        vram:4,
         vram_type:"GDDR5",
         interface:"PCI-e 3.0",
         has_Vga:false,
@@ -169,18 +170,27 @@ var GPUDATA=[
         price:12500
     },
     {
-        brand:"Nvidia",
+        brand:"Asus",
+        platform:"Nvidia",
         model:"GTX 2070 Super",
+        vram:8,
+        vram_type:"GDDR5",
         price:45000
     },
     {
-        brand:"Nvidia",
+        brand:"Galax",
+        platform:"Nvidia",
         model:"GTX 2080Ti",
+        vram:8,
+        vram_type:"GDDR5",
         price:123000
     },
     {
-        brand:"AMD",
+        brand:"MSI",
+        platform:"AMD",
         model:"RX 5700XT",
+        vram:8,
+        vram_type:"GDDR5",
         price:41900
     }
 ];

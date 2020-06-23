@@ -322,7 +322,7 @@ function getImage(arg,id){
     }else if(id=="hddList"){
         y="hdd";
     }else if(id=="gpuList"){
-        if(arg.brand=="amd"||arg.brand=="Amd"||arg.brand=="AMD"){
+        if(arg.platform=="amd"||arg.platform=="Amd"||arg.platform=="AMD"){
             y="gpu_amd";
         }else{
             y="gpu_nvidia";

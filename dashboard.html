@@ -370,12 +370,38 @@
                     </div>
                     <p class="type mediumTitle typeOption">Platform</p>
                     <div class="radioBtnGroup">
-                        <input type="radio" name="mPlatform" id="motherboardPlatform1" value="AMD" onclick="applyRamFilter('platform','AMD')">
-                        <label class="type" for="motherboardPlatform1">Amd</label>
-                        <input type="radio" name="mPlatform" id="motherboardPlatform2" value="Intel" onclick="applyRamFilter('platform','Intel')">
-                        <label class="type" for="motherboardPlatform2">Intel</label>
-                        <input type="radio" name="mPlatform" id="motherboardPlatform3" value="" onclick="applyRamFilter('platform','')" checked="checked">
-                        <label class="type" for="motherboardPlatform3">Both</label>
+                        <input type="radio" name="gPlatform" id="gPlatform1" value="" onclick="applyGpuFilter('platform','Nvidia')">
+                        <label class="type" for="gPlatform1">Nvidia</label>
+                        <input type="radio" name="gPlatform" id="gPlatform2" value="" onclick="applyGpuFilter('platform','AMD')">
+                        <label class="type" for="gPlatform2">AMD</label>
+                        <input type="radio" name="gPlatform" id="gPlatform3" value="" onclick="applyGpuFilter('platform','')" checked="checked">
+                        <label class="type" for="gPlatform3">Both</label>
+                    </div>
+
+                    <p class="type mediumTitle typeOption">VRAM</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="gVram" id="gVram1" value="" onclick="applyGpuFilter('vram',2)">
+                        <label class="type" for="gVram1">2GB</label>
+                        <input type="radio" name="gVram" id="gVram2" value="" onclick="applyGpuFilter('vram',4)">
+                        <label class="type" for="gVram2">4GB</label>
+                        <input type="radio" name="gVram" id="gVram3" value="" onclick="applyGpuFilter('vram',8)">
+                        <label class="type" for="gVram3">8GB</label>
+                        <input type="radio" name="gVram" id="gVram4" value="" onclick="applyGpuFilter('vram',12)">
+                        <label class="type" for="gVram4">12GB</label>
+                        <input type="radio" name="gVram" id="gVram5" value="" onclick="applyGpuFilter('vram',0)" checked="checked">
+                        <label class="type" for="gVram5">Any</label>
+                    </div>
+
+                    <p class="type mediumTitle typeOption">VRAM</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="gVramType" id="gVramType1" value="" onclick="applyGpuFilter('vramType','GDDR5')">
+                        <label class="type" for="gVramType1">GDDR5</label>
+                        <input type="radio" name="gVramType" id="gVramType2" value="" onclick="applyGpuFilter('vramType','GDDR6')">
+                        <label class="type" for="gVramType2">GDDR6</label>
+                        <input type="radio" name="gVramType" id="gVramType3" value="" onclick="applyGpuFilter('vramType','HBM')">
+                        <label class="type" for="gVramType3">HBM</label>
+                        <input type="radio" name="gVramType" id="gVramType4" value="" onclick="applyGpuFilter('vramType','')" checked="checked">
+                        <label class="type" for="gVramType4">Any</label>
                     </div>
                     
                 </div>
