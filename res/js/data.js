@@ -128,17 +128,26 @@ var RAMDATA=[
     },
     {
         brand:"Corsair",
-        model:"Value Select 16GB",
+        model:"Value Select 32GB",
+        capacity: 16,
+        quantity: 2,
+        type:"DDR4",
         price:7100
     },
     {
         brand:"Kingstone",
-        model:"HyperX Fury 8GB",
+        model:"HyperX Fury 16GB",
+        capacity: 8,
+        quantity: 2,
+        type:"DDR4",
         price:4180
     },
     {
         brand:"Adata",
         model:"XPG 16GB",
+        capacity: 4,
+        quantity: 4,
+        type:"DDR4",
         price:5100
     }
 ];

@@ -294,14 +294,56 @@
                         <input type="radio" name="sortRam" id="lowR" value="" onclick="reRenderSort(false,'add_ram')">
                         <label class="type" for="lowR">Low to High</label>
                     </div>
-                    <p class="type mediumTitle typeOption">Platform</p>
+                    <p class="type mediumTitle typeOption">Brand</p>
                     <div class="radioBtnGroup">
-                        <input type="radio" name="mPlatform" id="motherboardPlatform1" value="AMD" onclick="applyRamFilter('platform','AMD')">
-                        <label class="type" for="motherboardPlatform1">Amd</label>
-                        <input type="radio" name="mPlatform" id="motherboardPlatform2" value="Intel" onclick="applyRamFilter('platform','Intel')">
-                        <label class="type" for="motherboardPlatform2">Intel</label>
-                        <input type="radio" name="mPlatform" id="motherboardPlatform3" value="" onclick="applyRamFilter('platform','')" checked="checked">
-                        <label class="type" for="motherboardPlatform3">Both</label>
+                        <input type="radio" name="rBrand" id="rBrand1" value="" onclick="applyRamFilter('brand','Corsair')">
+                        <label class="type" for="rBrand1">Corsair</label>
+                        <input type="radio" name="rBrand" id="rBrand2" value="" onclick="applyRamFilter('brand','Kingstone')">
+                        <label class="type" for="rBrand2">Kingstone</label>
+                        <input type="radio" name="rBrand" id="rBrand3" value="" onclick="applyRamFilter('brand','Gskill')">
+                        <label class="type" for="rBrand3">Gskill</label>
+                        <input type="radio" name="rBrand" id="rBrand4" value="" onclick="applyRamFilter('brand','')" checked="checked">
+                        <label class="type" for="rBrand4">All</label>
+                    </div>
+
+                    <p class="type mediumTitle typeOption">Type</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="rType" id="rType1" value="" onclick="applyRamFilter('type','DDR4')">
+                        <label class="type" for="rType1">DDR4</label>
+                        <input type="radio" name="rType" id="rType2" value="" onclick="applyRamFilter('type','DDR5')">
+                        <label class="type" for="rType2">DDR5</label>
+                        <input type="radio" name="rType" id="rType3" value="" onclick="applyRamFilter('type','HBM')">
+                        <label class="type" for="rType3">HBM</label>
+                        <input type="radio" name="rType" id="rType4" value="" onclick="applyRamFilter('type','')" checked="checked">
+                        <label class="type" for="rType4">Any</label>
+                    </div>
+
+                    <p class="type mediumTitle typeOption">Capacity</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="rCapacity" id="rCapacity1" value="" onclick="applyRamFilter('capacity',8)">
+                        <label class="type" for="rCapacity1">8GB</label>
+                        <input type="radio" name="rCapacity" id="rCapacity2" value="" onclick="applyRamFilter('capacity',16)">
+                        <label class="type" for="rCapacity2">16GB</label>
+                        <input type="radio" name="rCapacity" id="rCapacity3" value="" onclick="applyRamFilter('capacity',32)">
+                        <label class="type" for="rCapacity3">32GB</label>
+                        <input type="radio" name="rCapacity" id="rCapacity4" value="" onclick="applyRamFilter('capacity',64)">
+                        <label class="type" for="rCapacity4">64GB</label>
+                        <input type="radio" name="rCapacity" id="rCapacity5" value="" onclick="applyRamFilter('capacity',0)" checked="checked">
+                        <label class="type" for="rCapacity5">Any</label>
+                    </div>
+
+                    <p class="type mediumTitle typeOption">Quantity</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="rquantity" id="rquantity1" value="" onclick="applyRamFilter('quantity',1)">
+                        <label class="type" for="rquantity1">x1</label>
+                        <input type="radio" name="rquantity" id="rquantity2" value="" onclick="applyRamFilter('quantity',2)">
+                        <label class="type" for="rquantity2">x2</label>
+                        <input type="radio" name="rquantity" id="rquantity3" value="" onclick="applyRamFilter('quantity',4)">
+                        <label class="type" for="rquantity3">x4</label>
+                        <input type="radio" name="rquantity" id="rquantity4" value="" onclick="applyRamFilter('quantity',8)">
+                        <label class="type" for="rquantity4">x8</label>
+                        <input type="radio" name="rquantity" id="rquantity5" value="" onclick="applyRamFilter('quantity',0)" checked="checked">
+                        <label class="type" for="rquantity5">Any</label>
                     </div>
                     
                 </div>
@@ -326,7 +368,15 @@
                         <input type="radio" name="sortGpu" id="lowG" value="" onclick="reRenderSort(false,'add_gpu')">
                         <label class="type" for="lowG">Low to High</label>
                     </div>
-                    
+                    <p class="type mediumTitle typeOption">Platform</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="mPlatform" id="motherboardPlatform1" value="AMD" onclick="applyRamFilter('platform','AMD')">
+                        <label class="type" for="motherboardPlatform1">Amd</label>
+                        <input type="radio" name="mPlatform" id="motherboardPlatform2" value="Intel" onclick="applyRamFilter('platform','Intel')">
+                        <label class="type" for="motherboardPlatform2">Intel</label>
+                        <input type="radio" name="mPlatform" id="motherboardPlatform3" value="" onclick="applyRamFilter('platform','')" checked="checked">
+                        <label class="type" for="motherboardPlatform3">Both</label>
+                    </div>
                     
                 </div>
             </div>
@@ -350,7 +400,15 @@
                         <input type="radio" name="sortHdd" id="lowH" value="" onclick="reRenderSort(false,'add_hdd')">
                         <label class="type" for="lowH">Low to High</label>
                     </div>
-                    
+                    <p class="type mediumTitle typeOption">Platform</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="mPlatform" id="motherboardPlatform1" value="AMD" onclick="applyRamFilter('platform','AMD')">
+                        <label class="type" for="motherboardPlatform1">Amd</label>
+                        <input type="radio" name="mPlatform" id="motherboardPlatform2" value="Intel" onclick="applyRamFilter('platform','Intel')">
+                        <label class="type" for="motherboardPlatform2">Intel</label>
+                        <input type="radio" name="mPlatform" id="motherboardPlatform3" value="" onclick="applyRamFilter('platform','')" checked="checked">
+                        <label class="type" for="motherboardPlatform3">Both</label>
+                    </div>
                     
                 </div>
             </div>
@@ -374,7 +432,15 @@
                         <input type="radio" name="sortSsd" id="lowS" value="" onclick="reRenderSort(false,'add_ssd')">
                         <label class="type" for="lowS">Low to High</label>
                     </div>
-                    
+                    <p class="type mediumTitle typeOption">Platform</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="mPlatform" id="motherboardPlatform1" value="AMD" onclick="applyRamFilter('platform','AMD')">
+                        <label class="type" for="motherboardPlatform1">Amd</label>
+                        <input type="radio" name="mPlatform" id="motherboardPlatform2" value="Intel" onclick="applyRamFilter('platform','Intel')">
+                        <label class="type" for="motherboardPlatform2">Intel</label>
+                        <input type="radio" name="mPlatform" id="motherboardPlatform3" value="" onclick="applyRamFilter('platform','')" checked="checked">
+                        <label class="type" for="motherboardPlatform3">Both</label>
+                    </div>
                     
                 </div>
             </div>
@@ -398,7 +464,15 @@
                         <input type="radio" name="sortPsu" id="lowP" value="" onclick="reRenderSort(false,'add_psu')">
                         <label class="type" for="lowP">Low to High</label>
                     </div>
-                    
+                    <p class="type mediumTitle typeOption">Platform</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="mPlatform" id="motherboardPlatform1" value="AMD" onclick="applyRamFilter('platform','AMD')">
+                        <label class="type" for="motherboardPlatform1">Amd</label>
+                        <input type="radio" name="mPlatform" id="motherboardPlatform2" value="Intel" onclick="applyRamFilter('platform','Intel')">
+                        <label class="type" for="motherboardPlatform2">Intel</label>
+                        <input type="radio" name="mPlatform" id="motherboardPlatform3" value="" onclick="applyRamFilter('platform','')" checked="checked">
+                        <label class="type" for="motherboardPlatform3">Both</label>
+                    </div>
                     
                 </div>
             </div>
@@ -422,7 +496,15 @@
                         <input type="radio" name="sortCase" id="lowC" value="" onclick="reRenderSort(false,'add_case')">
                         <label class="type" for="lowC">Low to High</label>
                     </div>
-                    
+                    <p class="type mediumTitle typeOption">Platform</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="mPlatform" id="motherboardPlatform1" value="AMD" onclick="applyRamFilter('platform','AMD')">
+                        <label class="type" for="motherboardPlatform1">Amd</label>
+                        <input type="radio" name="mPlatform" id="motherboardPlatform2" value="Intel" onclick="applyRamFilter('platform','Intel')">
+                        <label class="type" for="motherboardPlatform2">Intel</label>
+                        <input type="radio" name="mPlatform" id="motherboardPlatform3" value="" onclick="applyRamFilter('platform','')" checked="checked">
+                        <label class="type" for="motherboardPlatform3">Both</label>
+                    </div>
                     
                 </div>
             </div>

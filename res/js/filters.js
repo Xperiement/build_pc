@@ -9,17 +9,17 @@ function filter(id,DATA){
         }else if(id=="motherboardList"){
             return MOTHERBOARDFILTER(DATA);
         }else if(id=="ramList"){
-            return CPUFILTER(DATA);
+            return RAMFILTER(DATA);
         }else if(id=="ssdList"){
-            return CPUFILTER(DATA);
+            return SSDFILTER(DATA);
         }else if(id=="hddList"){
-            return CPUFILTER(DATA);
+            return HDDFILTER(DATA);
         }else if(id=="gpuList"){
-            return CPUFILTER(DATA);
+            return GPUFILTER(DATA);
         }else if(id=="psuList"){
-            return CPUFILTER(DATA);
+            return PSUFILTER(DATA);
         }else{
-            return CPUFILTER(DATA);
+            return CASEFILTER(DATA);
         }
             
     }
