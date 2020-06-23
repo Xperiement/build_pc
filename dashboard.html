@@ -534,14 +534,46 @@
                         <input type="radio" name="sortPsu" id="lowP" value="" onclick="reRenderSort(false,'add_psu')">
                         <label class="type" for="lowP">Low to High</label>
                     </div>
-                    <p class="type mediumTitle typeOption">Platform</p>
+                    <p class="type mediumTitle typeOption">Brand</p>
                     <div class="radioBtnGroup">
-                        <input type="radio" name="mPlatform" id="motherboardPlatform1" value="AMD" onclick="applyRamFilter('platform','AMD')">
-                        <label class="type" for="motherboardPlatform1">Amd</label>
-                        <input type="radio" name="mPlatform" id="motherboardPlatform2" value="Intel" onclick="applyRamFilter('platform','Intel')">
-                        <label class="type" for="motherboardPlatform2">Intel</label>
-                        <input type="radio" name="mPlatform" id="motherboardPlatform3" value="" onclick="applyRamFilter('platform','')" checked="checked">
-                        <label class="type" for="motherboardPlatform3">Both</label>
+                        <input type="radio" name="pBrand" id="pBrand1" value="" onclick="applyPsuFilter('brand','Corsair')">
+                        <label class="type" for="pBrand1">Corsair</label>
+                        <input type="radio" name="pBrand" id="pBrand2" value="" onclick="applyPsuFilter('brand','Cooler Master')">
+                        <label class="type" for="pBrand2">Cooler Master</label>
+                        <input type="radio" name="pBrand" id="pBrand3" value="" onclick="applyPsuFilter('brand','Antec')">
+                        <label class="type" for="pBrand3">Antec</label>
+                        <input type="radio" name="pBrand" id="pBrand4" value="" onclick="applyPsuFilter('brand','Thermaltake')">
+                        <label class="type" for="pBrand4">Thermaltake</label>
+                        <input type="radio" name="pBrand" id="pBrand5" value="" onclick="applyPsuFilter('brand','')" checked="checked">
+                        <label class="type" for="pBrand5">All</label>
+                    </div>
+
+                    <p class="type mediumTitle typeOption">Capacity</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="pCapacity" id="pCapacity1" value="" onclick="applyPsuFilter('capacity',400)">
+                        <label class="type" for="pCapacity1">400W</label>
+                        <input type="radio" name="pCapacity" id="pCapacity2" value="" onclick="applyPsuFilter('capacity',450)">
+                        <label class="type" for="pCapacity2">450W</label>
+                        <input type="radio" name="pCapacity" id="pCapacity3" value="" onclick="applyPsuFilter('capacity',550)">
+                        <label class="type" for="pCapacity3">550W</label>
+                        <input type="radio" name="pCapacity" id="pCapacity4" value="" onclick="applyPsuFilter('capacity',750)">
+                        <label class="type" for="pCapacity4">750W</label>
+                        <input type="radio" name="pCapacity" id="pCapacity5" value="" onclick="applyPsuFilter('capacity',1000)">
+                        <label class="type" for="pCapacity5">1000W</label>
+                        <input type="radio" name="pCapacity" id="pCapacity6" value="" onclick="applyPsuFilter('capacity',1200)">
+                        <label class="type" for="pCapacity6">1200W</label>
+                        <input type="radio" name="pCapacity" id="pCapacity7" value="" onclick="applyPsuFilter('capacity',0)" checked="checked">
+                        <label class="type" for="pCapacity7">All</label>
+                    </div>
+
+                    <p class="type mediumTitle typeOption">80 Plus Cartification</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="pCartification" id="pCartification1" value="" onclick="applyPsuFilter('cartification',true)">
+                        <label class="type" for="pCartification1">Yes</label>
+                        <input type="radio" name="pCartification" id="pCartification2" value="" onclick="applyPsuFilter('cartification',false)">
+                        <label class="type" for="pCartification2">No</label>
+                        <input type="radio" name="pCartification" id="pCartification3" value="" onclick="applyPsuFilter('cartification',null)" checked="checked">
+                        <label class="type" for="pCartification3">All</label>
                     </div>
                     
                 </div>

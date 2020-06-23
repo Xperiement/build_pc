@@ -271,16 +271,19 @@ var PSUDATA=[
     {
         brand:"Corsair",
         model:"VS450",
+        capacity:450,
         price:2600
     },
     {
         brand:"Cooler Master",
         model:"MWE 750",
+        capacity:750,
         price:6234
     },
     {
         brand:"Sliver Stone",
         model:"S450",
+        capacity:450,
         price:3186
     }
 ];
