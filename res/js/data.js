@@ -313,16 +313,22 @@ var CASEDATA=[
     {
         brand:"Corsair",
         model:"Spec 03",
+        type:"Mid Tower",
+        maxMotherboardSize:"Micro-ATX",
         price:2457
     },
     {
         brand:"Cooler Master",
         model:"M500",
+        type:"Mini Tower",
+        maxMotherboardSize:"Mini-ITX",
         price:5767
     },
     {
         brand:"Aorus",
         model:"Gaming X",
+        type:"Full Tower",
+        maxMotherboardSize:"ATX",
         price:7576
     }
 ];

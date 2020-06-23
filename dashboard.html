@@ -598,14 +598,46 @@
                         <input type="radio" name="sortCase" id="lowC" value="" onclick="reRenderSort(false,'add_case')">
                         <label class="type" for="lowC">Low to High</label>
                     </div>
-                    <p class="type mediumTitle typeOption">Platform</p>
+                    <p class="type mediumTitle typeOption">Brand</p>
                     <div class="radioBtnGroup">
-                        <input type="radio" name="mPlatform" id="motherboardPlatform1" value="AMD" onclick="applyRamFilter('platform','AMD')">
-                        <label class="type" for="motherboardPlatform1">Amd</label>
-                        <input type="radio" name="mPlatform" id="motherboardPlatform2" value="Intel" onclick="applyRamFilter('platform','Intel')">
-                        <label class="type" for="motherboardPlatform2">Intel</label>
-                        <input type="radio" name="mPlatform" id="motherboardPlatform3" value="" onclick="applyRamFilter('platform','')" checked="checked">
-                        <label class="type" for="motherboardPlatform3">Both</label>
+                        <input type="radio" name="caseBrand" id="caseBrand1" value="" onclick="applyCaseFilter('brand','Corsair')">
+                        <label class="type" for="caseBrand1">Corsair</label>
+                        <input type="radio" name="caseBrand" id="caseBrand2" value="" onclick="applyCaseFilter('brand','Cooler Master')">
+                        <label class="type" for="caseBrand2">Cooler Master</label>
+                        <input type="radio" name="caseBrand" id="caseBrand3" value="" onclick="applyCaseFilter('brand','Thermaltake')">
+                        <label class="type" for="caseBrand3">Thermaltake</label>
+                        <input type="radio" name="caseBrand" id="caseBrand4" value="" onclick="applyCaseFilter('brand','Ant Esports')">
+                        <label class="type" for="caseBrand4">Ant Esports</label>
+                        <input type="radio" name="caseBrand" id="caseBrand5" value="" onclick="applyCaseFilter('brand','Antec')">
+                        <label class="type" for="caseBrand5">Antec</label>
+                        <input type="radio" name="caseBrand" id="caseBrand6" value="" onclick="applyCaseFilter('brand','NZXT')">
+                        <label class="type" for="caseBrand6">NZXT</label>
+                        <input type="radio" name="caseBrand" id="caseBrand7" value="" onclick="applyCaseFilter('brand','')" checked="checked">
+                        <label class="type" for="caseBrand7">All</label>
+                    </div>
+
+                    <p class="type mediumTitle typeOption">Size</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="caseSize" id="caseSize1" value="" onclick="applyCaseFilter('type','Mini Tower')">
+                        <label class="type" for="caseSize1">Mini-Tower</label>
+                        <input type="radio" name="caseSize" id="caseSize2" value="" onclick="applyCaseFilter('type','Mid Tower')">
+                        <label class="type" for="caseSize2">Mid-Tower</label>
+                        <input type="radio" name="caseSize" id="caseSize3" value="" onclick="applyCaseFilter('type','Full Tower')">
+                        <label class="type" for="caseSize3">Full-Tower</label>
+                        <input type="radio" name="caseSize" id="caseSize4" value="" onclick="applyCaseFilter('type','')" checked="checked">
+                        <label class="type" for="caseSize4">All</label>
+                    </div>
+
+                    <p class="type mediumTitle typeOption">Motherboard Form Factor</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="caseFromFactor" id="caseFromFactor1" value="" onclick="applyCaseFilter('formFactor','Mini-ITX')">
+                        <label class="type" for="caseFromFactor1">Mini ITX</label>
+                        <input type="radio" name="caseFromFactor" id="caseFromFactor2" value="" onclick="applyCaseFilter('formFactor','Micro-ATX')">
+                        <label class="type" for="caseFromFactor2">Micro ATX</label>
+                        <input type="radio" name="caseFromFactor" id="caseFromFactor3" value="" onclick="applyCaseFilter('formFactor','ATX')">
+                        <label class="type" for="caseFromFactor3">ATX</label>
+                        <input type="radio" name="caseFromFactor" id="caseFromFactor4" value="" onclick="applyCaseFilter('formFactor','')" checked="checked">
+                        <label class="type" for="caseFromFactor4">All</label>
                     </div>
                     
                 </div>
