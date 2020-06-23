@@ -94,6 +94,8 @@ function applySsdFilter(prop,value){
         ssdBrand=value;
     }else if(prop=="capacity"){
         ssdCapacity=value;
+    }else if(prop=="type"){
+        ssdType=value;
     }
     reRenderComponents("add_ssd");
 }
@@ -349,6 +351,7 @@ function HDDFILTER(DATA){
 //HDD
 var ssdBrand="";
 var ssdCapacity=0;
+var ssdType="";
 function SSDFILTER(DATA){
     var ret=true;
     if(ssdBrand!=""){
@@ -360,6 +363,13 @@ function SSDFILTER(DATA){
     }
     if(ssdCapacity!=0){
         if(ssdCapacity==DATA.capacity){
+            ret=true;
+        }else{
+            return false;
+        }
+    }
+    if(ssdType!=0){
+        if(ssdType==DATA.type){
             ret=true;
         }else{
             return false;

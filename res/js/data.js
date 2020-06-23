@@ -207,16 +207,19 @@ var HDDDATA=[
     {
         brand:"Seagate",
         model:"Baracuda 4TB",
+        capacity: 4,
         price:9000
     },
     {
         brand:"WD",
         model:"Blue 1TB",
+        capacity: 1,
         price:4000
     },
     {
         brand:"WD",
         model:"Black 1TB",
+        capacity: 1,
         price:5500
     }
 ];
@@ -233,6 +236,7 @@ var SSDDATA=[
     {
         brand:"Corsair",
         model:"MP500",
+        capacity: 512,
         interface:"M.2",
         type:"SATA",
         price:9665
@@ -240,6 +244,7 @@ var SSDDATA=[
     {
         brand:"Adata",
         model:"XPG S6000",
+        capacity: 256,
         interface:"M.2",
         type:"SATA",
         price:5500
@@ -247,6 +252,7 @@ var SSDDATA=[
     {
         brand:"WD",
         model:"Black 203",
+        capacity: 1,
         interface:"M.2",
         type:"NVME",
         price:8954

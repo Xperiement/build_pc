@@ -426,14 +426,28 @@
                         <input type="radio" name="sortHdd" id="lowH" value="" onclick="reRenderSort(false,'add_hdd')">
                         <label class="type" for="lowH">Low to High</label>
                     </div>
-                    <p class="type mediumTitle typeOption">Platform</p>
+                    <p class="type mediumTitle typeOption">Brand</p>
                     <div class="radioBtnGroup">
-                        <input type="radio" name="mPlatform" id="motherboardPlatform1" value="AMD" onclick="applyRamFilter('platform','AMD')">
-                        <label class="type" for="motherboardPlatform1">Amd</label>
-                        <input type="radio" name="mPlatform" id="motherboardPlatform2" value="Intel" onclick="applyRamFilter('platform','Intel')">
-                        <label class="type" for="motherboardPlatform2">Intel</label>
-                        <input type="radio" name="mPlatform" id="motherboardPlatform3" value="" onclick="applyRamFilter('platform','')" checked="checked">
-                        <label class="type" for="motherboardPlatform3">Both</label>
+                        <input type="radio" name="hBrand" id="hBrand1" value="AMD" onclick="applyHddFilter('brand','Seagate')">
+                        <label class="type" for="hBrand1">Seagate</label>
+                        <input type="radio" name="hBrand" id="hBrand2" value="Intel" onclick="applyHddFilter('brand','WD')">
+                        <label class="type" for="hBrand2">WD</label>
+                        <input type="radio" name="hBrand" id="hBrand3" value="" onclick="applyHddFilter('brand','')" checked="checked">
+                        <label class="type" for="hBrand3">All</label>
+                    </div>
+
+                    <p class="type mediumTitle typeOption">Capacity</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="hCapacity" id="hCapacity1" value="" onclick="applyHddFilter('capacity',1)">
+                        <label class="type" for="hCapacity1">1TB</label>
+                        <input type="radio" name="hCapacity" id="hCapacity2" value="" onclick="applyHddFilter('capacity',2)">
+                        <label class="type" for="hCapacity2">2TB</label>
+                        <input type="radio" name="hCapacity" id="hCapacity3" value="" onclick="applyHddFilter('capacity',4)">
+                        <label class="type" for="hCapacity3">4TB</label>
+                        <input type="radio" name="hCapacity" id="hCapacity4" value="" onclick="applyHddFilter('capacity',8)">
+                        <label class="type" for="hCapacity4">8TB</label>
+                        <input type="radio" name="hCapacity" id="hCapacity5" value="" onclick="applyHddFilter('capacity',0)" checked="checked">
+                        <label class="type" for="hCapacity5">Any</label>
                     </div>
                     
                 </div>
@@ -458,14 +472,44 @@
                         <input type="radio" name="sortSsd" id="lowS" value="" onclick="reRenderSort(false,'add_ssd')">
                         <label class="type" for="lowS">Low to High</label>
                     </div>
-                    <p class="type mediumTitle typeOption">Platform</p>
+                    <p class="type mediumTitle typeOption">Brand</p>
                     <div class="radioBtnGroup">
-                        <input type="radio" name="mPlatform" id="motherboardPlatform1" value="AMD" onclick="applyRamFilter('platform','AMD')">
-                        <label class="type" for="motherboardPlatform1">Amd</label>
-                        <input type="radio" name="mPlatform" id="motherboardPlatform2" value="Intel" onclick="applyRamFilter('platform','Intel')">
-                        <label class="type" for="motherboardPlatform2">Intel</label>
-                        <input type="radio" name="mPlatform" id="motherboardPlatform3" value="" onclick="applyRamFilter('platform','')" checked="checked">
-                        <label class="type" for="motherboardPlatform3">Both</label>
+                        <input type="radio" name="sBrand" id="sBrand1" value="" onclick="applySsdFilter('brand','Adata')">
+                        <label class="type" for="sBrand1">Adata</label>
+                        <input type="radio" name="sBrand" id="sBrand2" value="" onclick="applySsdFilter('brand','Corsair')">
+                        <label class="type" for="sBrand2">Corsair</label>
+                        <input type="radio" name="sBrand" id="sBrand3" value="" onclick="applySsdFilter('brand','Gigabyte')">
+                        <label class="type" for="sBrand3">Gigabyte</label>
+                        <input type="radio" name="sBrand" id="sBrand4" value="" onclick="applySsdFilter('brand','Kingstone')">
+                        <label class="type" for="sBrand4">Kingstone</label>
+                        <input type="radio" name="sBrand" id="sBrand5" value="" onclick="applySsdFilter('brand','')" checked="checked">
+                        <label class="type" for="sBrand5">All</label>
+                    </div>
+
+                    <p class="type mediumTitle typeOption">Capacity</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="sCapacity" id="sCapacity1" value="" onclick="applySsdFilter('capacity',120)">
+                        <label class="type" for="sCapacity1">120GB</label>
+                        <input type="radio" name="sCapacity" id="sCapacity2" value="" onclick="applySsdFilter('capacity',240)">
+                        <label class="type" for="sCapacity2">240GB</label>
+                        <input type="radio" name="sCapacity" id="sCapacity3" value="" onclick="applySsdFilter('capacity',512)">
+                        <label class="type" for="sCapacity3">512GB</label>
+                        <input type="radio" name="sCapacity" id="sCapacity4" value="" onclick="applySsdFilter('capacity',1)">
+                        <label class="type" for="sCapacity4">1TB</label>
+                        <input type="radio" name="sCapacity" id="sCapacity5" value="" onclick="applySsdFilter('capacity',0)" checked="checked">
+                        <label class="type" for="sCapacity5">Any</label>
+                    </div>
+
+                    <p class="type mediumTitle typeOption">Type</p>
+                    <div class="radioBtnGroup">
+                        <input type="radio" name="sType" id="sType1" value="" onclick="applySsdFilter('type','SATAL')">
+                        <label class="type" for="sType1">SATA 2.5</label>
+                        <input type="radio" name="sType" id="sType2" value="" onclick="applySsdFilter('type','SATA')">
+                        <label class="type" for="sType2">M.2 SATA</label>
+                        <input type="radio" name="sType" id="sType3" value="" onclick="applySsdFilter('type','NVME')">
+                        <label class="type" for="sType3">M.2 NVME</label>
+                        <input type="radio" name="sType" id="sType4" value="" onclick="applySsdFilter('type',0)" checked="checked">
+                        <label class="type" for="sType4">Any</label>
                     </div>
                     
                 </div>
