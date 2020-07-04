@@ -44,6 +44,7 @@ async function changePanel(x,y){
     }else if(y=="add_motherboard"){
         document.getElementById('panelTitle').innerHTML='Select Motherboard';
         sort("add_motherboard");
+        setAutoFilter(y);
         for(var i=0;i<MOTHERBOARDDATA.length;i++){
             if(filter("motherboardList",MOTHERBOARDDATA[i])){
                 createCard(MOTHERBOARDDATA[i],i,"motherboardList");
@@ -52,6 +53,7 @@ async function changePanel(x,y){
     }else if(y=="add_ram"){
         document.getElementById('panelTitle').innerHTML='Select Ram';
         sort("add_ram");
+        setAutoFilter(y);
         for(var i=0;i<RAMDATA.length;i++){
             if(filter("ramList",RAMDATA[i])){
                 createCard(RAMDATA[i],i,"ramList");
@@ -60,6 +62,7 @@ async function changePanel(x,y){
     }else if(y=="add_gpu"){
         document.getElementById('panelTitle').innerHTML='Select Graphics Card';
         sort("add_gpu");
+        setAutoFilter(y);
         for(var i=0;i<GPUDATA.length;i++){
             if(filter("gpuList",GPUDATA[i])){
                 createCard(GPUDATA[i],i,"gpuList");
@@ -68,6 +71,7 @@ async function changePanel(x,y){
     }else if(y=="add_hdd"){
         document.getElementById('panelTitle').innerHTML='Select Hard Disk';
         sort("add_hdd");
+        setAutoFilter(y);
         for(var i=0;i<HDDDATA.length;i++){
             if(filter("hddList",HDDDATA[i])){
                 createCard(HDDDATA[i],i,"hddList");
@@ -76,6 +80,7 @@ async function changePanel(x,y){
     }else if(y=="add_ssd"){
         document.getElementById('panelTitle').innerHTML='Select SSD';
         sort("add_ssd");
+        setAutoFilter(y);
         for(var i=0;i<SSDDATA.length;i++){
             if(filter("ssdList",SSDDATA[i])){
                 createCard(SSDDATA[i],i,"ssdList");
@@ -84,6 +89,7 @@ async function changePanel(x,y){
     }else if(y=="add_psu"){
         document.getElementById('panelTitle').innerHTML='Select Power Supply';
         sort("add_psu");
+        setAutoFilter(y);
         for(var i=0;i<PSUDATA.length;i++){
             if(filter("psuList",PSUDATA[i])){
                 createCard(PSUDATA[i],i,"psuList");
@@ -92,6 +98,7 @@ async function changePanel(x,y){
     }else if(y=="add_case"){
         document.getElementById('panelTitle').innerHTML='Select Case';
         sort("add_case");
+        setAutoFilter(y);
         for(var i=0;i<CASEDATA.length;i++){
             if(filter("caseList",CASEDATA[i])){
                 createCard(CASEDATA[i],i,"caseList");

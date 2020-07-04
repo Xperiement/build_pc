@@ -5,5 +5,11 @@ function setAutoFilter(id){
         }else{
             applyCpuFilter("brand","",false);
         }
+    }else if(id=="add_motherboard"){
+        if(myCPU!=null){
+            applyMotherboardFilter("platform",myCPU.brand,false);
+        }else{
+            applyMotherboardFilter("platform","",false);
+        }
     }
 }

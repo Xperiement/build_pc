@@ -176,9 +176,9 @@
                     </div>
                     <p class="type mediumTitle typeOption">Internal Graphics</p>
                     <div class="radioBtnGroup">
-                        <input type="radio" name="iGPU" id="igpuOp1" value="false" onclick="applyCpuIgpuFilter(['igpuOp1','igpuOp2','igpuOp3'])"><label class="type" for="igpuOp1">No iGPU</label>
-                        <input type="radio" name="iGPU" id="igpuOp2" value="true" onclick="applyCpuIgpuFilter(['igpuOp1','igpuOp2','igpuOp3'])"><label class="type" for="igpuOp2">iGPU</label>
-                        <input type="radio" name="iGPU" id="igpuOp3" value="null" onclick="applyCpuIgpuFilter(['igpuOp1','igpuOp2','igpuOp3'])" checked="checked"><label class="type" for="igpuOp3">Both</label>
+                        <input type="radio" name="iGPU" id="igpuOp1" value="false" onclick="applyCpuFilter('igpu',false)"><label class="type" for="igpuOp1">No iGPU</label>
+                        <input type="radio" name="iGPU" id="igpuOp2" value="true" onclick="applyCpuFilter('igpu',true)"><label class="type" for="igpuOp2">iGPU</label>
+                        <input type="radio" name="iGPU" id="igpuOp3" value="null" onclick="applyCpuFilter('igpu',null)" checked="checked"><label class="type" for="igpuOp3">Both</label>
                     </div>
                     
                 </div>
