@@ -402,15 +402,6 @@ input {
   margin-top: 2rem;
 }
 
-/*.fsPanel:hover{
-    height: 100%;
-    #CpuFilterButton{
-        opacity: 0%;
-    }
-    .optionPanel{
-        transform: scale(100%);
-    }
-}*/
 .card1 {
   width: 200px;
   height: 250px;

@@ -4,6 +4,7 @@ include("res/js/guiComponent.js");
 include("res/js/otherOptions.js");
 include("res/js/clearData.js");
 include("res/js/filters.js");
+include("res/js/filterAi.js");
 include("res/js/sort.js");
 
 var lowToHigh=false;
@@ -34,6 +35,7 @@ async function changePanel(x,y){
     if(y=="add_cpu"){
         document.getElementById('panelTitle').innerHTML='Select Cpu';
         sort("add_cpu");
+        setAutoFilter(y);
         for(var i=0;i<CPUDATA.length;i++){
             if(filter("cpuList",CPUDATA[i])){
                 createCard(CPUDATA[i],i,"cpuList");

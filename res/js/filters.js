@@ -28,7 +28,7 @@ function filter(id,DATA){
 }
 
 //Gui Interface for appling filter
-function applyCpuFilter(prop,value){
+function applyCpuFilter(prop,value,arg=true){
     if(prop=="core"){
         cpuCore=value;
     }else if(prop=="igpu"){
@@ -38,9 +38,11 @@ function applyCpuFilter(prop,value){
     }else if(prop=='socket'){
         cpuSocket=value;
     }
-    reRenderComponents("add_cpu");
+    if(arg){
+        reRenderComponents("add_cpu");
+    }
 }
-function applyMotherboardFilter(prop,value){
+function applyMotherboardFilter(prop,value,arg=true){
     if(prop=="platform"){
         motherboardPlatform=value;
     }else if(prop=="chipset"){
@@ -55,9 +57,11 @@ function applyMotherboardFilter(prop,value){
     }else if(prop=='sata_m_2'){
         hasSata_m2_SSD_Slot=value;
     }
-    reRenderComponents("add_motherboard");
+    if(arg){
+        reRenderComponents("add_motherboard");
+    }
 }
-function applyGpuFilter(prop,value){
+function applyGpuFilter(prop,value,arg=true){
     if(prop=="vram"){
         gpuVram=value;
     }else if(prop=="platform"){
@@ -67,9 +71,11 @@ function applyGpuFilter(prop,value){
     }else if(prop=='brand'){
         gpuBrand=value;
     }
-    reRenderComponents("add_gpu");
+    if(arg){
+        reRenderComponents("add_gpu");
+    }
 }
-function applyRamFilter(prop,value){
+function applyRamFilter(prop,value,arg=true){
     if(prop=="brand"){
         ramBrand=value;
     }else if(prop=="capacity"){
@@ -79,17 +85,21 @@ function applyRamFilter(prop,value){
     }else if(prop=="quantity"){
         ramQuantity=value;
     }
-    reRenderComponents("add_ram");
+    if(arg){
+        reRenderComponents("add_ram");
+    }
 }
-function applyHddFilter(prop,value){
+function applyHddFilter(prop,value,arg=true){
     if(prop=="brand"){
         hddBrand=value;
     }else if(prop=="capacity"){
         hddCapacity=value;
     }
-    reRenderComponents("add_hdd");
+    if(arg){
+        reRenderComponents("add_hdd");
+    }
 }
-function applySsdFilter(prop,value){
+function applySsdFilter(prop,value,arg=true){
     if(prop=="brand"){
         ssdBrand=value;
     }else if(prop=="capacity"){
@@ -97,9 +107,11 @@ function applySsdFilter(prop,value){
     }else if(prop=="type"){
         ssdType=value;
     }
-    reRenderComponents("add_ssd");
+    if(arg){
+        reRenderComponents("add_ssd");
+    }
 }
-function applyPsuFilter(prop,value){
+function applyPsuFilter(prop,value,arg=true){
     if(prop=="brand"){
         psuBrand=value;
     }else if(prop=="capacity"){
@@ -109,9 +121,11 @@ function applyPsuFilter(prop,value){
     }else if(prop=="type_80"){
         type_80_plus=value;
     }
-    reRenderComponents("add_psu");
+    if(arg){
+        reRenderComponents("add_psu");
+    }
 }
-function applyCaseFilter(prop,value){
+function applyCaseFilter(prop,value,arg=true){
     if(prop=="brand"){
         caseBrand=value;
     }else if(prop=="type"){
@@ -119,7 +133,9 @@ function applyCaseFilter(prop,value){
     }else if(prop=="formFactor"){
         caseMaxMotherboardSize=value;
     }
-    reRenderComponents("add_case");
+    if(arg){
+        reRenderComponents("add_case");
+    }
 }
 
 //CPU
