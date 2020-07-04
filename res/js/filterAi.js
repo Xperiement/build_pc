@@ -11,5 +11,11 @@ function setAutoFilter(id){
         }else{
             applyMotherboardFilter("platform","",false);
         }
+    }else if(id=="add_ram"){
+        if(myMOTHERBOARD!=null){
+            applyRamFilter("type",myMOTHERBOARD.memoryType,false);
+        }else{
+            applyRamFilter("type","",false);
+        }
     }
 }
