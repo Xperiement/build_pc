@@ -8,6 +8,78 @@ var mySSD;
 var myPSU;
 var myCASE;
 
+var AmdChipsets=[
+    {
+        chipsetName: "A320",//1
+        supportCpuIndex: [
+            1,2
+        ]
+    },
+    {
+        chipsetName: "B350",//2
+        supportCpuIndex: [
+            1,2
+        ]
+    },
+    {
+        chipsetName: "X370",//3
+        supportCpuIndex: [
+            1,2
+        ]
+    },
+    {
+        chipsetName: "B450",//4
+        supportCpuIndex: [
+            1,2,3
+        ]
+    },
+    {
+        chipsetName: "X470",//5
+        supportCpuIndex: [
+            1,2,3
+        ]
+    },
+    {
+        chipsetName: "B550",//6
+        supportCpuIndex: [
+            2,3,4
+        ]
+    },
+    {
+        chipsetName: "X570",//7
+        supportCpuIndex: [
+            2,3,4
+        ]
+    },  
+];
+
+var AmdCpus=[
+    {
+        genaration: 1,//1
+        chipsetIndex: [
+            1,2,3,4,5
+        ]
+    },
+    {
+        genaration: 2,//2
+        chipsetIndex: [
+            1,2,3,4,5,6,7
+        ]
+    },
+    {
+        genaration: 3,//3
+        chipsetIndex: [
+            4,5,6,7
+        ]
+    },
+    {
+        genaration: 4,//4
+        chipsetIndex: [
+            6,7
+        ]
+    },
+]
+
 
 var CPUDATA=[
     {
