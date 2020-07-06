@@ -78,7 +78,83 @@ var AmdCpus=[
             6,7
         ]
     },
-]
+];
+
+
+
+var IntelChipsets=[
+    {
+        chipsetName: "H310",//1
+        supportCpuIndex: [
+            1,2
+        ]
+    },
+    {
+        chipsetName: "B360",//2
+        supportCpuIndex: [
+            1,2
+        ]
+    },
+    {
+        chipsetName: "H370",//3
+        supportCpuIndex: [
+            1,2
+        ]
+    },
+    {
+        chipsetName: "B365",//4
+        supportCpuIndex: [
+            1,2
+        ]
+    },
+    {
+        chipsetName: "Z370",//5
+        supportCpuIndex: [
+            1,2
+        ]
+    },
+    {
+        chipsetName: "Z390",//6
+        supportCpuIndex: [
+            1,2
+        ]
+    },
+    {
+        chipsetName: "Z470",//7
+        supportCpuIndex: [
+            3
+        ]
+    },
+    {
+        chipsetName: "Z490",//8
+        supportCpuIndex: [
+            3
+        ]
+    },
+
+];
+
+var IntelCpus=[
+    {
+        genaration: 8,//1
+        chipsetIndex: [
+            1,2,3,4,5,6
+        ]
+    },
+    {
+        genaration: 9,//2
+        chipsetIndex: [
+            1,2,3,4,5,6
+        ]
+    },
+    {
+        genaration: 10,//3
+        chipsetIndex: [
+            7,8
+        ]
+    },
+
+];
 
 
 var CPUDATA=[
