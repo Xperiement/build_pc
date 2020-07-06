@@ -84,51 +84,57 @@ var AmdCpus=[
 
 var IntelChipsets=[
     {
-        chipsetName: "H310",//1
+        chipsetName: "H110",//1
         supportCpuIndex: [
-            1,2
+            1
         ]
     },
     {
-        chipsetName: "B360",//2
+        chipsetName: "H310",//2
         supportCpuIndex: [
-            1,2
+            2,3
         ]
     },
     {
-        chipsetName: "H370",//3
+        chipsetName: "B360",//3
         supportCpuIndex: [
-            1,2
+            2,3
         ]
     },
     {
-        chipsetName: "B365",//4
+        chipsetName: "H370",//4
         supportCpuIndex: [
-            1,2
+            2,3
         ]
     },
     {
-        chipsetName: "Z370",//5
+        chipsetName: "B365",//5
         supportCpuIndex: [
-            1,2
+            2,3
         ]
     },
     {
-        chipsetName: "Z390",//6
+        chipsetName: "Z370",//6
         supportCpuIndex: [
-            1,2
+            2,3
         ]
     },
     {
-        chipsetName: "Z470",//7
+        chipsetName: "Z390",//7
         supportCpuIndex: [
-            3
+            2,3
         ]
     },
     {
-        chipsetName: "Z490",//8
+        chipsetName: "Z470",//8
         supportCpuIndex: [
-            3
+            4
+        ]
+    },
+    {
+        chipsetName: "Z490",//9
+        supportCpuIndex: [
+            4
         ]
     },
 
@@ -136,21 +142,27 @@ var IntelChipsets=[
 
 var IntelCpus=[
     {
-        genaration: 8,//1
+        genaration: 6,//1
         chipsetIndex: [
-            1,2,3,4,5,6
+            1
         ]
     },
     {
-        genaration: 9,//2
+        genaration: 8,//2
         chipsetIndex: [
-            1,2,3,4,5,6
+            2,3,4,5,6,7
         ]
     },
     {
-        genaration: 10,//3
+        genaration: 9,//3
         chipsetIndex: [
-            7,8
+            2,3,4,5,6,7
+        ]
+    },
+    {
+        genaration: 10,//4
+        chipsetIndex: [
+            8,9
         ]
     },
 
@@ -161,6 +173,7 @@ var CPUDATA=[
     {
         brand:"Intel",
         model:"Core i3-6098p",
+        genaration: 6,
         baseClock:"3.60 GHZ",
         turboClock:"None",
         tdp:54,
@@ -180,6 +193,7 @@ var CPUDATA=[
         brand:"Intel",
         core:8,
         model:"Core i9-9900KS",
+        genaration: 9,
         socket:"LGA1151",
         has_igpu: false,
         price:70000
@@ -188,6 +202,7 @@ var CPUDATA=[
         brand:"Intel",
         core:4,
         model:"Core i5-9400F",
+        genaration: 9,
         socket:"LGA1151",
         has_igpu: false,
         price:12000
@@ -196,6 +211,7 @@ var CPUDATA=[
         brand:"AMD",
         core:4,
         model:"Ryzen 5 3600X",
+        genaration: 3,
         socket:"AM4+",
         has_igpu: false,
         price:21000

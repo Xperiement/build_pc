@@ -20,9 +20,12 @@ function setAutoFilter(id){
     }
 }
 
-function isCompatibleMotherboard(platform,cpuGenaration,chipset){
+function isCompatibleMotherboard(chipset){
     var chipsetIndex;
     var status=false;
+    if(myCPU==null){return true}
+    var platform=myCPU.brand;
+    var cpuGenaration=myCPU.genaration;
     if(platform=="AMD"){
         for(var i=0;i<AmdCpus.length;i++){
             if(AmdCpus[i].genaration==cpuGenaration){
@@ -39,7 +42,7 @@ function isCompatibleMotherboard(platform,cpuGenaration,chipset){
         }
         return status;
     }else{
-        for(var i=0;i<AmdCpus.length;i++){
+        for(var i=0;i<IntelCpus.length;i++){
             if(IntelCpus[i].genaration==cpuGenaration){
                 chipsetIndex=IntelCpus[i].chipsetIndex;
                 break;
@@ -56,9 +59,12 @@ function isCompatibleMotherboard(platform,cpuGenaration,chipset){
     }
 }
 
-function isCompatibleCpu(platform,cpuGenaration,chipset){
+function isCompatibleCpu(cpuGenaration){
     var cpuIndex;
     var status=false;
+    if(myMOTHERBOARD==null){return true}
+    var platform=myMOTHERBOARD.platform;
+    var chipset=myMOTHERBOARD.chipset;
     if(platform=="AMD"){
         for(var i=0;i<AmdChipsets.length;i++){
             if(AmdChipsets[i].chipsetName==chipset){

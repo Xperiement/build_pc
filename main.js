@@ -37,7 +37,7 @@ async function changePanel(x,y){
         sort("add_cpu");
         setAutoFilter(y);
         for(var i=0;i<CPUDATA.length;i++){
-            if(filter("cpuList",CPUDATA[i])){
+            if(filter("cpuList",CPUDATA[i])&&isCompatibleCpu(CPUDATA[i].genaration)){
                 createCard(CPUDATA[i],i,"cpuList");
             }
         }
@@ -46,7 +46,7 @@ async function changePanel(x,y){
         sort("add_motherboard");
         setAutoFilter(y);
         for(var i=0;i<MOTHERBOARDDATA.length;i++){
-            if(filter("motherboardList",MOTHERBOARDDATA[i])){
+            if(filter("motherboardList",MOTHERBOARDDATA[i])&&isCompatibleMotherboard(MOTHERBOARDDATA[i].chipset)){
                 createCard(MOTHERBOARDDATA[i],i,"motherboardList");
             }
         }
