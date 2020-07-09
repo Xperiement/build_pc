@@ -114,3 +114,46 @@ function reRenderComponents(y){
         }
     }
 }
+
+
+function genarateStats(){
+    var x=document.getElementById('listContainer');
+    x.innerHTML="";
+    if(myCPU!=null){
+        x.appendChild(getElement(myCPU.model,myCPU.price));
+    }
+}
+
+function getElement(CompoName,price){
+    var mainContainer=document.createElement("div");
+    mainContainer.classList.add("row");
+    mainContainer.classList.add("border");
+
+
+    var info=document.createElement("div");
+    info.classList.add("col");
+    var type=document.createElement("div");
+    type.classList.add("element");
+    type.classList.add("smallTitleEx");
+    type.innerHTML="Cpu";
+    var name=document.createElement("div");
+    name.classList.add("element");
+    name.classList.add("mediumTitleEx");
+    name.innerHTML=CompoName;
+    info.appendChild(type);
+    info.appendChild(name);
+
+    var priceCol=document.createElement("div");
+    priceCol.classList.add("col");
+
+    var priceP=document.createElement("div");
+    priceP.classList.add("price");
+    priceP.classList.add("mediumTitleEx");
+    priceP.innerHTML=price;
+
+    priceCol.appendChild(priceP);
+
+    mainContainer.appendChild(info);
+    mainContainer.appendChild(priceCol);
+    return mainContainer;
+}

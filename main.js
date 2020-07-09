@@ -104,6 +104,8 @@ async function changePanel(x,y){
                 createCard(CASEDATA[i],i,"caseList");
             }
         }
+    }else if(y=="stats"){
+        document.getElementById('panelTitle').innerHTML='Stats';
     }else{
         document.getElementById('panelTitle').innerHTML='Dashboard';
     }
