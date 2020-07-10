@@ -14,7 +14,7 @@ var statMotherboard=true;
 var statRam=true;
 var statGpu=true;
 var statHdd=true;
-var statSdd=true;
+var statSsd=true;
 var statPsu=true;
 var statCase=true;
 

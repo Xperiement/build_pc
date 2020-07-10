@@ -120,17 +120,74 @@ function genarateStats(){
     var x=document.getElementById('listContainer');
     x.innerHTML="";
     if(myCPU!=null){
-        x.appendChild(getElement("cpu",myCPU.model,myCPU.price));
+        x.appendChild(getElement("CpuStat",statCpu,myCPU.model,myCPU.price));
+        x.appendChild(getSeparator());
     }
+    if(myMOTHERBOARD!=null){
+        x.appendChild(getElement("MotherboardStat",statMotherboard,myMOTHERBOARD.model,myMOTHERBOARD.price));
+        x.appendChild(getSeparator());
+    }
+    if(myRAM!=null){
+        x.appendChild(getElement("RamStat",statRam,myRAM.model,myRAM.price));
+        x.appendChild(getSeparator());
+    }
+    if(myGPU!=null){
+        x.appendChild(getElement("GpuStat",statGpu,myGPU.model,myGPU.price));
+        x.appendChild(getSeparator());
+    }
+    if(myHDD!=null){
+        x.appendChild(getElement("HddStat",statHdd,myHDD.model,myHDD.price));
+        x.appendChild(getSeparator());
+    }
+    if(mySSD!=null){
+        x.appendChild(getElement("SsdStat",statSsd,mySSD.model,mySSD.price));
+        x.appendChild(getSeparator());
+    }
+    if(myPSU!=null){
+        x.appendChild(getElement("PsuStat",statPsu,myPSU.model,myPSU.price));
+        x.appendChild(getSeparator());
+    }
+    if(myCASE!=null){
+        x.appendChild(getElement("CaseStat",statCase,myCASE.model,myCASE.price));
+        x.appendChild(getSeparator());
+    }
+}
+
+function getSeparator(){
+    var div=document.createElement("div");
+    div.classList.add("separator");
+    return div;
+}
+
+function toggleStat(id){
+    if(id=="CpuStat"){
+        statCpu ? statCpu=false : statCpu=true;
+    }else if(id=="MotherboardStat"){
+        statMotherboard ? statMotherboard=false : statMotherboard=true;
+    }else if(id=="RamStat"){
+        statRam ? statRam=false : statRam=true;
+    }else if(id=="GpuStat"){
+        statGpu ? statGpu=false : statGpu=true;
+    }else if(id=="HddStat"){
+        statHdd ? statHdd=false : statHdd=true;
+    }else if(id=="SsdStat"){
+        statSsd ? statSsd=false : statSsd=true;
+    }else if(id=="PsuStat"){
+        statPsu ? statPsu=false : statPsu=true;
+    }else if(id=="CaseStat"){
+        statCase ? statCase=false : statCase=true;
+    }
+    genarateStats();
 }
 
 function getElement(compoType,enabled,CompoName,price){
     var mainContainer=document.createElement("div");
     mainContainer.classList.add("row");
-    mainContainer.classList.add("border");
-    mainContainer.setAttribute("id","G"+compoType);
+    //mainContainer.classList.add("border");
+    mainContainer.setAttribute("id",compoType);
+    mainContainer.setAttribute("onclick","toggleStat('"+compoType+"')");
     if(!enabled){
-        mainContainer.classList.add("disabled");
+        mainContainer.classList.add("disable");
     }
 
     var info=document.createElement("div");
@@ -138,7 +195,8 @@ function getElement(compoType,enabled,CompoName,price){
     var type=document.createElement("div");
     type.classList.add("element");
     type.classList.add("smallTitleEx");
-    type.innerHTML="Cpu";
+    type.innerHTML=compoType.substring(0,compoType.indexOf("Stat"));
+
     var name=document.createElement("div");
     name.classList.add("element");
     name.classList.add("mediumTitleEx");

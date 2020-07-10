@@ -58,13 +58,14 @@ input{
         justify-content: space-between;
         margin-right: 1rem;
         padding: 1rem;
-        transition: background 280ms;
+        transition: background 200ms;
     }
     .row:hover{
-        background: #eeeeee;
+        background: #dfdfdf;
     }
     .disable{
-        background: #eeeeee;
+        position: relative;
+        background: #ffe6e6;
     }
     .border{
         border: 1px solid #dfdfdf;
