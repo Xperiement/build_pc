@@ -106,7 +106,6 @@ async function changePanel(x,y){
         }
     }else if(y=="stats"){
         genarateStats();
-        document.getElementById('panelTitle').innerHTML='Stats';
     }else{
         document.getElementById('panelTitle').innerHTML='Dashboard';
     }

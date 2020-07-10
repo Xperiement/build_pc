@@ -1,3 +1,4 @@
+var TOTALPRICE=0;
 //Saved Final Components
 var myCPU;
 var myMOTHERBOARD;

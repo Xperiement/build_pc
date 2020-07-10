@@ -119,6 +119,7 @@ function reRenderComponents(y){
 function genarateStats(){
     var x=document.getElementById('listContainer');
     x.innerHTML="";
+    TOTALPRICE=0;
     if(myCPU!=null){
         x.appendChild(getElement("CpuStat",statCpu,myCPU.model,myCPU.price));
         x.appendChild(getSeparator());
@@ -151,6 +152,7 @@ function genarateStats(){
         x.appendChild(getElement("CaseStat",statCase,myCASE.model,myCASE.price));
         x.appendChild(getSeparator());
     }
+    document.getElementById('panelTitle').innerHTML='Total - '+TOTALPRICE;
 }
 
 function getSeparator(){
@@ -188,6 +190,8 @@ function getElement(compoType,enabled,CompoName,price){
     mainContainer.setAttribute("onclick","toggleStat('"+compoType+"')");
     if(!enabled){
         mainContainer.classList.add("disable");
+    }else{
+        TOTALPRICE+=price;
     }
 
     var info=document.createElement("div");
