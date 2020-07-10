@@ -8,6 +8,16 @@ var mySSD;
 var myPSU;
 var myCASE;
 
+//Stat
+var statCpu=true;
+var statMotherboard=true;
+var statRam=true;
+var statGpu=true;
+var statHdd=true;
+var statSdd=true;
+var statPsu=true;
+var statCase=true;
+
 var AmdChipsets=[
     {
         chipsetName: "A320",//1

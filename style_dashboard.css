@@ -78,8 +78,17 @@ input {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-right: 1rem;
-  margin-bottom: 1rem;
   padding: 1rem;
+  -webkit-transition: background 280ms;
+  transition: background 280ms;
+}
+
+.compoList .row:hover {
+  background: #eeeeee;
+}
+
+.compoList .disable {
+  background: #eeeeee;
 }
 
 .compoList .border {
@@ -95,6 +104,13 @@ input {
   border-color: transparent;
   -webkit-box-shadow: 0px 2px 10px #0000001a;
           box-shadow: 0px 2px 10px #0000001a;
+}
+
+.compoList .separator {
+  height: 1px;
+  width: calc(100% - 1rem);
+  margin-right: 1rem;
+  background: #dfdfdf;
 }
 
 .compoList .col {

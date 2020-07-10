@@ -120,15 +120,18 @@ function genarateStats(){
     var x=document.getElementById('listContainer');
     x.innerHTML="";
     if(myCPU!=null){
-        x.appendChild(getElement(myCPU.model,myCPU.price));
+        x.appendChild(getElement("cpu",myCPU.model,myCPU.price));
     }
 }
 
-function getElement(CompoName,price){
+function getElement(compoType,enabled,CompoName,price){
     var mainContainer=document.createElement("div");
     mainContainer.classList.add("row");
     mainContainer.classList.add("border");
-
+    mainContainer.setAttribute("id","G"+compoType);
+    if(!enabled){
+        mainContainer.classList.add("disabled");
+    }
 
     var info=document.createElement("div");
     info.classList.add("col");

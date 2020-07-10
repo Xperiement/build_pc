@@ -57,9 +57,14 @@ input{
         flex-direction: row;
         justify-content: space-between;
         margin-right: 1rem;
-        //background: #e6ffe8;
-        margin-bottom: 1rem;
         padding: 1rem;
+        transition: background 280ms;
+    }
+    .row:hover{
+        background: #eeeeee;
+    }
+    .disable{
+        background: #eeeeee;
     }
     .border{
         border: 1px solid #dfdfdf;
@@ -69,6 +74,13 @@ input{
     .border:hover{
         border-color: transparent;
         box-shadow: 0px 2px 10px #0000001a;
+    }
+    .separator{
+        height: 1px;
+        width: calc(100% - 1rem);
+        margin-right: 1rem;
+        //margin-left: 1rem;
+        background: #dfdfdf;
     }
     .col{
         display: flex;
