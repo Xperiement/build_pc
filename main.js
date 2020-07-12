@@ -33,6 +33,7 @@ async function changePanel(x,y){
     await sleep(280);
     document.getElementById(y).style['opacity']='100%';
     if(y=="add_cpu"){
+        setAction("changePanel('"+y+"','"+x+"')","backBtn");
         document.getElementById('panelTitle').innerHTML='Select Cpu';
         sort("add_cpu");
         setAutoFilter(y);
@@ -42,6 +43,7 @@ async function changePanel(x,y){
             }
         }
     }else if(y=="add_motherboard"){
+        setAction("changePanel('"+y+"','"+x+"')","backBtn");
         document.getElementById('panelTitle').innerHTML='Select Motherboard';
         sort("add_motherboard");
         setAutoFilter(y);
@@ -51,6 +53,7 @@ async function changePanel(x,y){
             }
         }
     }else if(y=="add_ram"){
+        setAction("changePanel('"+y+"','"+x+"')","backBtn");
         document.getElementById('panelTitle').innerHTML='Select Ram';
         sort("add_ram");
         setAutoFilter(y);
@@ -60,6 +63,7 @@ async function changePanel(x,y){
             }
         }
     }else if(y=="add_gpu"){
+        setAction("changePanel('"+y+"','"+x+"')","backBtn");
         document.getElementById('panelTitle').innerHTML='Select Graphics Card';
         sort("add_gpu");
         setAutoFilter(y);
@@ -69,6 +73,7 @@ async function changePanel(x,y){
             }
         }
     }else if(y=="add_hdd"){
+        setAction("changePanel('"+y+"','"+x+"')","backBtn");
         document.getElementById('panelTitle').innerHTML='Select Hard Disk';
         sort("add_hdd");
         setAutoFilter(y);
@@ -78,6 +83,7 @@ async function changePanel(x,y){
             }
         }
     }else if(y=="add_ssd"){
+        setAction("changePanel('"+y+"','"+x+"')","backBtn");
         document.getElementById('panelTitle').innerHTML='Select SSD';
         sort("add_ssd");
         setAutoFilter(y);
@@ -87,6 +93,7 @@ async function changePanel(x,y){
             }
         }
     }else if(y=="add_psu"){
+        setAction("changePanel('"+y+"','"+x+"')","backBtn");
         document.getElementById('panelTitle').innerHTML='Select Power Supply';
         sort("add_psu");
         setAutoFilter(y);
@@ -96,6 +103,7 @@ async function changePanel(x,y){
             }
         }
     }else if(y=="add_case"){
+        setAction("changePanel('"+y+"','"+x+"')","backBtn");
         document.getElementById('panelTitle').innerHTML='Select Case';
         sort("add_case");
         setAutoFilter(y);
@@ -105,6 +113,7 @@ async function changePanel(x,y){
             }
         }
     }else if(y=="stats"){
+        setAction("changePanel('"+y+"','"+x+"')","backBtn");
         genarateStats();
     }else{
         document.getElementById('panelTitle').innerHTML='Dashboard';
