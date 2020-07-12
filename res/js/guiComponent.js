@@ -222,3 +222,19 @@ function getElement(compoType,enabled,CompoName,price){
     mainContainer.appendChild(priceCol);
     return mainContainer;
 }
+
+
+
+
+
+
+function activateBtn(x,id){
+    if(x){
+        document.getElementById(id).classList.remove("rm");
+    }else{
+        document.getElementById(id).classList.add("rm");
+    }
+}
+function setAction(action,id){
+    document.getElementById(id).setAttribute("onclick",action);
+}

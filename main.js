@@ -109,6 +109,11 @@ async function changePanel(x,y){
     }else{
         document.getElementById('panelTitle').innerHTML='Dashboard';
     }
+    if(x=="dashboard"){
+        activateBtn(true,"backBtn");
+    }else if(y=="dashboard"){
+        activateBtn(false,"backBtn");
+    }
 }
 
 
