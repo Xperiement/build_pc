@@ -394,4 +394,14 @@ function getCollecter(arg,index,id){
 
 }
 
+function readFile(event){
+    var FILE= new FileReader();
+    FILE.onload = function(){
+        if(FILE.readyState == 2){
+            var obj=JSON.parse(FILE.result);
+        }
+    }
+    FILE.readAsText(event.target.files[0]);
+}
+
 

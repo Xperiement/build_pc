@@ -21,7 +21,8 @@
     <header class="heading">
         <div class="wrapper headerWrapper"> 
             <div class="nav">
-                <button href="">Import</button>
+                <input class="rm" type="file" name="export" id="exportBtn" accept=".json, .JSON" onchange="readFile(event)">
+                <label for="exportBtn">Import</label>
                 <button href="">Export</button>
             </div>
         </div>
