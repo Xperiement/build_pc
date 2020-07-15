@@ -146,9 +146,13 @@ function setValue(x){
 
 
 
-function load(id,to,from,brand,model,price,index){
+function load(id,to,from,brand,model,price,sz=true){
     if(id=="cpuList"){
-        myCPU=fetcher(CPUDATA,brand,model,price);
+        if(sz){
+            myCPU=fetcher(CPUDATA,brand,model,price);
+        }else{
+            myCPU=IMPORT[0];
+        }
         if(myCPU.brand=="intel"||myCPU.brand=="Intel"||myCPU.brand=="INTEL"){
             document.getElementById('myCpuImg').style['backgroundImage']="url('"+getImage(myCPU,id)+"')";
         }else{
@@ -162,7 +166,11 @@ function load(id,to,from,brand,model,price,index){
         document.getElementById("cpuName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
         document.getElementById("cpu_clearBtnPanel").style['display']="grid";
     }else if(id=="motherboardList"){
-        myMOTHERBOARD=fetcher(MOTHERBOARDDATA,brand,model,price);
+        if(sz){
+            myMOTHERBOARD=fetcher(MOTHERBOARDDATA,brand,model,price);
+        }else{
+            myMOTHERBOARD=IMPORT[1];
+        }
         document.getElementById("motherboardBrand").innerHTML=myMOTHERBOARD.brand;
         document.getElementById("motherboardName").innerHTML=myMOTHERBOARD.model;
         document.getElementById("motherboardName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
@@ -171,7 +179,11 @@ function load(id,to,from,brand,model,price,index){
         document.getElementById('myMotherboardImg').style['backgroundSize']="auto 120px";
         document.getElementById("motherboard_clearBtnPanel").style['display']="grid";
     }else if(id=="ramList"){
-        myRAM=fetcher(RAMDATA,brand,model,price);
+        if(sz){
+            myRAM=fetcher(RAMDATA,brand,model,price);
+        }else{
+            myRAM=IMPORT[2];
+        }
         document.getElementById("ramBrand").innerHTML=myRAM.brand;
         document.getElementById("ramName").innerHTML=myRAM.model;
         document.getElementById("ramName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
@@ -182,7 +194,11 @@ function load(id,to,from,brand,model,price,index){
 
 
     }else if(id=="gpuList"){
-        myGPU=fetcher(GPUDATA,brand,model,price);
+        if(sz){
+            myGPU=fetcher(GPUDATA,brand,model,price);
+        }else{
+            myGPU=IMPORT[3];
+        }
         document.getElementById("gpuBrand").innerHTML=myGPU.brand;
         document.getElementById("gpuName").innerHTML=myGPU.model;
         document.getElementById("gpuName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
@@ -192,7 +208,11 @@ function load(id,to,from,brand,model,price,index){
         document.getElementById("gpu_clearBtnPanel").style['display']="grid";
 
     }else if(id=="hddList"){
-        myHDD=fetcher(HDDDATA,brand,model,price);
+        if(sz){
+            myHDD=fetcher(HDDDATA,brand,model,price);
+        }else{
+            myHDD=IMPORT[4];
+        }
         document.getElementById("hddBrand").innerHTML=myHDD.brand;
         document.getElementById("hddName").innerHTML=myHDD.model;
         document.getElementById("hddName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
@@ -201,7 +221,11 @@ function load(id,to,from,brand,model,price,index){
         document.getElementById('myHddImg').style['backgroundSize']="auto 120px";
         document.getElementById("hdd_clearBtnPanel").style['display']="grid";
     }else if(id=="ssdList"){
-        mySSD=fetcher(SSDDATA,brand,model,price);
+        if(sz){
+            mySSD=fetcher(SSDDATA,brand,model,price);
+        }else{
+            mySSD=IMPORT[5];
+        }
         document.getElementById("ssdBrand").innerHTML=mySSD.brand;
         document.getElementById("ssdName").innerHTML=mySSD.model;
         document.getElementById("ssdName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
@@ -210,7 +234,11 @@ function load(id,to,from,brand,model,price,index){
         document.getElementById('mySsdImg').style['backgroundSize']="auto 200px";
         document.getElementById("ssd_clearBtnPanel").style['display']="grid";
     }else if(id=="psuList"){
-        myPSU=fetcher(PSUDATA,brand,model,price);
+        if(sz){
+            myPSU=fetcher(PSUDATA,brand,model,price);
+        }else{
+            myPSU=IMPORT[6];
+        }
         document.getElementById("psuBrand").innerHTML=myPSU.brand;
         document.getElementById("psuName").innerHTML=myPSU.model;
         document.getElementById("psuName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
@@ -219,15 +247,19 @@ function load(id,to,from,brand,model,price,index){
         document.getElementById('myPsuImg').style['backgroundSize']="auto 160px";
         document.getElementById("psu_clearBtnPanel").style['display']="grid";
     }else if(id=="caseList"){
-        
-        myCASE=fetcher(CASEDATA,brand,model,price);
+        if(sz){
+            myCASE=fetcher(CASEDATA,brand,model,price);
+        }else{
+            myCASE=IMPORT[7];
+        }
         document.getElementById("caseBrand").innerHTML=myCASE.brand;
         document.getElementById("caseName").innerHTML=myCASE.model;
         document.getElementById("caseName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
         document.getElementById("case_clearBtnPanel").style['display']="grid";
     }
-
-    changePanel(to,from);
+    if(sz){
+        changePanel(to,from);
+    }
 }
 
 function fetcher(DATA,brand,model,price){
@@ -250,7 +282,7 @@ async function createCard(arg,index,id){
     document.getElementById(id).appendChild(createInfoPanel(id));
     await sleep(1);
 
-    var fansan=getCollecter(arg,index,id);
+    var fansan=getCollecter(arg,id);
 
     var card=document.createElement("div");
     card.classList.add("card1");
@@ -363,7 +395,7 @@ function getImage(arg,id){
 }
 
 
-function getCollecter(arg,index,id){
+function getCollecter(arg,id){
     var to;
     if(id=="cpuList"){
         to="add_cpu";
@@ -389,7 +421,7 @@ function getCollecter(arg,index,id){
         to="add_case";
     }
 
-    var args="'"+id+"','"+to+"','"+"dashboard"+"','"+arg.brand+"','"+arg.model+"','"+arg.price+"','"+index+"'";
+    var args="'"+id+"','"+to+"','"+"dashboard"+"','"+arg.brand+"','"+arg.model+"','"+arg.price+"'";
 
     return ("load("+args+")");
 

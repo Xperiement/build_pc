@@ -654,7 +654,7 @@ var cloneCASEDATA=CASEDATA.slice(0,CASEDATA.length);
 
 
 var IMPORT=[
-    {
+    /*{
         brand:"Intel",
         model:"Core i3-6098p",
         baseClock:"3.4 GHZ",
@@ -760,6 +760,6 @@ var IMPORT=[
         no_of_available_hdd_space: 2,
         no_of_available_ssd_space: 2,
         price:6000
-    }
+    }*/
 
 ];

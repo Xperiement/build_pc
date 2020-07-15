@@ -6,6 +6,7 @@ function readFile(event){
             try{
                 var obj=JSON.parse(FILE.result);
             }catch(e){
+                console.log(e);
                 return;
             }
             verifyObj(obj);
@@ -18,37 +19,41 @@ function readFile(event){
 
 function verifyObj(obj){
     var count=0;
-    if(obj.length<7){
-        console.log("Wrong File");
-    }else{
-        for(var i=0; i<obj.length;i++){
-            if(obj[i].compoType=="cpu"){
-                IMPORT[0]=obj[i];
-                count++;
-            }else if(obj[i].compoType=="motherboard"){
-                IMPORT[1]=obj[i];
-                count++;
-            }else if(obj[i].compoType=="ram"){
-                IMPORT[2]=obj[i];
-                count++;
-            }else if(obj[i].compoType=="gpu"){
-                IMPORT[3]=obj[i];
-                count++;
-            }else if(obj[i].compoType=="hdd"){
-                IMPORT[4]=obj[i];
-                count++;
-            }else if(obj[i].compoType=="ssd"){
-                IMPORT[5]=obj[i];
-                count++;
-            }else if(obj[i].compoType=="psu"){
-                IMPORT[6]=obj[i];
-                count++;
-            }else if(obj[i].compoType=="case"){
-                IMPORT[7]=obj[i];
-                count++;
-            }
+
+    for(var i=0; i<obj.length;i++){
+        if(obj[i].compoType=="cpu"){
+            IMPORT[0]=obj[i];
+            load("cpuList","Dummy","Dummy",IMPORT[0].brand,IMPORT[0].model,IMPORT[0].price,false);
+            count++;
+        }else if(obj[i].compoType=="motherboard"){
+            IMPORT[1]=obj[i];
+            load("motherboardList","Dummy","Dummy",IMPORT[1].brand,IMPORT[1].model,IMPORT[1].price,false);
+            count++;
+        }else if(obj[i].compoType=="ram"){
+            IMPORT[2]=obj[i];
+            load("ramList","Dummy","Dummy",IMPORT[2].brand,IMPORT[2].model,IMPORT[2].price,false);
+            count++;
+        }else if(obj[i].compoType=="gpu"){
+            IMPORT[3]=obj[i];
+            load("gpuList","Dummy","Dummy",IMPORT[3].brand,IMPORT[3].model,IMPORT[3].price,false);
+            count++;
+        }else if(obj[i].compoType=="hdd"){
+            IMPORT[4]=obj[i];
+            load("hddList","Dummy","Dummy",IMPORT[4].brand,IMPORT[4].model,IMPORT[4].price,false);
+            count++;
+        }else if(obj[i].compoType=="ssd"){
+            IMPORT[5]=obj[i];
+            load("ssdList","Dummy","Dummy",IMPORT[5].brand,IMPORT[5].model,IMPORT[5].price,false);
+            count++;
+        }else if(obj[i].compoType=="psu"){
+            IMPORT[6]=obj[i];
+            load("psuList","Dummy","Dummy",IMPORT[6].brand,IMPORT[6].model,IMPORT[6].price,false);
+            count++;
+        }else if(obj[i].compoType=="case"){
+            IMPORT[7]=obj[i];
+            load("caseList","Dummy","Dummy",IMPORT[7].brand,IMPORT[7].model,IMPORT[7].price,false);
+            count++;
         }
-        console.log(IMPORT)
     }
 }
 
@@ -60,4 +65,15 @@ function getAll(){
 function exportJson(){
     var x="data:text/json;charset=utf-8,"+JSON.stringify(IMPORT);
     document.getElementById("exportBtn").setAttribute("href",x);
+}
+
+function cleanCards(){
+    clearData('cpu','cpu_clearBtnPanel');
+    clearData('motherboard','motherboard_clearBtnPanel');
+    clearData('ram','ram_clearBtnPanel');
+    clearData('gpu','gpu_clearBtnPanel');
+    clearData('hdd','hdd_clearBtnPanel');
+    clearData('ssd','ssd_clearBtnPanel');
+    clearData('psu','psu_clearBtnPanel');
+    clearData('case','case_clearBtnPanel');
 }
