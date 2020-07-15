@@ -651,3 +651,115 @@ var cloneHDDDATA=HDDDATA.slice(0,HDDDATA.length);
 var cloneSSDDATA=SSDDATA.slice(0,SSDDATA.length);
 var clonePSUDATA=PSUDATA.slice(0,PSUDATA.length);
 var cloneCASEDATA=CASEDATA.slice(0,CASEDATA.length);
+
+
+var IMPORT=[
+    {
+        brand:"Intel",
+        model:"Core i3-6098p",
+        baseClock:"3.4 GHZ",
+        turboClock:"None",
+        tdp:54,
+        core:2,
+        thread:4,
+        l1cache:"512KB",
+        l2cache:"1MB",
+        l3cache:"3MB",
+        soket:"LGA1151",
+        cpu_overclocking: false,
+        pcilanes:"16",
+        has_igpu: true,
+        igpu:"HD 510",
+        price:7900
+    },
+    {
+        brand:"Gigabyte",
+        model:"H110m-s2",
+        chipset:"H110",
+        socket: "LGA1151",
+        size:"micro-ATX",
+        supportedCpu: "",
+        memorySlot: 2,
+        has_dualChannel: true,
+        has_quadChannel: false,
+        max_memory: 32,
+        max_memory_speed: 2133,
+        no_of_pcie_full: 1,
+        no_of_pcie_1x: 1,
+        available_pci_lanes:16,
+        no_of_sata_port: 4,
+        has_dual_bios: false,
+        has_nvme_m_2_slot: false,
+        has_sata_m_2_slot: false,
+        no_of_m_2_slot: 0,
+        cpu_overclocking: false, 
+        price:3999
+    },
+    {
+        brand:"Corsair",
+        model:"Value Select 8GB",
+        capacity: 8,
+        quantity: 1,
+        type:"DDR4",
+        speed:2666,
+        eccMemory: false,
+        price:3100
+    },
+    {
+        brand:"Nvidia",
+        model:"GTX 1050",
+        baseClock:"None",
+        turboClock:"None",
+        tdp:120,
+        vram:2,
+        vram_type:"GDDR5",
+        interface:"PCI-e 3.0",
+        has_Vga:false,
+        has_Dvi:false,
+        has_Hdmi:true,
+        has_displayPort:false,
+        price:5500
+    },
+    {
+        brand:"WD",
+        model:"Blue",
+        capacity: 1,
+        interface:"SATA3",
+        rpm:7200,
+        price:3199
+    },
+    {
+        brand:"ADATA",
+        model:"XPG S6000",
+        capacity:128,
+        interface:"M.2",
+        type:"NVME",
+        price:2990
+    },
+    {
+        brand:"CoolerMaster",
+        model:"MWE-450",
+        capacity:450,
+        has_80_cartification: true,
+        type_80_plus:"Default",
+        price:6500
+    },
+    {
+        brand:"Corsair",
+        model:"Spec 01",
+        type:"Mid_tower",
+        maxMotherboardSize:"ATX",
+        has_rear_fan_space: true,
+        has_top_fan_space: false,
+        no_of__available_top_fan_space: 0,
+        max_top_fan_type: 120,
+        no_of__available_front_fan_space: 0,
+        max_front_fan_type: 120,
+        no_of__available_bottom_fan_space: 0,
+        max_bottom_fan_type: 120,
+        no_of_available_hdd_space: 2,
+        no_of_available_ssd_space: 2,
+        price:6000
+    }
+
+];

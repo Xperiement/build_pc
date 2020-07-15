@@ -1,4 +1,5 @@
 include("res/js/data.js");
+include("res/js/ExImport.js");
 include("res/js/componentInfo.js");
 include("res/js/guiComponent.js");
 include("res/js/otherOptions.js");
@@ -392,16 +393,6 @@ function getCollecter(arg,index,id){
 
     return ("load("+args+")");
 
-}
-
-function readFile(event){
-    var FILE= new FileReader();
-    FILE.onload = function(){
-        if(FILE.readyState == 2){
-            var obj=JSON.parse(FILE.result);
-        }
-    }
-    FILE.readAsText(event.target.files[0]);
 }
 
 

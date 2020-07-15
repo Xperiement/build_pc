@@ -67,10 +67,7 @@ header{
     font-family: 'Raleway', sans-serif;
     letter-spacing: .1rem;
     text-transform: uppercase;
-    input[type="file"]{
-        color: red;
-    }
-    button, label{
+    a, label{
         margin-top: 1rem;
         border: 0;
         font-size: 1.2rem;
@@ -84,18 +81,18 @@ header{
         transition: color 280ms, border-bottom 280ms;
         margin-left: 1.5rem;
     }
-    button::after, label::after{
+    a::after, label::after{
         content: "";
         display: block;
         border-bottom: 3px solid #818181;
         transition: transform 280ms ease-out, border-bottom-color 280ms;
         transform: translateY(5px) scaleX(0%);
     }
-    button:hover::after, label:hover::after{
+    a:hover::after, label:hover::after{
         transform: translateY(5px) scaleX(100%);
         border-bottom-color: #131313;
     }
-    button:hover, label:hover{
+    a:hover, label:hover{
         color: #131313;
     }
 }

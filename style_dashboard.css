@@ -88,11 +88,7 @@ header {
   text-transform: uppercase;
 }
 
-.nav input[type="file"] {
-  color: red;
-}
-
-.nav button, .nav label {
+.nav a, .nav label {
   margin-top: 1rem;
   border: 0;
   font-size: 1.2rem;
@@ -106,7 +102,7 @@ header {
   margin-left: 1.5rem;
 }
 
-.nav button::after, .nav label::after {
+.nav a::after, .nav label::after {
   content: "";
   display: block;
   border-bottom: 3px solid #818181;
@@ -118,13 +114,13 @@ header {
           transform: translateY(5px) scaleX(0%);
 }
 
-.nav button:hover::after, .nav label:hover::after {
+.nav a:hover::after, .nav label:hover::after {
   -webkit-transform: translateY(5px) scaleX(100%);
           transform: translateY(5px) scaleX(100%);
   border-bottom-color: #131313;
 }
 
-.nav button:hover, .nav label:hover {
+.nav a:hover, .nav label:hover {
   color: #131313;
 }
 
