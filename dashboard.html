@@ -21,7 +21,7 @@
     <header class="heading">
         <div class="wrapper headerWrapper"> 
             <div class="nav">
-                <input class="rm" type="file" name="export" id="importBtn" accept=".json, .JSON" onchange="readFile(event)">
+                <input class="rm" type="file" name="export" id="importBtn" accept=".json, .JSON" onchange="clearData('cpu','cpu_clearBtnPanel');readFile(event)">
                 <label for="importBtn">Import</label>
                 <a id="exportBtn" href="" download="x.json" onclick="exportJson()">Export</a>
             </div>
