@@ -262,6 +262,7 @@ var MOTHERBOARDDATA=[
         size:"Mini-ITX",
         chipset:"B450",
         socket: "AM4+",
+        memoryType:"DDR4",
         has_nvme_m_2_slot: false,
         has_sata_m_2_slot: true,
         price:9500
@@ -273,6 +274,7 @@ var MOTHERBOARDDATA=[
         size:"Micro-ATX",
         chipset:"H110",
         socket: "LGA1151",
+        memoryType:"DDR4",
         has_nvme_m_2_slot: false,
         has_sata_m_2_slot: false,
         price:3800
@@ -284,6 +286,7 @@ var MOTHERBOARDDATA=[
         size:"ATX",
         chipset:"B450",
         socket: "AM4+",
+        memoryType:"DDR4",
         has_nvme_m_2_slot: true,
         has_sata_m_2_slot: true,
         price:9000

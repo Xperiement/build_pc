@@ -315,6 +315,17 @@ input {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.pointerCursor {
+  cursor: pointer;
+}
+
+.notSelectable {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .specsType {
   font-size: 1.4rem;
   font-family: 'Raleway', sans-serif;
@@ -371,10 +382,8 @@ input {
 .compoDetails {
   font-family: product sans;
   color: grey;
-  -webkit-transition: -webkit-transform 280ms;
-  transition: -webkit-transform 280ms;
-  transition: transform 280ms;
-  transition: transform 280ms, -webkit-transform 280ms;
+  -webkit-transition: color 280ms;
+  transition: color 280ms;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -383,8 +392,7 @@ input {
 
 .compoDetails:focus,
 .compoDetails:hover {
-  -webkit-transform: scale(110%);
-          transform: scale(110%);
+  color: #5c5c5c;
 }
 
 .type {
@@ -654,6 +662,7 @@ input {
   height: 150px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: pointer;
   background-size: auto 100px;
   background-repeat: no-repeat;
   background-position: center;
@@ -664,6 +673,7 @@ input {
   height: 130px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: pointer;
   background-size: auto 100px;
   background-repeat: no-repeat;
   background-position: center;

@@ -163,6 +163,7 @@ function load(id,to,from,brand,model,price,sz=true){
 
         document.getElementById("cpuBrand").innerHTML=myCPU.brand;
         document.getElementById("cpuName").innerHTML=myCPU.model;
+        document.getElementById("cpuName").classList.add("pointerCursor");
         document.getElementById("cpuName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
         document.getElementById("cpu_clearBtnPanel").style['display']="grid";
     }else if(id=="motherboardList"){
@@ -173,6 +174,7 @@ function load(id,to,from,brand,model,price,sz=true){
         }
         document.getElementById("motherboardBrand").innerHTML=myMOTHERBOARD.brand;
         document.getElementById("motherboardName").innerHTML=myMOTHERBOARD.model;
+        document.getElementById("motherboardName").classList.add("pointerCursor");
         document.getElementById("motherboardName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
 
         document.getElementById('myMotherboardImg').style['backgroundImage']="url('"+getImage(myMOTHERBOARD,id)+"')";
@@ -186,6 +188,7 @@ function load(id,to,from,brand,model,price,sz=true){
         }
         document.getElementById("ramBrand").innerHTML=myRAM.brand;
         document.getElementById("ramName").innerHTML=myRAM.model;
+        document.getElementById("ramName").classList.add("pointerCursor");
         document.getElementById("ramName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
 
         document.getElementById('myRamImg').style['backgroundImage']="url('"+getImage(myRAM,id)+"')";
@@ -201,6 +204,7 @@ function load(id,to,from,brand,model,price,sz=true){
         }
         document.getElementById("gpuBrand").innerHTML=myGPU.brand;
         document.getElementById("gpuName").innerHTML=myGPU.model;
+        document.getElementById("gpuName").classList.add("pointerCursor");
         document.getElementById("gpuName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
 
         document.getElementById('myGpuImg').style['backgroundImage']="url('"+getImage(myGPU,id)+"')";
@@ -215,6 +219,7 @@ function load(id,to,from,brand,model,price,sz=true){
         }
         document.getElementById("hddBrand").innerHTML=myHDD.brand;
         document.getElementById("hddName").innerHTML=myHDD.model;
+        document.getElementById("hddName").classList.add("pointerCursor");
         document.getElementById("hddName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
 
         document.getElementById('myHddImg').style['backgroundImage']="url('"+getImage(myHDD,id)+"')";
@@ -228,6 +233,7 @@ function load(id,to,from,brand,model,price,sz=true){
         }
         document.getElementById("ssdBrand").innerHTML=mySSD.brand;
         document.getElementById("ssdName").innerHTML=mySSD.model;
+        document.getElementById("ssdName").classList.add("pointerCursor");
         document.getElementById("ssdName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
 
         document.getElementById('mySsdImg').style['backgroundImage']="url('"+getImage(mySSD,id)+"')";
@@ -241,6 +247,7 @@ function load(id,to,from,brand,model,price,sz=true){
         }
         document.getElementById("psuBrand").innerHTML=myPSU.brand;
         document.getElementById("psuName").innerHTML=myPSU.model;
+        document.getElementById("psuName").classList.add("pointerCursor");
         document.getElementById("psuName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
 
         document.getElementById('myPsuImg').style['backgroundImage']="url('"+getImage(myPSU,id)+"')";
@@ -254,6 +261,7 @@ function load(id,to,from,brand,model,price,sz=true){
         }
         document.getElementById("caseBrand").innerHTML=myCASE.brand;
         document.getElementById("caseName").innerHTML=myCASE.model;
+        document.getElementById("caseName").classList.add("pointerCursor");
         document.getElementById("caseName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
         document.getElementById("case_clearBtnPanel").style['display']="grid";
     }
@@ -314,7 +322,7 @@ async function createCard(arg,index,id){
 
 
     var p2=document.createElement("p");
-    p2.classList.add("compoDetails","smallTitleEx");
+    p2.classList.add("compoDetails","smallTitleEx","pointerCursor");
     p2.setAttribute("onclick",balerFunction(id,index,"Info","InfoContainer"));
     p2.innerHTML=name;
     //console.log(balerFunction(id,index,"Info","InfoContainer"));

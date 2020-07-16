@@ -61,6 +61,7 @@ async function clearData(arg,id){
     document.getElementById(x).style['backgroundImage']="url('res/images/plus-circle-solid.svg')";
     document.getElementById(x).style['backgroundSize']="auto 100px";
     document.getElementById(y).innerHTML='Not selected';
+    document.getElementById(y).classList.remove("pointerCursor");
 
     //Disable the panel
     document.getElementById(id).style['opacity']="0%";
