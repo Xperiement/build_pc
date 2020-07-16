@@ -43,6 +43,8 @@ async function verifyObj(obj){
         }else if(obj[i].compoType=="case"){
             IMPORT[7]=obj[i];
             load("caseList","Dummy","Dummy",IMPORT[7].brand,IMPORT[7].model,IMPORT[7].price,false);
+        }else if(obj[i].compoType=="desktopName"){
+            document.getElementById("desktopName").value=obj[i].name;
         }
     }
 }
@@ -58,6 +60,7 @@ function exportJson(){
 }
 
 async function cleanCards(){
+    document.getElementById("desktopName").value='';
     clearData('cpu','cpu_clearBtnPanel');
     clearData('motherboard','motherboard_clearBtnPanel');
     clearData('ram','ram_clearBtnPanel');
