@@ -59,6 +59,39 @@ function exportJson(){
     document.getElementById("exportBtn").setAttribute("href",x);
 }
 
+function genarateExportObj(){
+    var obj;
+    var count=0;
+    var DesktopName='';
+    if(myCPU!=null){
+        obj[count++]=myCPU;
+    }
+    if(myMOTHERBOARD!=null){
+        obj[count++]=myMOTHERBOARD;
+    }
+    if(myRAM!=null){
+        obj[count++]=myRAM;
+    }
+    if(myGPU!=null){
+        obj[count++]=myGPU;
+    }
+    if(myHDD!=null){
+        obj[count++]=myHDD;
+    }
+    if(mySSD!=null){
+        obj[count++]=mySSD;
+    }
+    if(myPSU!=null){
+        obj[count++]=myPSU;
+    }
+    if(myCASE!=null){
+        obj[count++]=myCASE;
+    }
+    obj[count]=[
+
+    ]
+}
+
 async function cleanCards(){
     document.getElementById("desktopName").value='';
     clearData('cpu','cpu_clearBtnPanel');

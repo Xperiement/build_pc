@@ -182,6 +182,7 @@ var IntelCpus=[
 
 var CPUDATA=[
     {
+        compoType:"cpu",
         brand:"Intel",
         model:"Core i3-6098p",
         genaration: 6,
@@ -201,6 +202,7 @@ var CPUDATA=[
         price:7900
     },
     {
+        compoType:"cpu",
         brand:"Intel",
         core:8,
         model:"Core i9-9900KS",
@@ -210,6 +212,7 @@ var CPUDATA=[
         price:70000
     },
     {
+        compoType:"cpu",
         brand:"Intel",
         core:4,
         model:"Core i5-9400F",
@@ -219,6 +222,7 @@ var CPUDATA=[
         price:12000
     },
     {
+        compoType:"cpu",
         brand:"AMD",
         core:4,
         model:"Ryzen 5 3600X",
@@ -231,6 +235,7 @@ var CPUDATA=[
 
 var MOTHERBOARDDATA=[
     {
+        compoType:"motherboard",
         brand:"Asus",
         platform: "Intel",
         model:"Z570",
@@ -256,6 +261,7 @@ var MOTHERBOARDDATA=[
         price:16000
     },
     {
+        compoType:"motherboard",
         brand:"Asrock",
         platform: "AMD",
         model:"B450 Lightning",
@@ -268,6 +274,7 @@ var MOTHERBOARDDATA=[
         price:9500
     },
     {
+        compoType:"motherboard",
         brand:"Gigabyte",
         platform: "Intel",
         model:"H110m-s2",
@@ -280,6 +287,7 @@ var MOTHERBOARDDATA=[
         price:3800
     },
     {
+        compoType:"motherboard",
         brand:"MSI",
         platform: "AMD",
         model:"B450-Tomahawk",
@@ -295,6 +303,7 @@ var MOTHERBOARDDATA=[
 
 var RAMDATA=[
     {
+        compoType:"ram",
         brand:"Corsair",
         model:"Value Select 8GB",
         capacity: 8,
@@ -305,6 +314,7 @@ var RAMDATA=[
         price:3100
     },
     {
+        compoType:"ram",
         brand:"Corsair",
         model:"Value Select 32GB",
         capacity: 16,
@@ -313,6 +323,7 @@ var RAMDATA=[
         price:7100
     },
     {
+        compoType:"ram",
         brand:"Kingstone",
         model:"HyperX Fury 16GB",
         capacity: 8,
@@ -321,6 +332,7 @@ var RAMDATA=[
         price:4180
     },
     {
+        compoType:"ram",
         brand:"Adata",
         model:"XPG 16GB",
         capacity: 4,
@@ -332,6 +344,7 @@ var RAMDATA=[
 
 var GPUDATA=[
     {
+        compoType:"gpu",
         brand:"Aorus",
         platform:"Nvidia",
         model:"GTX 1650",
@@ -348,6 +361,7 @@ var GPUDATA=[
         price:12500
     },
     {
+        compoType:"gpu",
         brand:"Asus",
         platform:"Nvidia",
         model:"GTX 2070 Super",
@@ -356,6 +370,7 @@ var GPUDATA=[
         price:45000
     },
     {
+        compoType:"gpu",
         brand:"Galax",
         platform:"Nvidia",
         model:"GTX 2080Ti",
@@ -364,6 +379,7 @@ var GPUDATA=[
         price:123000
     },
     {
+        compoType:"gpu",
         brand:"MSI",
         platform:"AMD",
         model:"RX 5700XT",
@@ -375,6 +391,7 @@ var GPUDATA=[
 
 var HDDDATA=[
     {
+        compoType:"hdd",
         brand:"Seagate",
         model:"Baracuda 1TB",
         capacity: 1,
@@ -383,18 +400,21 @@ var HDDDATA=[
         price:4100
     },
     {
+        compoType:"hdd",
         brand:"Seagate",
         model:"Baracuda 4TB",
         capacity: 4,
         price:9000
     },
     {
+        compoType:"hdd",
         brand:"WD",
         model:"Blue 1TB",
         capacity: 1,
         price:4000
     },
     {
+        compoType:"hdd",
         brand:"WD",
         model:"Black 1TB",
         capacity: 1,
@@ -404,6 +424,7 @@ var HDDDATA=[
 
 var SSDDATA=[
     {
+        compoType:"ssd",
         brand:"Samsung",
         model:"960 Evo",
         capacity:128,
@@ -412,6 +433,7 @@ var SSDDATA=[
         price:8453
     },
     {
+        compoType:"ssd",
         brand:"Corsair",
         model:"MP500",
         capacity: 512,
@@ -420,6 +442,7 @@ var SSDDATA=[
         price:9665
     },
     {
+        compoType:"ssd",
         brand:"Adata",
         model:"XPG S6000",
         capacity: 256,
@@ -428,6 +451,7 @@ var SSDDATA=[
         price:5500
     },
     {
+        compoType:"ssd",
         brand:"WD",
         model:"Black 203",
         capacity: 1,
@@ -439,6 +463,7 @@ var SSDDATA=[
 
 var PSUDATA=[
     {
+        compoType:"psu",
         brand:"Corsair",
         model:"VS550",
         capacity:450,
@@ -447,18 +472,21 @@ var PSUDATA=[
         price:4678
     },
     {
+        compoType:"psu",
         brand:"Corsair",
         model:"VS450",
         capacity:450,
         price:2600
     },
     {
+        compoType:"psu",
         brand:"Cooler Master",
         model:"MWE 750",
         capacity:750,
         price:6234
     },
     {
+        compoType:"psu",
         brand:"Sliver Stone",
         model:"S450",
         capacity:450,
@@ -468,6 +496,7 @@ var PSUDATA=[
 
 var CASEDATA=[
     {
+        compoType:"case",
         brand:"Corsair",
         model:"Carbide S1",
         type:"Mid Tower",
@@ -489,6 +518,7 @@ var CASEDATA=[
         price:5473
     },
     {
+        compoType:"case",
         brand:"Corsair",
         model:"Spec 03",
         type:"Mid Tower",
@@ -496,6 +526,7 @@ var CASEDATA=[
         price:2457
     },
     {
+        compoType:"case",
         brand:"Cooler Master",
         model:"M500",
         type:"Mini Tower",
@@ -503,6 +534,7 @@ var CASEDATA=[
         price:5767
     },
     {
+        compoType:"case",
         brand:"Aorus",
         model:"Gaming X",
         type:"Full Tower",
