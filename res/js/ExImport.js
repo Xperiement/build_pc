@@ -49,20 +49,17 @@ async function verifyObj(obj){
     }
 }
 
-function getAll(){
-    var x=JSON.stringify(myCPU)+','+JSON.stringify(myMOTHERBOARD)+','+JSON.stringify(myRAM)+','+JSON.stringify(myGPU)+','+JSON.stringify(myHDD)+','+JSON.stringify(mySSD)+','+JSON.stringify(myPSU)+','+JSON.stringify(myCASE);
-    console.log(x);
-}
-
 function exportJson(){
-    var x="data:text/json;charset=utf-8,"+JSON.stringify(IMPORT);
+    var x="data:text/json;charset=utf-8,"+JSON.stringify(genarateExportObj());
     document.getElementById("exportBtn").setAttribute("href",x);
 }
 
 function genarateExportObj(){
-    var obj;
+    var obj=[
+
+    ];
     var count=0;
-    var DesktopName='';
+    var DesktopName=document.getElementById("desktopName").value;
     if(myCPU!=null){
         obj[count++]=myCPU;
     }
@@ -87,9 +84,11 @@ function genarateExportObj(){
     if(myCASE!=null){
         obj[count++]=myCASE;
     }
-    obj[count]=[
-
-    ]
+    obj[count]={
+        compoType:""
+    };
+    obj[count].compoType=DesktopName;
+    return obj;
 }
 
 async function cleanCards(){
