@@ -1,4 +1,5 @@
 function setAutoFilter(id){
+    resetFilter(id);
     if(id=="add_cpu"){
         if(myMOTHERBOARD!=null){
             applyCpuFilter("brand",myMOTHERBOARD.platform,false);
@@ -62,7 +63,9 @@ function isCompatibleMotherboard(chipset){
 function isCompatibleCpu(cpuGenaration){
     var cpuIndex;
     var status=false;
-    if(myMOTHERBOARD==null){return true}
+    if(myMOTHERBOARD==null){
+        return true;
+    }
     var platform=myMOTHERBOARD.platform;
     var chipset=myMOTHERBOARD.chipset;
     if(platform=="AMD"){

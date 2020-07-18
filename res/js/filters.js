@@ -462,3 +462,28 @@ function CASEFILTER(DATA){
     return ret;
 }
 
+function resetFilter(id){
+    if(id=="add_cpu"){
+        cpuBrand="";
+        cpuCore=0;
+        cache="";
+        cpuSocket="";
+        cpuOverclockable=null;
+        hasIgpu=null;
+    }else if(id=="add_motherboard"){
+        motherboardBrand="";
+        motherboardPlatform="";
+        motherboardChipset="";
+        motherboardSocket="";
+        motherboardSize="";
+        motherboardOverclockable=null;
+        hasNvme_m2_SSD_Slot=null;
+        hasSata_m2_SSD_Slot=null;
+    }else if(id=="add_ram"){
+        ramBrand="";
+        ramCapacity=0;
+        ramQuantity=0;
+        ramType="";
+    }
+}
+
