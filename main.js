@@ -142,18 +142,6 @@ function setValue(x){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 function load(id,to,from,brand,model,price,sz=true){
     if(id=="cpuList"){
         if(sz){
@@ -336,7 +324,7 @@ async function createCard(arg,index,id){
     //console.log(balerFunction(id,index,"Info","InfoContainer"));
     var p3=document.createElement("p");
     p3.classList.add("compoDetails","slighlySmallTitle");
-    p3.innerHTML="3.4GHZ, 2 cores 4 threads";
+    p3.innerHTML=getShortInfo(id,arg);
 
 
 
@@ -408,6 +396,38 @@ function getImage(arg,id){
     }
 
     return x+y+z;
+}
+
+function getShortInfo(id,data){
+    if(id=="cpuList"){//3.4GHZ, 2 cores 4 threads
+        return data.baseClock+", "+data.core+" cores "+data.thread+" threads";
+    }else if(id=="motherboardList"){
+        return data.platform+" "+data.chipset+" chipset "+data.size+" motherboard";
+    }else if(id=="ramList"){
+        return data.capacity+"GB x "+data.quantity+", "+data.speed+" MHZ";
+    }else if(id=="gpuList"){
+        return data.vram+"GB "+data.vram_type;
+    }else if(id=="hddList"){
+        return data.capacity+"TB Hard drive";
+    }else if(id=="ssdList"){
+        if(data.capacity<120){
+            return data.capacity+"TB "+data.interface+" "+data.type+" drive";
+        }else{
+            return data.capacity+"GB "+data.interface+" "+data.type+" drive";
+        }
+    }else if(id=="psuList"){
+        var a='';
+        if(data.has_80_cartification && data.type_80_plus=="Default"){
+            a="80+ Plus";
+        }else if(data.has_80_cartification){
+            a="80+ Plus "+data.type_80_plus;
+        }else{
+            a='PowerSupply'
+        }
+        return data.capacity+"W "+a;
+    }else if(id=="caseList"){
+        return data.type+" Case";
+    }
 }
 
 function getCollecter(arg,id){

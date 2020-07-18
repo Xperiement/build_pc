@@ -468,7 +468,7 @@ var PSUDATA=[
         model:"VS550",
         capacity:450,
         has_80_cartification: true,
-        type_80_plus:"Default",
+        type_80_plus:"Gold",
         price:4678
     },
     {
