@@ -24,7 +24,8 @@ function setAutoFilter(id){
                 applyMotherboardFilter("sata_m_2",null,false);
             }
         }else{
-            applyMotherboardFilter("platform","",false);
+            applyMotherboardFilter("nvme",null,false);
+            applyMotherboardFilter("sata_m_2",null,false);
         }
     }else if(id=="add_ram"){
         if(myMOTHERBOARD!=null){
