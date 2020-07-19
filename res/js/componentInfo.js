@@ -306,6 +306,9 @@ function get_hdd_info_container(DATA,id){
 }
 
 function get_ssd_info_container(DATA,id){
+    //Temp Variable
+    var x='';
+    var y='';
     //Main Div
     var mainDiv=document.createElement("div");
     mainDiv.classList.add("mainDesc");
@@ -320,8 +323,14 @@ function get_ssd_info_container(DATA,id){
     }else{
         var sizeType="TB";
     }
-    var p3=createParagraph(DATA.capacity+sizeType+" "+DATA.type+" SSD",["type","specs"]);
-    var p4=createParagraph("Interface - "+DATA.interface+" "+DATA.type,["type","specs"]);
+    if(DATA.type=="SATAL"){
+        x="2.5 inch";
+        y="3";
+    }else{
+        y=x=DATA.type;
+    }
+    var p3=createParagraph(DATA.capacity+sizeType+" "+x+" SSD",["type","specs"]);
+    var p4=createParagraph("Interface - "+DATA.interface+" "+y,["type","specs"]);
     
 
     //Close Button
