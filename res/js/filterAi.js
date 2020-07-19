@@ -12,11 +12,37 @@ function setAutoFilter(id){
         }else{
             applyMotherboardFilter("platform","",false);
         }
+        if(mySSD!=null){
+            if(mySSD.type=="NVME"||mySSD.type=="nvme"){
+                applyMotherboardFilter("nvme",true,false);
+                applyMotherboardFilter("sata_m_2",true,false);
+            }else if(mySSD.type=="SATA"){
+                applyMotherboardFilter("nvme",false,false);
+                applyMotherboardFilter("sata_m_2",true,false);
+            }else{
+                applyMotherboardFilter("nvme",null,false);
+                applyMotherboardFilter("sata_m_2",null,false);
+            }
+        }else{
+            applyMotherboardFilter("platform","",false);
+        }
     }else if(id=="add_ram"){
         if(myMOTHERBOARD!=null){
             applyRamFilter("type",myMOTHERBOARD.memoryType,false);
         }else{
             applyRamFilter("type","",false);
+        }
+    }else if(id=="add_ssd"){
+        if(myMOTHERBOARD!=null){
+            if(myMOTHERBOARD.has_nvme_m_2_slot){
+                applySsdFilter("type",0,false);
+            }else if(myMOTHERBOARD.has_sata_m_2_slot){
+                applySsdFilter("type",'SATA',false);
+            }else{
+                applySsdFilter("type",'SATAL',false);
+            }
+        }else{
+            applySsdFilter("type",0,false);
         }
     }
 }

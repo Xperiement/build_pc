@@ -50,7 +50,6 @@ function applyMotherboardFilter(prop,value,arg=true){
     }else if(prop=='formFactor'){
         motherboardSize=value;
     }else if(prop=='socket'){
-        console.log("passing");
         motherboardSocket=value;
     }else if(prop=='nvme'){
         hasNvme_m2_SSD_Slot=value;
@@ -370,6 +369,9 @@ var ssdCapacity=0;
 var ssdType="";
 function SSDFILTER(DATA){
     var ret=true;
+    if(DATA.type=='SATAL'){
+        return true;
+    }
     if(ssdBrand!=""){
         if(ssdBrand==DATA.brand){
             ret=true;
@@ -385,6 +387,11 @@ function SSDFILTER(DATA){
         }
     }
     if(ssdType!=0){
+        //IF Motherboard dont have any M.2 
+        if(myMOTHERBOARD!=null && (!myMOTHERBOARD.has_nvme_m_2_slot && !myMOTHERBOARD.has_sata_m_2_slot)){
+            return false;  
+        }
+        //Other Filters
         if(ssdType==DATA.type){
             ret=true;
         }else{
