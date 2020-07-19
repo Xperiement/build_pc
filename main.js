@@ -376,7 +376,9 @@ function getImage(arg,id){
     }else if(id=="ramList"){
         y="ram";
     }else if(id=="ssdList"){
-        if(arg.type=="NVME"||arg.type=="nvme"||arg.type=="Nvme"){
+        if(arg.interface=="SATA"||arg.interface=="sata"){
+            y="sata_ssd";
+        }else if(arg.type=="NVME"||arg.type=="nvme"||arg.type=="Nvme"){
             y="nvme_m_2";
         }else{
             y="sata_m_2";
@@ -399,6 +401,7 @@ function getImage(arg,id){
 }
 
 function getShortInfo(id,data){
+    var x='';
     if(id=="cpuList"){//3.4GHZ, 2 cores 4 threads
         return data.baseClock+", "+data.core+" cores "+data.thread+" threads";
     }else if(id=="motherboardList"){
@@ -410,21 +413,27 @@ function getShortInfo(id,data){
     }else if(id=="hddList"){
         return data.capacity+"TB Hard drive";
     }else if(id=="ssdList"){
-        if(data.capacity<120){
-            return data.capacity+"TB "+data.interface+" "+data.type+" drive";
+        x='';
+        if(data.type=="SATAL"){
+            x=data.interface+" 2.5' inch";
         }else{
-            return data.capacity+"GB "+data.interface+" "+data.type+" drive";
+            x=data.interface+" "+data.type;
+        }
+        if(data.capacity<120){
+            return data.capacity+"TB "+x+" drive";
+        }else{
+            return data.capacity+"GB "+x+" drive";
         }
     }else if(id=="psuList"){
-        var a='';
+        x='';
         if(data.has_80_cartification && data.type_80_plus=="Default"){
-            a="80+ Plus";
+            x="80+ Plus";
         }else if(data.has_80_cartification){
-            a="80+ Plus "+data.type_80_plus;
+            x="80+ Plus "+data.type_80_plus;
         }else{
-            a='PowerSupply'
+            x='PowerSupply';
         }
-        return data.capacity+"W "+a;
+        return data.capacity+"W "+x;
     }else if(id=="caseList"){
         return data.type+" Case";
     }
