@@ -468,6 +468,168 @@ var SSDDATA=[
         type:"SATAL",
         price:69
     },
+    {
+        compoType:"ssd",
+        brand:"WD",
+        model:"Black 203",
+        capacity: 1,
+        interface:"M.2",
+        type:"NVME",
+        price:8954
+    },
+    {
+        compoType:"ssd",
+        brand:"Kingstone",
+        model:"Data now",
+        capacity: 256,
+        interface:"SATA",
+        type:"SATAL",
+        price:69
+    },
+    {
+        compoType:"ssd",
+        brand:"WD",
+        model:"Black 203",
+        capacity: 1,
+        interface:"M.2",
+        type:"NVME",
+        price:8954
+    },
+    {
+        compoType:"ssd",
+        brand:"Kingstone",
+        model:"Data now",
+        capacity: 256,
+        interface:"SATA",
+        type:"SATAL",
+        price:69
+    },
+    {
+        compoType:"ssd",
+        brand:"WD",
+        model:"Black 203",
+        capacity: 1,
+        interface:"M.2",
+        type:"NVME",
+        price:8954
+    },
+    {
+        compoType:"ssd",
+        brand:"Kingstone",
+        model:"Data now",
+        capacity: 256,
+        interface:"SATA",
+        type:"SATAL",
+        price:69
+    },
+    {
+        compoType:"ssd",
+        brand:"WD",
+        model:"Black 203",
+        capacity: 1,
+        interface:"M.2",
+        type:"NVME",
+        price:8954
+    },
+    {
+        compoType:"ssd",
+        brand:"Kingstone",
+        model:"Data now",
+        capacity: 256,
+        interface:"SATA",
+        type:"SATAL",
+        price:69
+    },
+    {
+        compoType:"ssd",
+        brand:"WD",
+        model:"Black 203",
+        capacity: 1,
+        interface:"M.2",
+        type:"NVME",
+        price:8954
+    },
+    {
+        compoType:"ssd",
+        brand:"Kingstone",
+        model:"Data now",
+        capacity: 256,
+        interface:"SATA",
+        type:"SATAL",
+        price:69
+    },
+    {
+        compoType:"ssd",
+        brand:"WD",
+        model:"Black 203",
+        capacity: 1,
+        interface:"M.2",
+        type:"NVME",
+        price:8954
+    },
+    {
+        compoType:"ssd",
+        brand:"Kingstone",
+        model:"Data now",
+        capacity: 256,
+        interface:"SATA",
+        type:"SATAL",
+        price:69
+    },
+    {
+        compoType:"ssd",
+        brand:"WD",
+        model:"Black 203",
+        capacity: 1,
+        interface:"M.2",
+        type:"NVME",
+        price:8954
+    },
+    {
+        compoType:"ssd",
+        brand:"Kingstone",
+        model:"Data now",
+        capacity: 256,
+        interface:"SATA",
+        type:"SATAL",
+        price:69
+    },
+    {
+        compoType:"ssd",
+        brand:"WD",
+        model:"Black 203",
+        capacity: 1,
+        interface:"M.2",
+        type:"NVME",
+        price:8954
+    },
+    {
+        compoType:"ssd",
+        brand:"Kingstone",
+        model:"Data now",
+        capacity: 256,
+        interface:"SATA",
+        type:"SATAL",
+        price:69
+    },
+    {
+        compoType:"ssd",
+        brand:"WD",
+        model:"Black 203",
+        capacity: 1,
+        interface:"M.2",
+        type:"NVME",
+        price:8954
+    },
+    {
+        compoType:"ssd",
+        brand:"Kingstone",
+        model:"Data now",
+        capacity: 256,
+        interface:"SATA",
+        type:"SATAL",
+        price:69
+    },
 ];
 
 var PSUDATA=[

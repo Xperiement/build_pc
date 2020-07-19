@@ -116,7 +116,7 @@ input{
 
 .dashboard,
 .addComponentPanel{
-    margin-top: 1rem;
+    margin-top: 11rem;
     transition: display 280ms, opacity 280ms;
 }
 
@@ -177,11 +177,13 @@ input{
     height: 4rem;
 }
 .panelInfo{
-    //background: rgb(211, 211, 211);
-    z-index: 69;
+    background: #F6F8FF;
+    z-index: 1000;
     margin-top: 4rem;
-    height: 100px;
-    //box-shadow: 0px 1px 5px #00000033;
+    height: 7rem;
+    position: fixed;
+    width: calc(100vw - 1rem);
+    top: 0;
 }
 
 .dashboard{
@@ -380,18 +382,32 @@ input{
         align-items: center;
         justify-content: space-evenly;
     }
+    .mainHeadEx{
+        display: block;
+    }
     .mainDesc{
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
+    .mainDescEx{
+        width: calc(100% - .5rem);
+        max-width: 1000px;
+        position: fixed;
+        padding-left: .5rem;
+    }
     .closeBtn{
         position: absolute;
         width: 20px;
         top: 2%;
-        right: 5%;
+        right: 2%;
     }
+}
+.infoPanelEx{
+    position: fixed;
+    transform: translateY(-1rem);
+    padding-top: 1rem;
 }
 
 .StatsBtn{
@@ -412,11 +428,11 @@ input{
 }
 
 .fsPanel{
-    position: absolute;
+    position: fixed;
     max-width: 1000px;
     width: calc(100% - 2rem);
     height: 2rem;
-    background: rgba(255, 255, 255, 0.856);
+    background: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -454,7 +470,7 @@ input{
     
     
     .optionPanel{
-        width: calc(100% - 2rem);
+        //width: calc(100% - 2rem);
         height: calc(100% - 2rem);
         display: none;
         flex-direction: column;
@@ -462,6 +478,7 @@ input{
         justify-content: start;
         transition: display 280ms;
         transform-origin: left;
+        padding-left: .5rem;
     }
 
     .typeOption{
@@ -557,4 +574,8 @@ input{
         color: white;
         box-shadow: 0px 5px 10px #00000028;
     }
+}
+
+.listEx{
+    margin-top: 12rem;
 }

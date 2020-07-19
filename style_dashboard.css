@@ -119,7 +119,7 @@ input {
 
 .dashboard,
 .addComponentPanel {
-  margin-top: 1rem;
+  margin-top: 11rem;
   -webkit-transition: display 280ms, opacity 280ms;
   transition: display 280ms, opacity 280ms;
 }
@@ -213,9 +213,13 @@ input {
 }
 
 .panelInfo {
-  z-index: 69;
+  background: #F6F8FF;
+  z-index: 1000;
   margin-top: 4rem;
-  height: 100px;
+  height: 7rem;
+  position: fixed;
+  width: calc(100vw - 1rem);
+  top: 0;
 }
 
 .dashboard {
@@ -462,6 +466,10 @@ input {
           justify-content: space-evenly;
 }
 
+.infoPanel .mainHeadEx {
+  display: block;
+}
+
 .infoPanel .mainDesc {
   width: 100%;
   display: -webkit-box;
@@ -476,11 +484,25 @@ input {
           align-items: flex-start;
 }
 
+.infoPanel .mainDescEx {
+  width: calc(100% - .5rem);
+  max-width: 1000px;
+  position: fixed;
+  padding-left: .5rem;
+}
+
 .infoPanel .closeBtn {
   position: absolute;
   width: 20px;
   top: 2%;
-  right: 5%;
+  right: 2%;
+}
+
+.infoPanelEx {
+  position: fixed;
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+  padding-top: 1rem;
 }
 
 .StatsBtn {
@@ -504,11 +526,11 @@ input {
 }
 
 .fsPanel {
-  position: absolute;
+  position: fixed;
   max-width: 1000px;
   width: calc(100% - 2rem);
   height: 2rem;
-  background: rgba(255, 255, 255, 0.856);
+  background: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -560,7 +582,6 @@ input {
 }
 
 .fsPanel .optionPanel {
-  width: calc(100% - 2rem);
   height: calc(100% - 2rem);
   display: none;
   -webkit-box-orient: vertical;
@@ -577,6 +598,7 @@ input {
   transition: display 280ms;
   -webkit-transform-origin: left;
           transform-origin: left;
+  padding-left: .5rem;
 }
 
 .fsPanel .typeOption {
@@ -696,5 +718,9 @@ input {
   color: white;
   -webkit-box-shadow: 0px 5px 10px #00000028;
           box-shadow: 0px 5px 10px #00000028;
+}
+
+.listEx {
+  margin-top: 12rem;
 }
 /*# sourceMappingURL=style_dashboard.css.map */

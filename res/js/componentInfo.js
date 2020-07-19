@@ -1,9 +1,10 @@
 function createInfoPanel(id){
     var x=document.createElement("div");
     x.classList.add("infoPanel");
+    x.classList.add("infoPanelEx");
     x.setAttribute("id",id+"Info");
     var y=document.createElement("div");
-    y.classList.add("mainHead");
+    y.classList.add("mainHeadEx");
     y.setAttribute("id",id+"InfoContainer");
     x.appendChild(y)
     return x;
@@ -63,7 +64,7 @@ function get_cpu_info_container(DATA,id){
 
     //Main Div
     var mainDiv=document.createElement("div");
-    mainDiv.classList.add("mainDesc");
+    mainDiv.classList.add("mainDescEx");
 
     //Heading 
     var p1=createParagraph(DATA.brand,["type","bigTitle"]);
@@ -115,7 +116,7 @@ function get_cpu_info_container(DATA,id){
 function get_motherboard_info_container(DATA,id){
     //Main Div
     var mainDiv=document.createElement("div");
-    mainDiv.classList.add("mainDesc");
+    mainDiv.classList.add("mainDescEx");
     //Heading 
     var p1=createParagraph(DATA.brand,["type","bigTitle"]);
     //Sub Heading
@@ -180,7 +181,7 @@ function get_motherboard_info_container(DATA,id){
 function get_ram_info_container(DATA,id){
     //Main Div
     var mainDiv=document.createElement("div");
-    mainDiv.classList.add("mainDesc");
+    mainDiv.classList.add("mainDescEx");
     //Heading 
     var p1=createParagraph(DATA.brand,["type","bigTitle"]);
     //Sub Heading
@@ -220,7 +221,7 @@ function get_gpu_info_container(DATA,id){
     var availablePorts="";
     //Main Div
     var mainDiv=document.createElement("div");
-    mainDiv.classList.add("mainDesc");
+    mainDiv.classList.add("mainDescEx");
     //Heading 
     var p1=createParagraph(DATA.brand,["type","bigTitle"]);
     //Sub Heading
@@ -274,7 +275,7 @@ function get_gpu_info_container(DATA,id){
 function get_hdd_info_container(DATA,id){
     //Main Div
     var mainDiv=document.createElement("div");
-    mainDiv.classList.add("mainDesc");
+    mainDiv.classList.add("mainDescEx");
     //Heading 
     var p1=createParagraph(DATA.brand,["type","bigTitle"]);
     //Sub Heading
@@ -311,7 +312,7 @@ function get_ssd_info_container(DATA,id){
     var y='';
     //Main Div
     var mainDiv=document.createElement("div");
-    mainDiv.classList.add("mainDesc");
+    mainDiv.classList.add("mainDescEx");
     //Heading 
     var p1=createParagraph(DATA.brand,["type","bigTitle"]);
     //Sub Heading
@@ -351,7 +352,7 @@ function get_psu_info_container(DATA,id){
     var rating="";
     //Main Div
     var mainDiv=document.createElement("div");
-    mainDiv.classList.add("mainDesc");
+    mainDiv.classList.add("mainDescEx");
     //Heading 
     var p1=createParagraph(DATA.brand,["type","bigTitle"]);
     //Sub Heading
@@ -388,7 +389,7 @@ function get_case_info_container(DATA,id){
     front=top=bottom=rear=fanSpace="";
     //Main Div
     var mainDiv=document.createElement("div");
-    mainDiv.classList.add("mainDesc");
+    mainDiv.classList.add("mainDescEx");
     //Heading 
     var p1=createParagraph(DATA.brand,["type","bigTitle"]);
     //Sub Heading
