@@ -416,7 +416,7 @@ function PSUFILTER(DATA){
         }
     }
     if(psuCapacity!=0){
-        if(psuCapacity==DATA.capacity){
+        if(psuCapacity<=DATA.capacity){
             ret=true;
         }else{
             return false;

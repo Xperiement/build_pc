@@ -45,6 +45,27 @@ function setAutoFilter(id){
         }else{
             applySsdFilter("type",0,false);
         }
+    }else if(id=="add_psu"){
+        var totalLoad=0;
+        if(myCPU!=null){
+            totalLoad += myCPU.tdp;
+        }
+        if(myMOTHERBOARD!=null){
+            totalLoad += motherboardMaxTDP;
+        }
+        if(myRAM!=null){
+            totalLoad += myRAM.quantity*ramMaxTDP;
+        }
+        if(myGPU!=null){
+            totalLoad += myGPU.tdp;
+        }
+        if(myHDD!=null){
+            totalLoad += hddMaxTDP;
+        }
+        if(mySSD!=null){
+            totalLoad += ssdMaxTDP;
+        }
+        applyPsuFilter("capacity",totalLoad,false);
     }
 }
 

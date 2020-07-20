@@ -1,3 +1,4 @@
+include("res/js/variables.js");
 include("res/js/data.js");
 include("res/js/ExImport.js");
 include("res/js/componentInfo.js");
