@@ -260,6 +260,9 @@ function load(id,to,from,brand,model,price,sz=true){
         document.getElementById("caseName").innerHTML=myCASE.model;
         document.getElementById("caseName").classList.add("pointerCursor");
         document.getElementById("caseName").setAttribute("onclick","dashboardInfoHandler('"+id+"')");
+
+        document.getElementById('myCaseImg').style['backgroundImage']="url('"+getImage(myCASE,id)+"')";
+        document.getElementById('myCaseImg').style['backgroundSize']="auto 180px";
         document.getElementById("case_clearBtnPanel").style['display']="grid";
     }
     if(sz){
@@ -306,8 +309,10 @@ async function createCard(arg,index,id){
         x="auto 160px";
     }else if(id=="hddList"){
         x="auto 120px";
+    }else if(id=="caseList"){
+        x="auto 180px";
     }else{
-        x="auto  100px";
+        x="auto 100px";
     }
     img.style["backgroundSize"]=x;
     //res/images/amd_one.svg
@@ -395,7 +400,7 @@ function getImage(arg,id){
     }else if(id=="psuList"){
         y="psu";
     }else{
-        y="psu";
+        y="case";
     }
 
     return x+y+z;
