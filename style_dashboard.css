@@ -40,9 +40,9 @@ header {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   text-align: center;
   font-size: 1.2rem;
   font-family: 'Raleway', sans-serif;
@@ -727,5 +727,18 @@ input {
 
 .listEx {
   margin-top: 12rem;
+}
+
+.rightSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 /*# sourceMappingURL=style_dashboard.css.map */
