@@ -18,6 +18,7 @@
                     <button style="margin-left: 1rem;" id="backBtn" class="rm">Back</button>
                 </div>
                 <div class="rightSection">
+                    <button class="enabledAi" id="Auto_Ai" onclick="switchAutoAi()">AutoAi</button>
                     <button onclick="cleanCards()">Clear List</button>
                     <input class="rm" type="file" name="export" id="importBtn" accept=".json, .JSON" onchange="clearData('cpu','cpu_clearBtnPanel');readFile(event)">
                     <label for="importBtn">Import</label>

@@ -1,4 +1,5 @@
 var TOTALPRICE=0;
+var autoAi=true;
 //Saved Final Components
 var myCPU;
 var myMOTHERBOARD;

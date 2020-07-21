@@ -238,3 +238,14 @@ function activateBtn(x,id){
 function setAction(action,id){
     document.getElementById(id).setAttribute("onclick",action);
 }
+
+function switchAutoAi(){
+    if(autoAi){
+        autoAi=false;
+        document.getElementById('Auto_Ai').classList.remove('enabledAi');
+    }else{
+        autoAi=true;
+        document.getElementById('Auto_Ai').classList.add('enabledAi');
+    }
+    resetFilter();
+}

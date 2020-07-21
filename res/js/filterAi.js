@@ -70,6 +70,8 @@ function setAutoFilter(id){
 }
 
 function isCompatibleMotherboard(chipset){
+    if(!autoAi){return true;}
+
     var chipsetIndex;
     var status=false;
     if(myCPU==null){return true}
@@ -109,6 +111,8 @@ function isCompatibleMotherboard(chipset){
 }
 
 function isCompatibleCpu(cpuGenaration){
+    if(!autoAi){return true;}
+    
     var cpuIndex;
     var status=false;
     if(myMOTHERBOARD==null){

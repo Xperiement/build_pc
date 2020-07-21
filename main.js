@@ -39,7 +39,7 @@ async function changePanel(x,y){
         document.getElementById('panelTitle').innerHTML='Select Cpu';
         document.getElementById('cpuList').innerHTML='';
         sort("add_cpu");
-        setAutoFilter(y);
+        autoAi ? setAutoFilter(y) : null;
         for(var i=0;i<CPUDATA.length;i++){
             if(filter("cpuList",CPUDATA[i])&&isCompatibleCpu(CPUDATA[i].genaration)){
                 createCard(CPUDATA[i],i,"cpuList");
@@ -50,7 +50,7 @@ async function changePanel(x,y){
         document.getElementById('panelTitle').innerHTML='Select Motherboard';
         document.getElementById('motherboardList').innerHTML='';
         sort("add_motherboard");
-        setAutoFilter(y);
+        autoAi ? setAutoFilter(y) : null;
         for(var i=0;i<MOTHERBOARDDATA.length;i++){
             if(filter("motherboardList",MOTHERBOARDDATA[i])&&isCompatibleMotherboard(MOTHERBOARDDATA[i].chipset)){
                 createCard(MOTHERBOARDDATA[i],i,"motherboardList");
@@ -61,7 +61,7 @@ async function changePanel(x,y){
         document.getElementById('panelTitle').innerHTML='Select Ram';
         document.getElementById('ramList').innerHTML='';
         sort("add_ram");
-        setAutoFilter(y);
+        autoAi ? setAutoFilter(y) : null;
         for(var i=0;i<RAMDATA.length;i++){
             if(filter("ramList",RAMDATA[i])){
                 createCard(RAMDATA[i],i,"ramList");
@@ -72,7 +72,7 @@ async function changePanel(x,y){
         document.getElementById('panelTitle').innerHTML='Select Graphics Card';
         document.getElementById('gpuList').innerHTML='';
         sort("add_gpu");
-        setAutoFilter(y);
+        autoAi ? setAutoFilter(y) : null;
         for(var i=0;i<GPUDATA.length;i++){
             if(filter("gpuList",GPUDATA[i])){
                 createCard(GPUDATA[i],i,"gpuList");
@@ -83,7 +83,7 @@ async function changePanel(x,y){
         document.getElementById('panelTitle').innerHTML='Select Hard Disk';
         document.getElementById('hddList').innerHTML='';
         sort("add_hdd");
-        setAutoFilter(y);
+        autoAi ? setAutoFilter(y) : null;
         for(var i=0;i<HDDDATA.length;i++){
             if(filter("hddList",HDDDATA[i])){
                 createCard(HDDDATA[i],i,"hddList");
@@ -94,7 +94,7 @@ async function changePanel(x,y){
         document.getElementById('panelTitle').innerHTML='Select SSD';
         document.getElementById('ssdList').innerHTML='';
         sort("add_ssd");
-        setAutoFilter(y);
+        autoAi ? setAutoFilter(y) : null;
         for(var i=0;i<SSDDATA.length;i++){
             if(filter("ssdList",SSDDATA[i])){
                 createCard(SSDDATA[i],i,"ssdList");
@@ -105,7 +105,7 @@ async function changePanel(x,y){
         document.getElementById('panelTitle').innerHTML='Select Power Supply';
         document.getElementById('psuList').innerHTML='';
         sort("add_psu");
-        setAutoFilter(y);
+        autoAi ? setAutoFilter(y) : null;
         for(var i=0;i<PSUDATA.length;i++){
             if(filter("psuList",PSUDATA[i])){
                 createCard(PSUDATA[i],i,"psuList");
@@ -116,7 +116,7 @@ async function changePanel(x,y){
         document.getElementById('panelTitle').innerHTML='Select Case';
         document.getElementById('caseList').innerHTML='';
         sort("add_case");
-        setAutoFilter(y);
+        autoAi ? setAutoFilter(y) : null;
         for(var i=0;i<CASEDATA.length;i++){
             if(filter("caseList",CASEDATA[i])){
                 createCard(CASEDATA[i],i,"caseList");
