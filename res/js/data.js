@@ -1,15 +1,5 @@
+//Total price of selected components from the stat list
 var TOTALPRICE=0;
-var autoAi=true;
-//Saved Final Components
-var myCPU;
-var myMOTHERBOARD;
-var myRAM;
-var myGPU;
-var myHDD;
-var mySSD;
-var myPSU;
-var myCASE;
-
 //Stat
 var statCpu=true;
 var statMotherboard=true;
@@ -20,6 +10,25 @@ var statSsd=true;
 var statPsu=true;
 var statCase=true;
 
+
+//AutoAi toggle variable
+var autoAi=true;
+
+//SORT Variable
+var lowToHigh=false;
+var highToLow=false;
+
+//Saved Final Components
+var myCPU;
+var myMOTHERBOARD;
+var myRAM;
+var myGPU;
+var myHDD;
+var mySSD;
+var myPSU;
+var myCASE;
+
+//Compatibility framework for AMD based system [Motherboard Chipset]
 var AmdChipsets=[
     {
         chipsetName: "A320",//1
@@ -64,7 +73,7 @@ var AmdChipsets=[
         ]
     },  
 ];
-
+//Compatibility framework for AMD based system [Processor Genaration]
 var AmdCpus=[
     {
         genaration: 1,//1
@@ -93,7 +102,7 @@ var AmdCpus=[
 ];
 
 
-
+//Compatibility framework for Intel based system [Motherboard Chipset]
 var IntelChipsets=[
     {
         chipsetName: "H110",//1
@@ -151,7 +160,7 @@ var IntelChipsets=[
     },
 
 ];
-
+//Compatibility framework for Intel based system [Processor Genaration]
 var IntelCpus=[
     {
         genaration: 6,//1
@@ -180,7 +189,7 @@ var IntelCpus=[
 
 ];
 
-
+//Array of JSON Object of Pc components
 var CPUDATA=[
     {
         compoType:"cpu",
@@ -554,8 +563,7 @@ var CASEDATA=[
 ];
 
 
-
-//Data
+//Component Definations
 var cpuData={
     brand:"Intel",
     model:"Core i3-6098p",
@@ -591,7 +599,6 @@ var gpuData={
     price:5500
 };
 
-
 var mbData={
     brand:"Gigabyte",
     model:"H110m-s2",
@@ -614,7 +621,19 @@ var mbData={
     no_of_m_2_slot: 0,
     cpu_overclocking: false, 
     price:3999
-}
+};
+
+var ramdata={
+    compoType:"ram",
+    brand:"Corsair",
+    model:"Value Select 8GB",
+    capacity: 8,
+    quantity: 1,
+    type:"DDR4",
+    speed:2666,
+    eccMemory: false,
+    price:3100
+};
 
 var hddData={
     brand:"WD",
@@ -652,31 +671,6 @@ var caseData={
     price:6000
 };
 
-var mouseData={
-    brand:"Logitech",
-    model:"M120",
-    price:600
-};
-
-var keyboardData={
-    brand:"Logitech",
-    model:"K120",
-    price:780
-};
-
-var monitorData={
-    brand:"LG",
-    model:"38m-sh",
-    resolution:"1080p",
-    aspect_ratio:"16:9",
-    refresh_rate:60,
-    has_vga:true,
-    has_dvi:true,
-    has_hdmi:false,
-    has_displayPort:false,
-    price:6500
-};
-
 var powerSupplyData={
     brand:"CoolerMaster",
     model:"MWE-450",
@@ -697,7 +691,7 @@ var cloneSSDDATA=SSDDATA.slice(0,SSDDATA.length);
 var clonePSUDATA=PSUDATA.slice(0,PSUDATA.length);
 var cloneCASEDATA=CASEDATA.slice(0,CASEDATA.length);
 
-
+//Import object which will be used in future for importing pc specs
 var IMPORT=[
     /*{
         brand:"Intel",

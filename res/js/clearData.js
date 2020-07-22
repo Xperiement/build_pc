@@ -1,3 +1,4 @@
+//Clear Selected component's data
 async function clearData(arg,id){
     var x='';
     var y='';

@@ -1,3 +1,4 @@
+//Apply autofilter
 function setAutoFilter(id){
     resetFilter(id);
     if(id=="add_cpu"){
@@ -68,7 +69,7 @@ function setAutoFilter(id){
         applyPsuFilter("capacity",totalLoad,false);
     }
 }
-
+//To check if the motherboard is compatible with the processor or not.
 function isCompatibleMotherboard(chipset){
     if(!autoAi){return true;}
 
@@ -109,7 +110,7 @@ function isCompatibleMotherboard(chipset){
         return status;
     }
 }
-
+//To check if the processor is compatible with the motherboard or not.
 function isCompatibleCpu(cpuGenaration){
     if(!autoAi){return true;}
     

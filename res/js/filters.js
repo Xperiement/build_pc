@@ -137,6 +137,7 @@ function applyCaseFilter(prop,value,arg=true){
     }
 }
 
+//Specific component's filter handler
 //CPU
 var cpuBrand="";
 var cpuCore=0;

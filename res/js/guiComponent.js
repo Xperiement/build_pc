@@ -1,3 +1,4 @@
+//Open the clear panel
 async function openClearPanel(){
     document.getElementById("clearBtnPanel").style["height"]="100%";
     document.getElementById("clearBtnPanel").style["width"]="100%";
@@ -8,7 +9,7 @@ async function openClearPanel(){
     await sleep(200);
     document.getElementById("GuunerBtn").style["opacity"]="100%";
 }
-
+//Close the clear panel
 async function closeClearPanel(){
     document.getElementById("clearBtnPanel").style["height"]="10px";
     document.getElementById("clearBtnPanel").style["width"]="100%";
@@ -20,6 +21,7 @@ async function closeClearPanel(){
     document.getElementById("GuunerBtn").style["display"]="block";
 }
 
+//Filter Panel toggler
 function OptionPanelOn(id1,id2,id3,id4){
     document.getElementById(id1).style["height"]="100%";
     document.getElementById(id2).style["opacity"]="0%";
@@ -27,8 +29,7 @@ function OptionPanelOn(id1,id2,id3,id4){
     document.getElementById(id3).style["display"]="flex";
     document.getElementById(id4).style["display"]="block";
 }
-
-
+//Filter Panel toggler
 function closeOptionPanel(id1,id2,id3,id4){
     document.getElementById(id1).style["height"]="2rem";
     document.getElementById(id2).style["opacity"]="100%";
@@ -38,7 +39,7 @@ function closeOptionPanel(id1,id2,id3,id4){
 }
 
 
-
+//Rerender components after custom filtering
 function reRenderComponents(y){
     if(y=="add_cpu"){
         document.getElementById('panelTitle').innerHTML='Select Cpu';
@@ -115,7 +116,7 @@ function reRenderComponents(y){
     }
 }
 
-
+//Genarate list of items of selected components
 function genarateStats(){
     var x=document.getElementById('listContainer');
     x.innerHTML="";
@@ -154,13 +155,13 @@ function genarateStats(){
     }
     document.getElementById('panelTitle').innerHTML='Total - '+TOTALPRICE;
 }
-
+//Helper function for genarateStats() [create separator between two list item]
 function getSeparator(){
     var div=document.createElement("div");
     div.classList.add("separator");
     return div;
 }
-
+//Helper function for genarateStats() [Toggle handler for list item]
 function toggleStat(id){
     if(id=="CpuStat"){
         statCpu ? statCpu=false : statCpu=true;
@@ -181,7 +182,7 @@ function toggleStat(id){
     }
     genarateStats();
 }
-
+//Helper function for genarateStats() [Helps to create list items]
 function getElement(compoType,enabled,CompoName,price){
     var mainContainer=document.createElement("div");
     mainContainer.classList.add("row");
@@ -227,18 +228,7 @@ function getElement(compoType,enabled,CompoName,price){
 
 
 
-
-function activateBtn(x,id){
-    if(x){
-        document.getElementById(id).classList.remove("rm");
-    }else{
-        document.getElementById(id).classList.add("rm");
-    }
-}
-function setAction(action,id){
-    document.getElementById(id).setAttribute("onclick",action);
-}
-
+//Taggle handler for autoAi
 function switchAutoAi(){
     if(autoAi){
         autoAi=false;
@@ -248,4 +238,211 @@ function switchAutoAi(){
         document.getElementById('Auto_Ai').classList.add('enabledAi');
     }
     resetFilter();
+}
+
+//Create Card for component list
+async function createCard(arg,index,id){
+    var brand=arg.brand;
+    var name=arg.model;
+    var price=arg.price;
+    //document.getElementById(id).innerHTML="";
+    document.getElementById(id).appendChild(createInfoPanel(id));
+    await sleep(1);
+
+    var fansan=getCollecter(arg,id);
+
+    var card=document.createElement("div");
+    card.classList.add("card1");
+
+//<div id="myMotherboardImg" class="imageContainer" onclick="changePanel('dashboard','add_motherboard')"></div>
+    var img=document.createElement("div");
+    img.classList.add("imageContainerEx");
+    img.setAttribute("onclick",fansan);
+    //img.setAttribute("style","background-image:url('res/images/amd_one.svg'); background-size:'auto 100px';");
+    img.style["backgroundImage"]="url('"+getImage(arg,id)+"')";
+
+    //Size Of the image
+    if(id=="ramList"||id=="ssdList"){
+        x="auto 200px";
+    }else if(id=="psuList"||id=="gpuList"){
+        x="auto 160px";
+    }else if(id=="hddList"){
+        x="auto 120px";
+    }else if(id=="caseList"){
+        x="auto 180px";
+    }else{
+        x="auto 100px";
+    }
+    img.style["backgroundSize"]=x;
+
+    var p=document.createElement("p");
+    p.classList.add("type","mediumTitleEx");
+    p.innerHTML=price;
+
+
+    var p2=document.createElement("p");
+    p2.classList.add("compoDetails","smallTitleEx","pointerCursor");
+    p2.setAttribute("onclick",genarateSubInfo(id,index,"Info","InfoContainer"));
+    p2.innerHTML=name;
+    var p3=document.createElement("p");
+    p3.classList.add("compoDetails","slighlySmallTitle");
+    p3.innerHTML=getShortInfo(id,arg);
+
+
+
+    /*var subdiv=document.createElement("div");
+    subdiv.setAttribute("style","margin-top: .5rem;");
+
+
+    var btn=document.createElement("button");
+    btn.setAttribute("onclick",fansan);
+    btn.classList.add("cardBtn");
+    btn.innerHTML="Add";
+
+    subdiv.appendChild(btn);
+    card.appendChild(p);*/
+    card.appendChild(img);
+    card.appendChild(p2);
+    card.appendChild(p3);
+    card.appendChild(p);
+    //card.appendChild(subdiv);
+    document.getElementById(id).appendChild(card);
+
+}
+
+function genarateSubInfo(id,index,x,y){
+    var funName="subInfoHandler(";
+    return funName+"'"+id+"',"+index+",'"+id+x+"','"+id+y+"')";
+}
+//Get proper image of  component
+function getImage(arg,id){
+    var x="res/images/";
+    var z=".svg"
+    var y;
+    if(id=="cpuList"){
+        if(arg.brand=="Intel"||arg.brand=="intel"||arg.brand=="INTEL"){
+            if(arg.model.indexOf('i3')!=-1){
+                y="intel_model_one_i3";
+            }else if(arg.model.indexOf('i5')!=-1){
+                y="intel_model_one_i5";
+            }else if(arg.model.indexOf('i7')!=-1){
+                y="intel_model_one_i7";
+            }else if(arg.model.indexOf('i9')!=-1){
+                y="intel_model_one_i9";
+            }
+        }else{
+            return "res/images/amd_one.svg";
+        }
+    }else if(id=="motherboardList"){
+        y="motherboard";
+    }else if(id=="ramList"){
+        y="ram";
+    }else if(id=="ssdList"){
+        if(arg.interface=="SATA"||arg.interface=="sata"){
+            y="sata_ssd";
+        }else if(arg.type=="NVME"||arg.type=="nvme"||arg.type=="Nvme"){
+            y="nvme_m_2";
+        }else{
+            y="sata_m_2";
+        }
+    }else if(id=="hddList"){
+        y="hdd";
+    }else if(id=="gpuList"){
+        if(arg.platform=="amd"||arg.platform=="Amd"||arg.platform=="AMD"){
+            y="gpu_amd";
+        }else{
+            y="gpu_nvidia";
+        }
+    }else if(id=="psuList"){
+        y="psu";
+    }else{
+        y="case";
+    }
+
+    return x+y+z;
+}
+//Get short info for cards
+function getShortInfo(id,data){
+    var x='';
+    if(id=="cpuList"){//3.4GHZ, 2 cores 4 threads
+        return data.baseClock+", "+data.core+" cores "+data.thread+" threads";
+    }else if(id=="motherboardList"){
+        return data.platform+" "+data.chipset+" chipset "+data.size+" motherboard";
+    }else if(id=="ramList"){
+        return data.capacity+"GB x "+data.quantity+", "+data.speed+" MHZ";
+    }else if(id=="gpuList"){
+        return data.vram+"GB "+data.vram_type;
+    }else if(id=="hddList"){
+        return data.capacity+"TB Hard drive";
+    }else if(id=="ssdList"){
+        x='';
+        if(data.type=="SATAL"){
+            x=data.interface+" 2.5' inch";
+        }else{
+            x=data.interface+" "+data.type;
+        }
+        if(data.capacity<120){
+            return data.capacity+"TB "+x+" drive";
+        }else{
+            return data.capacity+"GB "+x+" drive";
+        }
+    }else if(id=="psuList"){
+        x='';
+        if(data.has_80_cartification && data.type_80_plus=="Default"){
+            x="80+ Plus";
+        }else if(data.has_80_cartification){
+            x="80+ Plus "+data.type_80_plus;
+        }else{
+            x='PowerSupply';
+        }
+        return data.capacity+"W "+x;
+    }else if(id=="caseList"){
+        return data.type+" Case";
+    }
+}
+//Helpes to create load()'s parameter of component cards
+function getCollecter(arg,id){
+    var to;
+    if(id=="cpuList"){
+        to="add_cpu";
+    }else if(id=="motherboardList"){
+        to="add_motherboard";
+
+    }else if(id=="ramList"){
+        to="add_ram";
+
+    }else if(id=="gpuList"){
+        to="add_gpu";
+
+    }else if(id=="hddList"){
+        to="add_hdd";
+
+    }else if(id=="ssdList"){
+        to="add_ssd";
+
+    }else if(id=="psuList"){
+        to="add_psu";
+
+    }else if(id=="caseList"){
+        to="add_case";
+    }
+
+    var args="'"+id+"','"+to+"','"+"dashboard"+"','"+arg.brand+"','"+arg.model+"','"+arg.price+"'";
+
+    return ("load("+args+")");
+
+}
+
+
+//Clear Dashbaord Cards
+async function cleanCards(){
+    document.getElementById("desktopName").value='';
+    clearData('cpu','cpu_clearBtnPanel');
+    clearData('motherboard','motherboard_clearBtnPanel');
+    clearData('ram','ram_clearBtnPanel');
+    clearData('gpu','gpu_clearBtnPanel');
+    clearData('hdd','hdd_clearBtnPanel');
+    clearData('ssd','ssd_clearBtnPanel');
+    clearData('psu','psu_clearBtnPanel');
+    clearData('case','case_clearBtnPanel');
 }

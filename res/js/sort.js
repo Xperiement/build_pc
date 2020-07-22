@@ -54,7 +54,7 @@ function sort(id){
         CASEDATA=TEMPDATA;
     }
 }
-
+//Rerender all the cards after doing any sort related operation
 function reRenderSort(x,id){
     if(x){
         highToLow=true;
@@ -69,12 +69,8 @@ function reRenderSort(x,id){
     }
     reRenderComponents(id);
 }
-
+//Restore unsorted data
 function restoreOldData(){
-    //console.log("CHANGED DATA--------------");
-    //console.log(MOTHERBOARDDATA);
-    //console.log("CLONED DATA--------------");
-    //console.log(cloneMOTHERBOARDDATA);
     CPUDATA=cloneCPUDATA.slice(0,cloneCPUDATA.length);
     MOTHERBOARDDATA=cloneMOTHERBOARDDATA.slice(0,cloneMOTHERBOARDDATA.length);
     RAMDATA=cloneRAMDATA.slice(0,cloneRAMDATA.length);

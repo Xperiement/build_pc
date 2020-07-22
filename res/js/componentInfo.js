@@ -1,3 +1,4 @@
+//Create info panel
 function createInfoPanel(id){
     var x=document.createElement("div");
     x.classList.add("infoPanel");
@@ -10,7 +11,7 @@ function createInfoPanel(id){
     return x;
 }
 
-//InfoHandler
+//Handle the dashboard infoPanel of each component
 function dashboardInfoHandler(x){
     document.getElementById("guun").innerHTML="";
     if(x=="cpuList"){
@@ -33,6 +34,7 @@ function dashboardInfoHandler(x){
     openOverlay('infoPanel');
 }
 
+//Handle the compolist infoPanel of each component [each card]
 function subInfoHandler(x,index,oOverlayId,containerId){
     document.getElementById(containerId).innerHTML="";
     if(x=="cpuList"){
@@ -57,6 +59,7 @@ function subInfoHandler(x,index,oOverlayId,containerId){
 
 
 
+//Helper functions to create layouts of each component type
 
 function get_cpu_info_container(DATA,id){
     //Vars
@@ -457,7 +460,7 @@ function get_case_info_container(DATA,id){
     mainDiv.appendChild(closeBtn);
     return mainDiv;
 }
-
+//Helper functions
 function createParagraph(text,classes){
     var x=document.createElement("p");
     for(var i=0;i<classes.length;i++){

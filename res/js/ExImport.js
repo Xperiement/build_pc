@@ -14,7 +14,7 @@ function readFile(event){
     }
     FILE.readAsText(event.target.files[0]);
 }
-
+//Verify the json
 async function verifyObj(obj){
     cleanCards();
     await sleep(200);
@@ -48,12 +48,12 @@ async function verifyObj(obj){
         }
     }
 }
-
+//Export PC specs as json
 function exportJson(){
     var x="data:text/json;charset=utf-8,"+JSON.stringify(genarateExportObj());
     document.getElementById("exportBtn").setAttribute("href",x);
 }
-
+//Genarate Json String for export
 function genarateExportObj(){
     var obj=[
 
@@ -89,16 +89,4 @@ function genarateExportObj(){
     };
     obj[count].compoType=DesktopName;
     return obj;
-}
-
-async function cleanCards(){
-    document.getElementById("desktopName").value='';
-    clearData('cpu','cpu_clearBtnPanel');
-    clearData('motherboard','motherboard_clearBtnPanel');
-    clearData('ram','ram_clearBtnPanel');
-    clearData('gpu','gpu_clearBtnPanel');
-    clearData('hdd','hdd_clearBtnPanel');
-    clearData('ssd','ssd_clearBtnPanel');
-    clearData('psu','psu_clearBtnPanel');
-    clearData('case','case_clearBtnPanel');
 }
