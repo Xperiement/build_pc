@@ -52,6 +52,11 @@ async function verifyObj(obj){
 function exportJson(){
     var x="data:text/json;charset=utf-8,"+JSON.stringify(genarateExportObj());
     document.getElementById("exportBtn").setAttribute("href",x);
+    var name=document.getElementById('desktopName').value;
+    if(name == '' || name == null){
+        name="PC";
+    }
+    document.getElementById("exportBtn").setAttribute("download",name+'.json');
 }
 //Genarate Json String for export
 function genarateExportObj(){
