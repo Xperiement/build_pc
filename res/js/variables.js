@@ -1,5 +1,5 @@
 //Currently all the values are estimated
-const ramMaxTDP=35;
-const motherboardMaxTDP=50;
-const hddMaxTDP=20;
-const ssdMaxTDP=10;
+const ramMaxTDP=5;
+const motherboardMaxTDP=70;
+const hddMaxTDP=10;
+const ssdMaxTDP=4;
