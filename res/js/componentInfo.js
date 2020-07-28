@@ -60,7 +60,6 @@ function subInfoHandler(x,index,oOverlayId,containerId){
 
 
 //Helper functions to create layouts of each component type
-
 function get_cpu_info_container(DATA,id){
     //Vars
     var turbo="";
