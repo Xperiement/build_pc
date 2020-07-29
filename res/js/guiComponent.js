@@ -246,7 +246,7 @@ async function createCard(arg,index,id){
     var name=arg.model;
     var price=arg.price;
     //document.getElementById(id).innerHTML="";
-    document.getElementById(id).appendChild(createInfoPanel(id));
+    //document.getElementById(id).appendChild(createInfoPanel(id));
     await sleep(1);
 
     var fansan=getCollecter(arg,id);

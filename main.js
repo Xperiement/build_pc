@@ -18,6 +18,7 @@ async function changePanel(x,y){
     document.getElementById(y).style['display']='flex';
     await sleep(280);
     document.getElementById(y).style['opacity']='100%';
+    var idFInfo=y.substr(4,y.length)+"List";
     if(y=="add_cpu"){
         setAction("changePanel('"+y+"','"+x+"')","backBtn");
         document.getElementById('panelTitle').innerHTML='Select Cpu';
@@ -29,6 +30,7 @@ async function changePanel(x,y){
                 createCard(CPUDATA[i],i,"cpuList");
             }
         }
+        document.getElementById(idFInfo).appendChild(createInfoPanel(idFInfo));
     }else if(y=="add_motherboard"){
         setAction("changePanel('"+y+"','"+x+"')","backBtn");
         document.getElementById('panelTitle').innerHTML='Select Motherboard';
@@ -40,6 +42,7 @@ async function changePanel(x,y){
                 createCard(MOTHERBOARDDATA[i],i,"motherboardList");
             }
         }
+        document.getElementById(idFInfo).appendChild(createInfoPanel(idFInfo));
     }else if(y=="add_ram"){
         setAction("changePanel('"+y+"','"+x+"')","backBtn");
         document.getElementById('panelTitle').innerHTML='Select Ram';
@@ -51,6 +54,7 @@ async function changePanel(x,y){
                 createCard(RAMDATA[i],i,"ramList");
             }
         }
+        document.getElementById(idFInfo).appendChild(createInfoPanel(idFInfo));
     }else if(y=="add_gpu"){
         setAction("changePanel('"+y+"','"+x+"')","backBtn");
         document.getElementById('panelTitle').innerHTML='Select Graphics Card';
@@ -62,6 +66,7 @@ async function changePanel(x,y){
                 createCard(GPUDATA[i],i,"gpuList");
             }
         }
+        document.getElementById(idFInfo).appendChild(createInfoPanel(idFInfo));
     }else if(y=="add_hdd"){
         setAction("changePanel('"+y+"','"+x+"')","backBtn");
         document.getElementById('panelTitle').innerHTML='Select Hard Disk';
@@ -73,6 +78,7 @@ async function changePanel(x,y){
                 createCard(HDDDATA[i],i,"hddList");
             }
         }
+        document.getElementById(idFInfo).appendChild(createInfoPanel(idFInfo));
     }else if(y=="add_ssd"){
         setAction("changePanel('"+y+"','"+x+"')","backBtn");
         document.getElementById('panelTitle').innerHTML='Select SSD';
@@ -84,6 +90,7 @@ async function changePanel(x,y){
                 createCard(SSDDATA[i],i,"ssdList");
             }
         }
+        document.getElementById(idFInfo).appendChild(createInfoPanel(idFInfo));
     }else if(y=="add_psu"){
         setAction("changePanel('"+y+"','"+x+"')","backBtn");
         document.getElementById('panelTitle').innerHTML='Select Power Supply';
@@ -95,6 +102,7 @@ async function changePanel(x,y){
                 createCard(PSUDATA[i],i,"psuList");
             }
         }
+        document.getElementById(idFInfo).appendChild(createInfoPanel(idFInfo));
     }else if(y=="add_case"){
         setAction("changePanel('"+y+"','"+x+"')","backBtn");
         document.getElementById('panelTitle').innerHTML='Select Case';
@@ -106,6 +114,7 @@ async function changePanel(x,y){
                 createCard(CASEDATA[i],i,"caseList");
             }
         }
+        document.getElementById(idFInfo).appendChild(createInfoPanel(idFInfo));
     }else if(y=="stats"){
         setAction("changePanel('"+y+"','"+x+"')","backBtn");
         genarateStats();
