@@ -1,6 +1,6 @@
 @font-face{
-    src: url("res/fonts/ProductSans-Regular.ttf");
-    font-family: Product Sans;
+    src: url("/res/fonts/ProductSansRegular.ttf");
+    font-family: ProductSans;
 }
 :root{
     --primary-color: rgb(245, 253, 255);
@@ -216,15 +216,15 @@ input{
 }
 .bigTitle{
     font-size: 3.5rem;
-    font-family: Product Sans;
+    font-family: ProductSans;
 }
 .mediumTitle{
     font-size: 1.6rem;
-    font-family: Product Sans;
+    font-family: ProductSans;
 }
 .mediumTitleEx{
     font-size: 1.4rem;
-    font-family: Product Sans;
+    font-family: ProductSans;
 }
 .smallTitle{
     font-size: 1rem;
@@ -290,7 +290,7 @@ input{
     background: transparent;
     color: rgb(94, 94, 94);
     //box-shadow: 0px 3px 10px #0000002a;
-    font-family: Product Sans;
+    font-family: ProductSans;
     letter-spacing: .1rem;
     transition: color 280ms, background 280ms, border-color 280ms;
 }
@@ -305,7 +305,7 @@ input{
     display: none;
 }
 .compoDetails{
-    font-family: product sans;
+    font-family: ProductSans;
     color: grey;
     transition: color 280ms;
     user-select: none;
@@ -439,7 +439,7 @@ input{
     max-width: 1000px;
     width: calc(100% - 2rem);
     height: 2rem;
-    background: rgb(255, 255, 255);
+    background: #F6F8FF;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -590,4 +590,87 @@ input{
     display: flex;
     flex-direction: row;
     justify-content: end;
+}
+
+
+
+@media(max-width: 500px){
+    .bigTitle{
+        font-size: 2.2rem;
+    }
+    .mediumTitle {
+        font-size: 1.2rem;
+    }
+    .slighlySmallTitle {
+        font-size: .7rem;
+    }
+    input{
+        width: 200px;
+    }
+    .StatsBtn{
+        font-size: 1rem;
+        transform: translateY(-22px) translateX(-12px);
+    }
+    .configStatus{
+        place-content: center;
+        //transform: translateX(-10px);
+    }
+    .infoPanel .closeBtn {
+        right: 10%;
+    }
+    .vertCenter{
+        height: unset;
+    }
+    .panelInfo{
+        height: unset;
+    }
+    .dashboard, .addComponentPanel{
+        margin-top: 9rem;
+    }
+    .fsPanel{
+        transform: translateY(-40px);
+    }
+
+    .infoPanelEx {
+        position: fixed;
+        -webkit-transform: translateY(-3.5rem);
+        transform: translateY(-3.5rem);
+        padding-top: unset;
+    }
+    
+    .card1{
+        transform: translateX(-10px);
+    }
+
+    .configStatus{
+        margin-bottom: 5rem;
+    }
+    .specsType{
+        font-size: 1.2rem;
+    }
+    .specs {
+        font-size: .9rem;
+        margin-bottom: .3rem;
+    }
+
+
+
+    .nav{
+        align-items: flex-start;
+        justify-content: start;
+        transform: translateX(-12px);
+        flex-direction: column;
+    }
+    .rightSection{
+        //display: none;
+        align-items: flex-start;
+        justify-content: start;
+        flex-wrap: wrap;
+        transform: translateY(2px) translateX(-12px);
+
+        *{
+            font-size: .8rem !important;
+            padding-bottom: unset !important;
+        }
+    }
 }

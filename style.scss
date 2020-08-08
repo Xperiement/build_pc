@@ -135,3 +135,67 @@ header{
         box-shadow: 0px 10px 20px #00000036;
     }
 }
+
+
+@media(max-width: 928px){
+    .heading{
+        //Font
+        font-size: 1.2rem;
+        letter-spacing: .1rem;
+    }
+    .nav{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        
+    
+        //Font
+        font-size: 1.2rem;
+        font-family: 'Raleway', sans-serif;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+        a{
+            color: black;
+            padding-left: .2rem;
+            padding-right: .2rem;
+        }
+        a:focus,
+        a:hover{
+            background: black;
+            color: white;
+        }
+    }
+    .container{
+        .belak{
+            font-size: 2rem;
+            span{
+                font-size: 3rem;
+            }
+        }
+        .subInfo{
+            width: 90%;
+            font-size: 1rem;
+            word-spacing: .1rem;
+            margin-top: .5rem;
+        }
+        .startBtn{
+            margin-top: 1rem;
+            height: 30px;
+            width: 110px;
+            font-size: 1rem;
+            border: 2px solid;
+        }
+    }
+
+    .blacky{
+        display: none;
+    }
+}
+
+@media(max-width: 648px){
+    .nav{
+        position: absolute;
+        display: none;
+    }
+
+}
